@@ -19,6 +19,9 @@ function AchievementCard({ id, title, desc, date, field, image }) {
       },
     },
   }));
+  const imgStyle = {
+    width: '80px'
+}
 
   const classes = useStyles();
   return (
@@ -45,7 +48,7 @@ function AchievementCard({ id, title, desc, date, field, image }) {
         </div>
         {image && (
           <div className="achievecard-imgcontainer">
-            <img src={image} alt="" />
+            {<img className ="svg-invert" src={image}  style = {imgStyle} alt="" />}
           </div>
         )}
       </div>
