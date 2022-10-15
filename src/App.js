@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
-
-import { ThemeContext } from "./contexts/ThemeContext";
 import { Main, BlogPage, ProjectPage, ProjectDetail } from "./pages";
 import { BackToTop } from "./components";
 import ScrollToTop from "./utils/ScrollToTop";
