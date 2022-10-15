@@ -39,6 +39,12 @@
     flex: 0.6;
 }
 
+.svg-invert {
+    -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
+            filter: invert(100%);
+  }
+
+
 .achievement-card {
     display: flex;
     flex-direction: row;
@@ -53,7 +59,6 @@
     width: 100%;
     position: relative;
 }
-
 .achievecard-content {
     display: flex;
     flex-direction: column;
@@ -116,6 +121,7 @@
 
 .achievecard-imgcontainer {
     width: 23%;
+    height: 10;
 }
 
 .achievecard-imgcontainer > img {
