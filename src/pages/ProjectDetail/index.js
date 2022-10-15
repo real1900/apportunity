@@ -8,7 +8,7 @@ import { FaPlay, FaCode } from "react-icons/fa";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../utils/events";
 import Transitions from "../Transitions";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { FaPlay, FaCode } from "react-icons/fa";
+// import { FaPlay, FaCode } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 
 import placeholder from "../../../assets/png/placeholder.png";
@@ -39,7 +39,7 @@ function SingleProject({
     },
   }));
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <button
