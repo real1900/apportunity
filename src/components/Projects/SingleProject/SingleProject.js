@@ -4,6 +4,7 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import placeholder from "../../../assets/png/placeholder.png";
+import { redThemeDark } from "../../../theme/theme";
 import "./SingleProject.css";
 
 function SingleProject({
@@ -41,6 +42,10 @@ function SingleProject({
 
   // const classes = useStyles();
 
+  const imgStyle = {
+    opacity: 0.5
+}
+
   return (
     <button
       style={{ backgroundColor: "transparent", border: "none" }}
@@ -59,7 +64,7 @@ function SingleProject({
             >
               {name}
             </h2>
-            <img src={image ? image : placeholder} alt={name}/>
+            <img className = "grayScale" src={image ? image : placeholder} style = {imgStyle} alt={name}/>
             <div className="project--showcaseBtn">
               {/* <a
                 href={demo}

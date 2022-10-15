@@ -9,6 +9,8 @@
 }
 
 .singleBlog--image {
+  
+    filter: grayscale(1);
     height: 50%;
     width: 100%;
     overflow: hidden;

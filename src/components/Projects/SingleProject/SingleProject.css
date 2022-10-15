@@ -13,6 +13,10 @@
     overflow: hidden;
 }
 
+.grayScale {
+    filter: grayscale(1);
+}
+
 .projectContent {
     display: flex;
     flex-direction: column;
