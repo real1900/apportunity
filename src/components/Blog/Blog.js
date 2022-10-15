@@ -6,7 +6,6 @@ import "./Blog.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { blogData } from "../../data/blogData";
 import SingleBlog from "./SingleBlog/SingleBlog";
-import { EventEmitter } from "../../utils/events";
 
 
 function Blog() {
