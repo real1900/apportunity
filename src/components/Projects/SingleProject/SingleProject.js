@@ -4,7 +4,6 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import placeholder from "../../../assets/png/placeholder.png";
-import { redThemeDark } from "../../../theme/theme";
 import "./SingleProject.css";
 
 function SingleProject({
