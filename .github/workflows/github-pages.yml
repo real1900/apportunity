@@ -16,7 +16,7 @@ jobs:
       run: yarn install
 
     - name: Test
-      run: npm run test
+      run: yarn run test
 
     - name: Deploy
       run: |
