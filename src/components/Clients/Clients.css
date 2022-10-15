@@ -29,6 +29,13 @@
     text-align: center;
 }
 
+.clientsDescription h5 {
+    font-family: var(--primaryFont);
+    font-weight: normal;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
 .clientsContainer {
     display: flex;
     align-items: center;

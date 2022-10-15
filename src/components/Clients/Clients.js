@@ -17,7 +17,8 @@ function Clients() {
     }
 
     const clientsImageStyle = {
-        width: '120px'
+        width: '120px',
+        opacity: 0.5,
     }
 
     return (
@@ -27,7 +28,7 @@ function Clients() {
              
             </div>
             <div className="clientsDescription">
-                <h4 style={{color:theme.tertiary80}}>{clientsDescriptionData}</h4></div>
+                <h5 style={{color:theme.tertiary80}}>{clientsDescriptionData}</h5></div>
             <div className="clientsContainer">
                 <div className="client--scroll">
                     <Marquee 
