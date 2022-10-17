@@ -28,7 +28,7 @@ function Clients() {
              
             </div>
             <div className="clientsDescription">
-                <h5 style={{color:theme.tertiary80}}>{clientsDescriptionData}</h5></div>
+                <p style={{color:theme.tertiary80}}>{clientsDescriptionData}</p></div>
             <div className="clientsContainer">
                 <div className="client--scroll">
                     <Marquee 

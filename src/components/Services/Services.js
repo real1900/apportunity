@@ -20,14 +20,14 @@ function Services() {
         >
           <div className="achievement-body">
             <h1 style={{ color: theme.primary }}>Our Services</h1>
-            <h4 style={{ color: theme.tertiary80 }}>
+            <p style={{ color: theme.tertiary80 }}>
               {serviceIntro.description1}
-            </h4>
+            </p>
             <br />
             <br />
-            <h4 style={{ color: theme.tertiary80 }}>
+            <p style={{ color: theme.tertiary80 }}>
               {serviceIntro.description2}
-            </h4>
+            </p>
           </div>
           <div className="achievement-cards">
             {servicesData.map((services) => (
