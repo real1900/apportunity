@@ -59,11 +59,13 @@
 }
 
 .about-img {
+  border-radius: 25px;
     margin-top: 40px;
     pointer-events: none;
 }
 
 .about-img > img {
+  border-radius:380px;
     width: 380px;
     flex: 0.5;
 }
