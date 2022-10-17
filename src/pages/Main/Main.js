@@ -31,13 +31,11 @@ function Main() {
       <About />
       {/* <Education /> */}
       {/* <Skills /> */}
-     
-      <Services />
       <Clients />
       <Experience />
+      <Services />
       <Projects />
       {/* <Achievement /> */}
-    
       <Testimonials />
       <Blog />
       <Contacts />
