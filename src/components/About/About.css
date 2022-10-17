@@ -1,31 +1,11 @@
+
+@import "../common/common.css";
+
 .about {
     min-height: 100vh;
     position: relative;
 }
 
-.about .line-styling{
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 50px;
-  width: 85%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.about .line-styling .style-circle{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.about .line-styling .style-line{
-  width: 95%;
-  height: 5px;
-  border-radius: 10px;
-}
 
 .about-body {
     display: flex;
@@ -60,7 +40,7 @@
 
 .about-img {
   border-radius: 25px;
-    margin-top: 40px;
+    margin-top: 100px;
     pointer-events: none;
 }
 
@@ -80,16 +60,12 @@
       font-size: 1.15rem;
     }
 
-    .about-img>img {
+    .about-img > img {
         width: 300px;
     } 
 }
 
 @media screen and (max-width: 992px){
-
-  .about .line-styling{
-    top: 20px;
-  }
 
     .about-body {
         padding-top: 2rem;
@@ -124,11 +100,7 @@
 }
 
 @media screen and (max-width: 800px){
-  .about .line-styling .style-circle{
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
+
   .about-description > h2{
     align-self: center;
   }
@@ -136,18 +108,6 @@
 }
 
 @media screen and (max-width: 600px){
-
-  .about .line-styling .style-circle{
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-  }
-  .about .line-styling .style-line{
-    width: 93%;
-    height: 3px;
-    border-radius: 10px;
-  }
-
   .about-description > h2 {
     font-size: 2.5rem;
   }

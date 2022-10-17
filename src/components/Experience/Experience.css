@@ -1,3 +1,6 @@
+
+@import "../common/common.css";
+
 .svg-invert {
     -webkit-filter: invert(100%); /* safari 6.0 - 9.0 */
             filter: invert(100%);
@@ -9,30 +12,6 @@
 .experience {
     min-height: 100vh;
     position: relative;
-}
-
-.experience .line-styling{
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 50px;
-  width: 85%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.experience .line-styling .style-circle{
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-}
-.experience .line-styling .style-line{
-  width: 95%;
-  height: 5px;
-  border-radius: 10px;
 }
 
 .experience-body {
@@ -96,9 +75,6 @@
 
 @media screen and (max-width: 992px){
 
-  .experience .line-styling{
-    top: 20px;
-  }
 
     .experience-body {
         padding-top: 2rem;
@@ -133,11 +109,7 @@
 }
 
 @media screen and (max-width: 800px){
-  .experience .line-styling .style-circle{
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-  }
+
   .experience-description > h2{
     align-self: center;
   }
@@ -145,17 +117,6 @@
 }
 
 @media screen and (max-width: 600px){
-
-  .experience .line-styling .style-circle{
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-  }
-  .experience .line-styling .style-line{
-    width: 93%;
-    height: 3px;
-    border-radius: 10px;
-  }
 
   .experience-description > h2 {
     font-size: 2.5rem;

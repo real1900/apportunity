@@ -27,10 +27,18 @@ function AchievementCard({ id, title, desc, date, field, image }) {
   return (
     <Fade bottom>
       <div key={id} className={`achievement-card ${classes.achievementCard}`}>
+      {image && (
+          <div className="achievecard-imgcontainer">
+            {<img className ="svg-invert" src={image}  style = {imgStyle} alt="" />}
+          </div>
+        )}
+
+
         <div className="achievecard-content">
+
           <div className="achievecard-details1">
             <h2 style={{ color: theme.tertiary }}>{title}</h2>
-            <h6 style={{ color: theme.tertiary80 }}>{desc}</h6>
+            <p style={{ color: theme.tertiary80 }}>{desc}</p>
           </div>
           {date ||
             (field && (
@@ -46,11 +54,10 @@ function AchievementCard({ id, title, desc, date, field, image }) {
               </div>
             ))}
         </div>
-        {image && (
-          <div className="achievecard-imgcontainer">
-            {<img className ="svg-invert" src={image}  style = {imgStyle} alt="" />}
-          </div>
-        )}
+
+
+        
+
       </div>
     </Fade>
   );
