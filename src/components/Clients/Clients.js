@@ -13,22 +13,21 @@ function Clients() {
 
     const clientBoxStyle = {
         backgroundColor: theme.secondary,
-        boxShadow: `0px 0px 30px ${theme.primary30}`
+        boxShadow: `0px 0px 30px ${theme.secondary}`
     }
 
     const clientsImageStyle = {
-        width: '120px',
-        opacity: 0.5,
+        width: '120px'
     }
 
     return (
-        <div className="clients" style={{backgroundColor: theme.secondary}}>
+        <div className="clients" style={{backgroundColor: theme.primary}}>
             <div className="clientsHeader">
-                <h2 style={{color: theme.primary}}>Clients</h2>
+                <h2 style={{color: theme.secondary}}>Clients</h2>
              
             </div>
             <div className="clientsDescription">
-                <p style={{color:theme.tertiary80}}>{clientsDescriptionData}</p></div>
+                <p style={{color:theme.secondary}}>{clientsDescriptionData}</p></div>
             <div className="clientsContainer">
                 <div className="client--scroll">
                     <Marquee 
