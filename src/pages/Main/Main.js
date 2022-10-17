@@ -25,14 +25,14 @@ function Main() {
       <Helmet>
         <title>{headerData.name}.io</title>
       </Helmet>
-
       <Navbar />
+      
       <Landing />
       <About />
       {/* <Education /> */}
       {/* <Skills /> */}
-      <Clients />
       <Experience />
+      <Clients />
       <Services />
       <Projects />
       {/* <Achievement /> */}
