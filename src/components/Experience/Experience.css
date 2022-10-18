@@ -8,7 +8,8 @@
 
 .experience{
     min-height: 50vh;
-    padding: 7rem;
+    padding: 20px;
+    padding-top: 100px;
     font-family: var(--primaryFont);
 }
 .experience {
