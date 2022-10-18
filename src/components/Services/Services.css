@@ -13,6 +13,19 @@
     justify-content: center;
     width: 100%;
 }
+.services-image {
+    display:flex;
+    pointer-events: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.services-image > img{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 100%;
+    max-height: 100%;
+}
 
 .services-header > h1 {
     margin-bottom: 20px;
