@@ -21,11 +21,12 @@ function ExperienceCard({ id, company, jobtitle, icon }) {
 
   return (
     <Fade bottom>
+   
       <div key={id} className={`experience-card ${classes.experienceCard}`}>
         <div className="expcard-img" style={{ backgroundColor: theme.primary }}>
           <img src={icon} className="svg-invert" alt="" />
         </div>
-        <div className="experience-details">
+        <div className="experience-card-description">
           <h4 style={{ color: theme.tertiary }}>{jobtitle}</h4>
           <h5 style={{ color: theme.tertiary80 }}>{company}</h5>
         </div>
