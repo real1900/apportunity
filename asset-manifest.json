@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bc84052.css",
-    "main.js": "/static/js/main.57ebea15.js",
+    "main.css": "/static/css/main.c36d218f.css",
+    "main.js": "/static/js/main.8bb309a9.js",
     "static/js/787.60a6ea97.chunk.js": "/static/js/787.60a6ea97.chunk.js",
     "static/media/suleman.jpg": "/static/media/suleman.9358824cb1dba36f54fd.jpg",
     "static/media/placeholder.png": "/static/media/placeholder.3fcbbdcd05f3e458d129.png",
@@ -16,7 +16,7 @@
     "static/media/oneThumbnail.png": "/static/media/oneThumbnail.c36c3141d72b8158de68.png",
     "static/media/twoThumbnail.png": "/static/media/twoThumbnail.aa071034e84c3a288b05.png",
     "static/media/fourThumbnail.png": "/static/media/fourThumbnail.ea1c01aab3b573f30c45.png",
-    "static/media/services.png": "/static/media/services.65adfb424195857be5df.png",
+    "static/media/services.png": "/static/media/services.53e1062427969e8fc766.png",
     "static/media/southwest.svg": "/static/media/southwest.a6366ac503a5f9c9c2dc3e023fd0b475.svg",
     "static/media/threeThumbnail.png": "/static/media/threeThumbnail.1317bf8e6fc88bd08f1c.png",
     "static/media/logo.png": "/static/media/logo.34e1f647338b6a4369ff.png",
@@ -165,12 +165,12 @@
     "static/media/vue.svg": "/static/media/vue.47bdfb5a7a54d8ade2aa4c61d5148668.svg",
     "static/media/vuetifyjs.svg": "/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
-    "main.6bc84052.css.map": "/static/css/main.6bc84052.css.map",
-    "main.57ebea15.js.map": "/static/js/main.57ebea15.js.map",
+    "main.c36d218f.css.map": "/static/css/main.c36d218f.css.map",
+    "main.8bb309a9.js.map": "/static/js/main.8bb309a9.js.map",
     "787.60a6ea97.chunk.js.map": "/static/js/787.60a6ea97.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bc84052.css",
-    "static/js/main.57ebea15.js"
+    "static/css/main.c36d218f.css",
+    "static/js/main.8bb309a9.js"
   ]
 }
