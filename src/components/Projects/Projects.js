@@ -55,7 +55,7 @@ function Projects () {
             <div className="projects--bodyContainer">
               {projectsData.slice(0, 3).map((project) => (
                 <Link to ={`/project/${project.id}`}>
-                <HiArrowRight className={classes.home}/>
+    
                 <SingleProject
                   onClick={() => {
                     EventEmitter.dispatch(
