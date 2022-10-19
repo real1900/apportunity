@@ -6507,6 +6507,11 @@ markdown-table@^3.0.0:
   resolved "https://npme.walmart.com/markdown-table/-/markdown-table-3.0.2.tgz"
   integrity sha512-y8j3a5/DkJCmS5x4dMCQL+OR0+2EAq3DOtio1COSHsmW2BGXnNCK3v12hJt1LrUz5iZH5g0LmuYOjDdI+czghA==
 
+markdown-to-jsx@^7.1.7:
+  version "7.1.7"
+  resolved "https://npme.walmart.com/markdown-to-jsx/-/markdown-to-jsx-7.1.7.tgz"
+  integrity sha512-VI3TyyHlGkO8uFle0IOibzpO1c1iJDcXcS/zBrQrXQQvJ2tpdwVzVZ7XdKsyRz1NdRmre4dqQkMZzUHaKIG/1w==
+
 mdast-util-definitions@^5.0.0:
   version "5.1.1"
   resolved "https://npme.walmart.com/mdast-util-definitions/-/mdast-util-definitions-5.1.1.tgz"
