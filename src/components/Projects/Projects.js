@@ -54,7 +54,7 @@ function Projects () {
           <div className="projects--body">
             <div className="projects--bodyContainer">
               {projectsData.slice(0, 3).map((project) => (
-                <Link to ={`/project/${project.id}`}>
+                <Link key={project.id} to ={`/project/${project.id}`}>
     
                 <SingleProject
                   onClick={() => {

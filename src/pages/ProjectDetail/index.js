@@ -1,7 +1,7 @@
 import React, { useContext , useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
-import "../../components/Landing/Landing.css";
+import "./projectDetail.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { projectsData } from "../../data/projectsData";
 import { FaPlay, FaCode } from "react-icons/fa";
@@ -9,9 +9,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../utils/events";
 import Transitions from "../Transitions";
 import { useNavigate } from "react-router-dom";
-import ReactMarkdown from 'react-markdown';
-import remarkGfm from 'remark-gfm';
-// import { DvrOutlined } from "@material-ui/icons";
+import ProjectBody from "./projectBody";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -77,18 +75,6 @@ function ProjectDetail() {
 
   const classes = useStyles();
 const  navigate = useNavigate();
-const [markdown, setMarkdown] = useState("");
-
-
-
-useEffect(() => {
-
-  const markDown = require(`../../data/markDown/${data.id}.md`);
-
-  fetch(markDown)
-    .then((res) => res.text())
-    .then((text) => setMarkdown(text));
-}, [data.id]);
 
   return (
     <Transitions>
@@ -128,7 +114,7 @@ useEffect(() => {
         >
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <h1>{data.projectName}</h1>
-            <ReactMarkdown children={markdown}  remarkPlugins={[remarkGfm]} />
+            <ProjectBody {...id} />
             <div
               style={{
                 display: "flex",

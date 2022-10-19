@@ -40,12 +40,12 @@ function Clients() {
                         direction="left"
                     >
                         {clientsData.map((client, id) => (
-                            <div className="client--name">
+                            <div key={id} className="client--name">
                             <div className="client--box" key={id} style={clientBoxStyle}>
                                 <img src={clientsImage(client)} alt={client}  style={clientsImageStyle}/>
                                 
                             </div>
-                            <h3  style={{color: theme.tertiary}}>  {client}</h3> 
+                            <h3 style={{color: theme.tertiary}}>  {client}</h3> 
                             </div>
                      
                         ))}
