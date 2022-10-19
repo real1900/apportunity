@@ -1,4 +1,4 @@
-import React, { useContext , useState, useEffect } from "react";
+import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
 import "./projectDetail.css";
