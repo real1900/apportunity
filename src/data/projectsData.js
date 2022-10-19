@@ -3,6 +3,7 @@ import twoThumbnail from '../assets/png/projects/twoThumbnail.png'
 import threeThumbnail from '../assets/png/projects/threeThumbnail.png'
 import fourThumbnail from '../assets/png/projects/fourThumbnail.png'
 
+
 export const projectsData = [
     {
         id: 1,
