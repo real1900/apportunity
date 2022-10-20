@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import "../../components/Landing/Landing.css";
+import './projectBody.css';
 import Markdown from 'markdown-to-jsx';
 
 function ProjectBody() {
@@ -20,7 +20,7 @@ useEffect(() => {
 
 
   return (
-    <div style = {{backgroundColor: "red", maxHeight: 50 }} >
+    <div className="markdown" >
     <Markdown>{markdown}</Markdown>;
     </div>
   );

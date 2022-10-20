@@ -78,11 +78,11 @@ const  navigate = useNavigate();
 
   return (
     <Transitions>
-    <div className="landing">
-      <div className="landing--container">
+    <div className="project-detail">
+      <div className="project-detail--container">
       
         <div
-          className="landing--container-left"
+          className="project-detail--container-left"
           style={{ backgroundColor: theme.primary }}
           
         >
@@ -100,7 +100,7 @@ const  navigate = useNavigate();
         <img
           src={data.image}
           alt=""
-          className="landing--img"
+          className="project-detail--img"
           style={{
             opacity: `${drawerOpen ? "0" : "1"}`,
             borderColor: theme.secondary,
@@ -109,12 +109,12 @@ const  navigate = useNavigate();
           }}
         />
         <div
-          className="landing--container-right"
+          className="project-detail--container-right"
           style={{ backgroundColor: theme.secondary }}
         >
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <h1>{data.projectName}</h1>
-            <ProjectBody {...id} />
+            <p>{data.projectDesc}</p>
             <div
               style={{
                 display: "flex",
