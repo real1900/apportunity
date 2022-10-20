@@ -1,13 +1,25 @@
 .markdown{
-    background-color : "red";
+    /* background-color : rgb(222, 74, 66); */
+    background-color : rgb(33, 33, 33);
+    color: rgb(173,173, 173);
     max-height : 50;
     padding: 30px;
+    font-family: var(--primaryFont);
 }
 
 .markdown h1{
-    color: royalblue;
+    color:  rgb(234, 234, 234);
 }
 
+.markdown a{
+    color: rgb(222, 74, 66);
+    text-decoration: underline;
+}
+
+
+
 .markdown img{
+    padding: 20px;
+    max-width: 800px;
     width: 100%;
 }
