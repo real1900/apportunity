@@ -10,6 +10,7 @@ import { EventEmitter } from "../../utils/events";
 import Transitions from "../Transitions";
 import { useNavigate } from "react-router-dom";
 import ProjectBody from "./projectBody";
+import { redThemeDark } from "../../theme/theme";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -78,7 +79,7 @@ const  navigate = useNavigate();
 
   return (
     <Transitions>
-    <div className="project-detail">
+    <div className="project-detail"  style={{ backgroundColor: theme.primary }}>
       <div className="project-detail--container">
       
         <div
@@ -86,7 +87,7 @@ const  navigate = useNavigate();
           style={{ backgroundColor: theme.primary }}
           
         >
-          <button className ='home' onClick={() => {
+          <div className ='home' onClick={() => {
             EventEmitter.dispatch(
               "routeChange",
               EventEmitter.animation.backward
@@ -94,7 +95,7 @@ const  navigate = useNavigate();
               navigate(-1);
           }}>
                 <HiArrowLeft className={classes.home}/>
-                </button>
+                </div>
         </div>
         
         <img
@@ -144,6 +145,7 @@ const  navigate = useNavigate();
         </div>
       </div>
     </div>
+    <ProjectBody {...id} />
     </Transitions>
   );
 }

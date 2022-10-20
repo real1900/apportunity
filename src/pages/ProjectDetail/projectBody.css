@@ -1,4 +1,13 @@
 .markdown{
     background-color : "red";
     max-height : 50;
+    padding: 30px;
+}
+
+.markdown h1{
+    color: royalblue;
+}
+
+.markdown img{
+    width: 100%;
 }
