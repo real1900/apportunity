@@ -10,7 +10,6 @@ import { EventEmitter } from "../../utils/events";
 import Transitions from "../Transitions";
 import { useNavigate } from "react-router-dom";
 import ProjectBody from "./projectBody";
-import { redThemeDark } from "../../theme/theme";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -27,7 +26,8 @@ function ProjectDetail() {
       border: "none",
     },
     home: {
-      color: theme.secondary,
+      color: theme.tertiary,
+
       position: "absolute",
       top: 25,
       left: 25,
@@ -121,6 +121,7 @@ const  navigate = useNavigate();
                 display: "flex",
                 flexDirection: "row",
                 marginTop: 15,
+                paddingTop:20,
               }}
             >
               <a
