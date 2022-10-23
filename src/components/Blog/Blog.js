@@ -91,15 +91,12 @@ function Blog() {
                 .slice(0, 3)
                 .reverse()
                 .map((item) => {
-
-                 
-
                   return <SingleBlog
                   theme={theme}
                   title={item.title}
                   desc={item.description}
                   date={item.date}
-                  image={item.image.url}
+                  image={item.image}
                   url={item.link}
                   key={item.guid}
                   id={item.guid}
