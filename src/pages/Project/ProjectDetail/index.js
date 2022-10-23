@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
 import "./projectDetail.css";
-import { ThemeContext } from "../../contexts/ThemeContext";
-import { projectsData } from "../../data/projectsData";
+import { ThemeContext } from "../../../contexts/ThemeContext";
+import { projectsData } from "../../../data/projectsData";
 import { FaPlay, FaCode } from "react-icons/fa";
 import { HiArrowLeft } from "react-icons/hi";
-import { EventEmitter } from "../../utils/events";
-import Transitions from "../Transitions";
+import { EventEmitter } from "../../../utils/events";
+import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
-import ProjectBody from "./projectBody";
+import ProjectBody from "../../ProjectDetail/projectBody";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);

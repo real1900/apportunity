@@ -1,4 +1,4 @@
 export { default as Main } from "./Main/Main";
 export { default as BlogPage } from "./Blog/BlogPage";
 export { default as ProjectPage } from "./Project/ProjectPage";
-export { default as ProjectDetail } from "./ProjectDetail";
+export { default as ProjectDetail } from "./Project/ProjectDetail";
