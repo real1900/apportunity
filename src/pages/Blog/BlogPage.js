@@ -79,6 +79,8 @@ function BlogPage (){
 
 
   useEffect(() => {
+
+
     const getRss = async (e) => {
 
       read(rssUrl, {
@@ -105,7 +107,8 @@ function BlogPage (){
       
           getRss();
           
-        }, [rssUrl]);    
+        }, [rssUrl]);   
+         
   return (
     <div className="blogPage" style={{ backgroundColor: theme.secondary }}>
       <Helmet>
@@ -149,7 +152,7 @@ function BlogPage (){
           >
             {items.reverse().map((item) => (
 
-              
+
           <SingleBlog
           theme={theme}
           title={item.title}

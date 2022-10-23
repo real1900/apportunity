@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import './blogDetailBody.css';
 import Markdown from 'markdown-to-jsx';
 
-import { ThemeContext } from "../../contexts/ThemeContext";
+import { ThemeContext } from "../../../contexts/ThemeContext";
 
 function BlogDetailBody() {
  
@@ -13,7 +13,7 @@ const { theme } = useContext(ThemeContext);
 
 useEffect(() => {
   // const markDown = require(`../../data/markDown/${id}.md`);
-   const markDown = require("../../data/markDown/1.md");
+   const markDown = require("../../../data/markDown/1.md");
 
   fetch(markDown)
     .then((res) => res.text())

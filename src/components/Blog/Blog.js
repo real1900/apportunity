@@ -39,7 +39,8 @@ function Blog() {
 
   const classes = useStyles();
   //https://proxy1900.herokuapp.com/
-  const [rssUrl] = useState("https://proxy.cors.sh/http://feeds.feedburner.com/appdevelopermagazine");
+  //"https://proxy.cors.sh/
+  const [rssUrl] = useState("https://proxy1900.herokuapp.com/http://feeds.feedburner.com/appdevelopermagazine");
   const [items, setItems] = useState([]);
 
 
@@ -52,19 +53,25 @@ function Blog() {
         getExtraEntryFields: (feedEntry) => {
           const mediaContent =  feedEntry["media:content"];
        //  console.log(mediaContent["@_url"]);
-  
+          const guid = feedEntry["guid"];
+          const uid =  guid.substring(0, guid.length - 1); 
+          const refinedId =  uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
+         
           return {
             image:  mediaContent["@_url"],
+            id: refinedId,
           }
         },
 
       }, {
         headers: {
-          "Access-Control-Allow-Origin": "*"
-        }
+          "Access-Control-Allow-Origin": "*",
+          'mode':"no-cors"
+        }, 
+        mode : 'no-cors',
       }).then(result =>{
               setItems(result.entries);
-            // console.log(result.entries);
+             console.log(result.entries);
             }); 
           };
       
@@ -99,8 +106,8 @@ function Blog() {
                   date={item.date}
                   image={item.image}
                   url={item.link}
-                  key={item.guid}
-                  id={item.guid}
+                  key={item.id}
+                  id={item.id}
                 />;
                 }
                   

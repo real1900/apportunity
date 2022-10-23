@@ -10,6 +10,7 @@ import ScrollToTop from "./utils/ScrollToTop";
 import { AnimatePresence } from 'framer-motion';
 import "./App.css";
 import { EventEmitter } from "./utils/events";
+import BlogDetail from "./pages/Blog/BlogDetail";
 
 function AnimatedSwitch() {
   const [animationClassNames, setAnimationClassNames] = useState("");
@@ -27,6 +28,7 @@ function AnimatedSwitch() {
           <Route path="/blog" exact element={<BlogPage />} />
           <Route path="/projects" exact element={<ProjectPage />} />
           <Route path="/project/:id" exact element={<ProjectDetail />} />
+          <Route path="/blog/:id" exact element={<BlogDetail />} />
         </Routes>
         </AnimatePresence >
   );

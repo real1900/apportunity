@@ -9,7 +9,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
-import ProjectBody from "../../ProjectDetail/projectBody";
+import ProjectBody from "./projectBody";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
