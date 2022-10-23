@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
@@ -6,7 +6,7 @@ import "./Blog.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { blogData } from "../../data/blogData";
 import SingleBlog from "./SingleBlog/SingleBlog";
-
+import { read } from "feed-reader";
 
 function Blog() {
 
@@ -38,10 +38,45 @@ function Blog() {
   }));
 
   const classes = useStyles();
+  //https://proxy1900.herokuapp.com/
+  const [rssUrl] = useState("https://proxy.cors.sh/http://feeds.feedburner.com/appdevelopermagazine");
+  const [items, setItems] = useState([]);
+
+
+  useEffect(() => {
+    const getRss = async (e) => {
+
+      read(rssUrl, {
+        useISODateFormat: false,
+        normalization: true,
+        getExtraEntryFields: (feedEntry) => {
+          const mediaContent =  feedEntry["media:content"];
+         console.log(mediaContent["@_url"]);
+  
+          return {
+            image:  mediaContent["@_url"],
+          }
+        },
+
+      }, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }).then(result =>{
+              setItems(result.entries);
+              console.log(result.entries);
+            }); 
+          };
+      
+          getRss();
+          
+        }, [rssUrl]);      
+
+
 
   return (
     <>
-      {blogData.length > 0 && (
+      {items.length > 0 && (
         <div
           className="blog"
           id="blog"
@@ -52,24 +87,29 @@ function Blog() {
           </div>
           <div className="blog--body">
             <div className="blog--bodyContainer">
-              {blogData
+              {items
                 .slice(0, 3)
                 .reverse()
-                .map((blog) => (
-                  <SingleBlog
-                    theme={theme}
-                    title={blog.title}
-                    desc={blog.description}
-                    date={blog.date}
-                    image={blog.image}
-                    url={blog.url}
-                    key={blog.id}
-                    id={blog.id}
-                  />
-                ))}
+                .map((item) => {
+
+                 
+
+                  return <SingleBlog
+                  theme={theme}
+                  title={item.title}
+                  desc={item.description}
+                  date={item.date}
+                  image={item.image.url}
+                  url={item.link}
+                  key={item.guid}
+                  id={item.guid}
+                />;
+                }
+                  
+                )}
             </div>
 
-            {blogData.length > 3 && (
+            {items.length > 3 && (
                             <div className="blog--viewAll">
                                 <Link to="/blog">
                                     <button className={classes.viewAllBtn}>
