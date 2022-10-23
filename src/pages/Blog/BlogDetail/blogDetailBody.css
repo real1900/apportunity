@@ -1,0 +1,42 @@
+.markdown {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+  background-color: rgb(33, 33, 33);
+  color: rgb(173, 173, 173);
+  max-height: 50;
+  padding: 30px;
+  font-family: var(--primaryFont);
+  line-height: 2.1rem;
+}
+
+.markdown h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(234, 234, 234);
+}
+
+.markdown a {
+  color: rgb(222, 74, 66);
+  text-decoration: underline;
+}
+
+.markdown img {
+  padding: 20px;
+  max-width: 80%;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+/* overriding from previous common.css file */
+.line-styling {
+  position: relative;
+  top: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .markdown {
+    border-top: none;
+  }
+}

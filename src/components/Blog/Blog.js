@@ -91,7 +91,8 @@ function Blog() {
                 .slice(0, 3)
                 .reverse()
                 .map((item) => {
-                  return <SingleBlog
+                  
+                  return  <SingleBlog
                   theme={theme}
                   title={item.title}
                   desc={item.description}
