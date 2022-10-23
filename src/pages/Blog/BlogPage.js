@@ -148,6 +148,8 @@ function BlogPage (){
             justifyContent="center"
           >
             {items.reverse().map((item) => (
+
+              
           <SingleBlog
           theme={theme}
           title={item.title}

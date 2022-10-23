@@ -51,7 +51,7 @@ function Blog() {
         normalization: true,
         getExtraEntryFields: (feedEntry) => {
           const mediaContent =  feedEntry["media:content"];
-         console.log(mediaContent["@_url"]);
+       //  console.log(mediaContent["@_url"]);
   
           return {
             image:  mediaContent["@_url"],
@@ -64,7 +64,7 @@ function Blog() {
         }
       }).then(result =>{
               setItems(result.entries);
-              console.log(result.entries);
+            // console.log(result.entries);
             }); 
           };
       
