@@ -4,7 +4,7 @@ import { HiArrowRight } from "react-icons/hi";
 import { Link } from "react-router-dom";
 import "./Blog.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { blogData } from "../../data/blogData";
+
 import SingleBlog from "./SingleBlog/SingleBlog";
 import { read } from "feed-reader";
 

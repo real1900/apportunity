@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
@@ -6,19 +6,14 @@ import { useNavigate } from "react-router";
 import "./BlogPage.css";
 import { SingleBlog } from "../../components";
 import { ThemeContext } from "../../contexts/ThemeContext";
-import { blogData } from "../../data/blogData";
 import { headerData } from "../../data/headerData";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../utils/events";
+import { read } from "feed-reader";
 
 function BlogPage (){
   const [search, setSearch] = useState("");
   const { theme } = useContext(ThemeContext);
-
-  const filteredArticles = blogData.filter((blog) => {
-    const content = blog.title + blog.description + blog.date;
-    return content.toLowerCase().includes(search.toLowerCase());
-  });
 
   const useStyles = makeStyles((t) => ({
     search: {
@@ -78,6 +73,39 @@ function BlogPage (){
 
   const classes = useStyles();
   const  navigate = useNavigate();
+
+  const [rssUrl] = useState("https://proxy.cors.sh/http://feeds.feedburner.com/appdevelopermagazine");
+  const [items, setItems] = useState([]);
+
+
+  useEffect(() => {
+    const getRss = async (e) => {
+
+      read(rssUrl, {
+        useISODateFormat: false,
+        normalization: true,
+        getExtraEntryFields: (feedEntry) => {
+          const mediaContent =  feedEntry["media:content"];
+         console.log(mediaContent["@_url"]);
+  
+          return {
+            image:  mediaContent["@_url"],
+          }
+        },
+
+      }, {
+        headers: {
+          "Access-Control-Allow-Origin": "*"
+        }
+      }).then(result =>{
+              setItems(result.entries);
+              console.log(result.entries);
+            }); 
+          };
+      
+          getRss();
+          
+        }, [rssUrl]);    
   return (
     <div className="blogPage" style={{ backgroundColor: theme.secondary }}>
       <Helmet>
@@ -119,17 +147,17 @@ function BlogPage (){
             alignItems="center"
             justifyContent="center"
           >
-            {filteredArticles.reverse().map((blog) => (
-              <SingleBlog
-                theme={theme}
-                title={blog.title}
-                desc={blog.description}
-                date={blog.date}
-                image={blog.image}
-                url={blog.url}
-                key={blog.id}
-                id={blog.id}
-              />
+            {items.reverse().map((item) => (
+          <SingleBlog
+          theme={theme}
+          title={item.title}
+          desc={item.description}
+          date={item.date}
+          image={item.image}
+          url={item.link}
+          key={item.guid}
+          id={item.guid}
+        />
             ))}
           </Grid>
         </div>
