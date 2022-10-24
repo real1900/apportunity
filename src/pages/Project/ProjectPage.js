@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-import { useNavigate, Link} from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { HiArrowLeft } from "react-icons/hi";
 import "./ProjectPage.css";
 import { SingleProject } from "../../components";
@@ -81,65 +81,65 @@ function ProjectPage() {
 
   return (
     <Transitions>
-    <div className="projectPage" style={{ backgroundColor: theme.secondary }}>
-      <Helmet>
-        <title>{headerData.name} | Projects</title>
-      </Helmet>
-      <div
-        className="projectPage-header"
-        style={{ backgroundColor: theme.primary }}
-      >
-         <button
-          className={classes.homeContainer}
-          onClick={() => {
-            EventEmitter.dispatch(
-              "routeChange",
-              EventEmitter.animation.backward
-            );
-           navigate(-1);
-         
-          }}
+      <div className="projectPage" style={{ backgroundColor: theme.secondary }}>
+        <Helmet>
+          <title>{headerData.name} | Projects</title>
+        </Helmet>
+        <div
+          className="projectPage-header"
+          style={{ backgroundColor: theme.primary }}
         >
-          <HiArrowLeft className={classes.home} />
-        </button>
-        <h1 style={{ color: theme.secondary }}>Projects</h1>
-      </div>
-      <div className="projectPage-container">
-        <div className="projectPage-search">
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder="Search project..."
-            className={classes.search}
-          />
-        </div>
-        <div className="project-container">
-          <Grid
-            className="project-grid"
-            container
-            direction="row"
-            alignItems="center"
-            justifyContent="center"
+          <button
+            className={classes.homeContainer}
+            onClick={() => {
+              EventEmitter.dispatch(
+                "routeChange",
+                EventEmitter.animation.backward
+              );
+              navigate(-1);
+
+            }}
           >
-            {filteredArticles.map((project) => (
-                 <Link to ={`/project/${project.id}`}>
-              <SingleProject
-                key={project.id}
-                theme={theme}
-                id={project.id}
-                name={project.projectName}
-                desc={project.projectDesc}
-                tags={project.tags}
-                code={project.code}
-                demo={project.demo}
-                image={project.image}
-              /></Link>
-            ))}
-          </Grid>
+            <HiArrowLeft className={classes.home} />
+          </button>
+          <h1 style={{ color: theme.secondary }}>Projects</h1>
         </div>
-      </div>
-    </div></Transitions>
+        <div className="projectPage-container">
+          <div className="projectPage-search">
+            <input
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search project..."
+              className={classes.search}
+            />
+          </div>
+          <div className="project-container">
+            <Grid
+              className="project-grid"
+              container
+              direction="row"
+              alignItems="center"
+              justifyContent="center"
+            >
+              {filteredArticles.map((project) => (
+                <Link to={`/project/${project.id}`}>
+                  <SingleProject
+                    key={project.id}
+                    theme={theme}
+                    id={project.id}
+                    name={project.projectName}
+                    desc={project.projectDesc}
+                    tags={project.tags}
+                    code={project.code}
+                    demo={project.demo}
+                    image={project.image}
+                  /></Link>
+              ))}
+            </Grid>
+          </div>
+        </div>
+      </div></Transitions>
   );
 };
 

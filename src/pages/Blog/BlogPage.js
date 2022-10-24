@@ -11,7 +11,7 @@ import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../utils/events";
 import { read } from "feed-reader";
 
-function BlogPage (){
+function BlogPage() {
   const [search, setSearch] = useState("");
   const { theme } = useContext(ThemeContext);
 
@@ -72,7 +72,7 @@ function BlogPage (){
   }));
 
   const classes = useStyles();
-  const  navigate = useNavigate();
+  const navigate = useNavigate();
 
   const [rssUrl] = useState("https://proxy1900.herokuapp.com/http://feeds.feedburner.com/appdevelopermagazine");
   const [items, setItems] = useState([]);
@@ -87,11 +87,11 @@ function BlogPage (){
         useISODateFormat: false,
         normalization: true,
         getExtraEntryFields: (feedEntry) => {
-          const mediaContent =  feedEntry["media:content"];
-        //  console.log(mediaContent["@_url"]);
-  
+          const mediaContent = feedEntry["media:content"];
+          //  console.log(mediaContent["@_url"]);
+
           return {
-            image:  mediaContent["@_url"],
+            image: mediaContent["@_url"],
           }
         },
 
@@ -99,15 +99,15 @@ function BlogPage (){
         headers: {
           "Access-Control-Allow-Origin": "*"
         }
-      }).then(result =>{
-              setItems(result.entries);
-              // console.log(result.entries);
-            }); 
-          };
-      
-          getRss();
-          
-        }, [rssUrl]);   
+      }).then(result => {
+        setItems(result.entries);
+        // console.log(result.entries);
+      });
+    };
+
+    getRss();
+
+  }, [rssUrl]);
 
   return (
     <div className="blogPage" style={{ backgroundColor: theme.secondary }}>
@@ -151,16 +151,16 @@ function BlogPage (){
             justifyContent="center"
           >
             {items.reverse().map((item) => (
-                  <SingleBlog
-                  theme={theme}
-                  title={item.title}
-                  desc={item.description}
-                  date={item.date}
-                  image={item.image}
-                  url={item.link}
-                  key={item.id}
-                  id={item.id}
-                  />
+              <SingleBlog
+                theme={theme}
+                title={item.title}
+                desc={item.description}
+                date={item.date}
+                image={item.image}
+                url={item.link}
+                key={item.id}
+                id={item.id}
+              />
             ))}
           </Grid>
         </div>

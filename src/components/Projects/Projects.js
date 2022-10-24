@@ -8,7 +8,7 @@ import SingleProject from "./SingleProject/SingleProject";
 import { EventEmitter } from "../../utils/events";
 import "./Projects.css";
 
-function Projects () {
+function Projects() {
   const { theme } = useContext(ThemeContext);
 
   const useStyles = makeStyles(() => ({
@@ -54,37 +54,37 @@ function Projects () {
           <div className="projects--body">
             <div className="projects--bodyContainer">
               {projectsData.slice(0, 3).map((project) => (
-                <Link key={project.id} to ={`/project/${project.id}`}>
-    
-                <SingleProject
-                  onClick={() => {
-                    EventEmitter.dispatch(
-                      "routeChange",
-                      EventEmitter.animation.forward
-                    );
-                   
-                  }}
-                  key={project.id}
-                  theme={theme}
-                  id={project.id}
-                  name={project.projectName}
-                  desc={project.projectDesc}
-                  image={project.image}
-                />
+                <Link key={project.id} to={`/project/${project.id}`}>
+
+                  <SingleProject
+                    onClick={() => {
+                      EventEmitter.dispatch(
+                        "routeChange",
+                        EventEmitter.animation.forward
+                      );
+
+                    }}
+                    key={project.id}
+                    theme={theme}
+                    id={project.id}
+                    name={project.projectName}
+                    desc={project.projectDesc}
+                    image={project.image}
+                  />
                 </Link>
               ))}
             </div>
 
             {projectsData.length > 3 && (
-                            <div className="projects--viewAll">
-                                <Link to="/projects">
-                                    <button className={classes.viewAllBtn}>
-                                        View All
-                                        <HiArrowRight className={classes.viewArr} />
-                                    </button>
-                                </Link>
-                            </div>
-                        )}
+              <div className="projects--viewAll">
+                <Link to="/projects">
+                  <button className={classes.viewAllBtn}>
+                    View All
+                    <HiArrowRight className={classes.viewArr} />
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}

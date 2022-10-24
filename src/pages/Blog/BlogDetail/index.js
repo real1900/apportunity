@@ -68,56 +68,56 @@ function BlogDetail() {
     },
   }));
 
-const classes = useStyles();
-const  navigate = useNavigate();
-const location = useLocation();
-const {title, image, id,
-  url,
+  const classes = useStyles();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { title, image, id,
+    url,
   } = location.state;
 
   return (
     <Transitions>
-    <div className="blog-detail"  style={{ backgroundColor: theme.primary }}>
-      <div className="blog-detail--container">
-      
-        <div
-          className="blog-detail--container-left"
-          style={{ backgroundColor: theme.primary }}
-          
-        >
-          <div className ='home' onClick={() => {
-            EventEmitter.dispatch(
-              "routeChange",
-              EventEmitter.animation.backward
-            );
+      <div className="blog-detail" style={{ backgroundColor: theme.primary }}>
+        <div className="blog-detail--container">
+
+          <div
+            className="blog-detail--container-left"
+            style={{ backgroundColor: theme.primary }}
+
+          >
+            <div className='home' onClick={() => {
+              EventEmitter.dispatch(
+                "routeChange",
+                EventEmitter.animation.backward
+              );
               navigate(-1);
-          }}>
-                <HiArrowLeft className={classes.home}/>
-                </div>
-        </div>
-        
-        <img
-          src={image}
-          alt=""
-          className="blog-detail--img"
-          style={{
-            opacity: `${drawerOpen ? "0" : "1"}`,
-            borderColor: theme.secondary,
-            backgroundColor: "#fff",
-            objectFit: "contain",
-          }}
-        />
-        <div
-          className="blog-detail--container-right"
-          style={{ backgroundColor: theme.secondary }}
-        >
-          <div className="lcr--content" style={{ color: theme.tertiary }}>
-            <h1>{title}</h1>
+            }}>
+              <HiArrowLeft className={classes.home} />
+            </div>
+          </div>
+
+          <img
+            src={image}
+            alt=""
+            className="blog-detail--img"
+            style={{
+              opacity: `${drawerOpen ? "0" : "1"}`,
+              borderColor: theme.secondary,
+              backgroundColor: "#fff",
+              objectFit: "contain",
+            }}
+          />
+          <div
+            className="blog-detail--container-right"
+            style={{ backgroundColor: theme.secondary }}
+          >
+            <div className="lcr--content" style={{ color: theme.tertiary }}>
+              <h1>{title}</h1>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <BlogDetailBody {...id} guid = {id} url = {url} />
+      <BlogDetailBody {...id} guid={id} url={url} />
     </Transitions>
   );
 }

@@ -16,7 +16,7 @@ function SingleProject({
 
   const imgStyle = {
     opacity: 0.5
-}
+  }
 
 
   return (
@@ -37,7 +37,7 @@ function SingleProject({
             >
               {name}
             </h2>
-            <img className = "grayScale" src={image ? image : placeholder} style = {imgStyle} alt={name}/>
+            <img className="grayScale" src={image ? image : placeholder} style={imgStyle} alt={name} />
             <div className="project--showcaseBtn">
               {/* <a
                 href={demo}
@@ -54,7 +54,7 @@ function SingleProject({
                   aria-label="Demo"
                 />
               </a> */}
-              
+
               {/* <a
                 href={code}
                 target="_blank"
