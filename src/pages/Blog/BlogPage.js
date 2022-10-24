@@ -101,7 +101,7 @@ function BlogPage() {
         }
       }).then(result => {
         setItems(result.entries);
-        // console.log(result.entries);
+        console.log(result.entries);
       });
     };
 
@@ -155,7 +155,7 @@ function BlogPage() {
                 theme={theme}
                 title={item.title}
                 desc={item.description}
-                date={item.date}
+                date={item.published}
                 image={item.image}
                 url={item.link}
                 key={item.id}

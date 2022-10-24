@@ -51,13 +51,13 @@ function Blog() {
         useISODateFormat: false,
         normalization: true,
         getExtraEntryFields: (feedEntry) => {
-          const mediaContent =  feedEntry["media:content"];
+          const mediaContent = feedEntry["media:content"];
           const guid = feedEntry["guid"];
-          const uid =  guid.substring(0, guid.length - 1); 
-          const refinedId =  uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
-         
+          const uid = guid.substring(0, guid.length - 1);
+          const refinedId = uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
+
           return {
-            image:  mediaContent["@_url"],
+            image: mediaContent["@_url"],
             id: refinedId,
           }
         },
@@ -65,18 +65,18 @@ function Blog() {
       }, {
         headers: {
           "Access-Control-Allow-Origin": "*",
-          'mode':"no-cors"
-        }, 
-        mode : 'no-cors',
-      }).then(result =>{
-              setItems(result.entries);
-           //  console.log(result.entries);
-            }); 
-          };
-      
-          getRss();
-          
-        }, [rssUrl]);      
+          'mode': "no-cors"
+        },
+        mode: 'no-cors',
+      }).then(result => {
+        setItems(result.entries);
+        //  console.log(result.entries);
+      });
+    };
+
+    getRss();
+
+  }, [rssUrl]);
 
 
 
@@ -97,32 +97,32 @@ function Blog() {
                 .slice(0, 3)
                 .reverse()
                 .map((item) => {
-                  
-                  return  <SingleBlog
-                  theme={theme}
-                  title={item.title}
-                  desc={item.description}
-                  date={item.date}
-                  image={item.image}
-                  url={item.link}
-                  key={item.id}
-                  id={item.id}
-                />;
+
+                  return <SingleBlog
+                    theme={theme}
+                    title={item.title}
+                    desc={item.description}
+                    date={item.published}
+                    image={item.image}
+                    url={item.link}
+                    key={item.id}
+                    id={item.id}
+                  />;
                 }
-                  
+
                 )}
             </div>
 
             {items.length > 3 && (
-                            <div className="blog--viewAll">
-                                <Link to="/blog">
-                                    <button className={classes.viewAllBtn}>
-                                        View All
-                                        <HiArrowRight className={classes.viewArr} />
-                                    </button>
-                                </Link>
-                            </div>
-                        )}
+              <div className="blog--viewAll">
+                <Link to="/blog">
+                  <button className={classes.viewAllBtn}>
+                    View All
+                    <HiArrowRight className={classes.viewArr} />
+                  </button>
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}

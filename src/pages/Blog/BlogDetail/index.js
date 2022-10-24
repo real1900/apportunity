@@ -71,9 +71,7 @@ function BlogDetail() {
   const classes = useStyles();
   const navigate = useNavigate();
   const location = useLocation();
-  const { title, image, id,
-    url,
-  } = location.state;
+  const { title, image, id, date, url, } = location.state;
 
   return (
     <Transitions>
@@ -113,6 +111,7 @@ function BlogDetail() {
           >
             <div className="lcr--content" style={{ color: theme.tertiary }}>
               <h1>{title}</h1>
+              <p>{date}</p>
             </div>
           </div>
         </div>

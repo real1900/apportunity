@@ -18,6 +18,7 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
                     desc : desc,
                     image : image,
                     url : url,
+                    date: date,
                 }}>
             <div className="singleBlog" key={id} style={{backgroundColor: theme.primary400}}>
                 <div className="singleBlog--image" style={{backgroundColor: theme.color}}>
