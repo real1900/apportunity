@@ -101,7 +101,7 @@ function BlogPage() {
         }
       }).then(result => {
         setItems(result.entries);
-        console.log(result.entries);
+    //    console.log(result.entries);
       });
     };
 
