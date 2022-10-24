@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useParams, useLocation } from "react-router";
+import { useLocation } from "react-router";
 import "./blogDetail.css";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { HiArrowLeft } from "react-icons/hi";
@@ -11,9 +11,6 @@ import BlogDetailBody from "./blogDetailBody";
 
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
-
-
-
   const useStyles = makeStyles((t) => ({
     homeContainer: {
       position: "absolute",
@@ -71,7 +68,7 @@ function BlogDetail() {
     },
   }));
 
-  const classes = useStyles();
+const classes = useStyles();
 const  navigate = useNavigate();
 const location = useLocation();
 const {title, desc, image, id,
@@ -117,32 +114,6 @@ const {title, desc, image, id,
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <h1>{title}</h1>
             <p>{desc}</p>
-            {/* <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                marginTop: 15,
-                paddingTop:20,
-              }}
-            >
-              <a
-                href={data.demo}
-                target="_blank"
-                rel="noreferrer"
-                className={classes.iconBtn}
-              >
-                <FaPlay className={classes.icon} aria-label="Demo" />
-              </a>
-              <a
-                href={data.code}
-                target="_blank"
-                rel="noreferrer"
-                className={classes.iconBtn}
-              >
-                <FaCode className={classes.icon} aria-label="Code" />
-              </a>
-            </div> */}
-           
           </div>
         </div>
       </div>
