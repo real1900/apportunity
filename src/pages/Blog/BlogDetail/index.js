@@ -71,7 +71,7 @@ function BlogDetail() {
 const classes = useStyles();
 const  navigate = useNavigate();
 const location = useLocation();
-const {title, desc, image, id,
+const {title, image, id,
   url,
   } = location.state;
 

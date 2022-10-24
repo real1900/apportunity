@@ -1,9 +1,6 @@
-import React, { useState, useEffect , useContext, useCallback} from "react";
+import React, { useState, useEffect , useContext,} from "react";
 import { useParams } from "react-router";
 import './blogDetailBody.css';
-import $ from 'jquery';
-
-import Markdown from 'markdown-to-jsx';
 import parse from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
 function BlogDetailBody({guid, url}) {
