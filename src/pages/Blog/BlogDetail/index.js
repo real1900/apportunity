@@ -113,7 +113,6 @@ const {title, desc, image, id,
         >
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <h1>{title}</h1>
-            <p>{desc}</p>
           </div>
         </div>
       </div>

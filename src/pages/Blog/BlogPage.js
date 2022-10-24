@@ -151,18 +151,16 @@ function BlogPage (){
             justifyContent="center"
           >
             {items.reverse().map((item) => (
-
-
-          <SingleBlog
-          theme={theme}
-          title={item.title}
-          desc={item.description}
-          date={item.date}
-          image={item.image}
-          url={item.link}
-          key={item.guid}
-          id={item.guid}
-        />
+                  <SingleBlog
+                  theme={theme}
+                  title={item.title}
+                  desc={item.description}
+                  date={item.date}
+                  image={item.image}
+                  url={item.link}
+                  key={item.id}
+                  id={item.id}
+                  />
             ))}
           </Grid>
         </div>

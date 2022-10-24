@@ -1,4 +1,4 @@
-.markdown {
+.blogDetailBody {
   border-top: 0.5px solid rgba(255, 255, 255, 0.4);
   background-color: rgb(33, 33, 33);
   color: rgb(173, 173, 173);
@@ -8,18 +8,32 @@
   line-height: 2.1rem;
 }
 
-.markdown h1 {
+.blogDetailBody p {
+  color: rgb(173, 173, 173);
+  max-height: 50;
+  padding: 20px;
+  font-family: var(--primaryFont);
+  line-height: 2.1rem;
+}
+
+.blogDetailBody h2 {
+  padding: 20px;
+  padding-bottom: 20px;
+  color: rgb(234, 234, 234);
+}
+
+.blogDetailBody h1 {
   padding-top: 20px;
   padding-bottom: 20px;
   color: rgb(234, 234, 234);
 }
 
-.markdown a {
+.blogDetailBody a {
   color: rgb(222, 74, 66);
   text-decoration: underline;
 }
 
-.markdown img {
+.blogDetailBody img {
   padding: 20px;
   max-width: 80%;
   width: 100%;
@@ -36,7 +50,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .markdown {
+  .blogDetailBody {
     border-top: none;
   }
 }
