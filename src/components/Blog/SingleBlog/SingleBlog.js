@@ -13,6 +13,7 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
         <Fade bottom>
                <Link key={id} to ={`/blog/${id}`}
                 state = {{
+                    id: id,
                     title : title,
                     desc : desc,
                     image : image,

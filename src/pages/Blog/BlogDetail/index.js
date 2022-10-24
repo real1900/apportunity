@@ -11,7 +11,6 @@ import BlogDetailBody from "./blogDetailBody";
 
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
-  const { id } = useParams();
 
 
 
@@ -75,8 +74,8 @@ function BlogDetail() {
   const classes = useStyles();
 const  navigate = useNavigate();
 const location = useLocation();
-const {title, desc, image,
-  //  url,
+const {title, desc, image, id,
+  url,
   } = location.state;
 
   return (
@@ -148,7 +147,7 @@ const {title, desc, image,
         </div>
       </div>
     </div>
-    <BlogDetailBody {...id} />
+    <BlogDetailBody {...id} guid = {id} url = {url} />
     </Transitions>
   );
 }
