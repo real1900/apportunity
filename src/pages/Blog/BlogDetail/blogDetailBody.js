@@ -1,7 +1,7 @@
 import React, { useState, useEffect , useContext,} from "react";
 import { useParams } from "react-router";
 import './blogDetailBody.css';
-import parse from 'html-react-parser';
+import parse, { domToReact } from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
 function BlogDetailBody({guid, url}) {
  
@@ -16,14 +16,30 @@ useEffect(() => {
   fetch(url).then((resp)=>{ return resp.text() }).then((text)=>
   { 
 
+    
+
+    const newText = text.replace('src="', 'src="https://appdevelopermagazine.com');
+    
+console.log(newText);
+    
     const parser = new DOMParser();
 // convert html string into DOM
-const document = parser.parseFromString(text, "text/html");
+const document = parser.parseFromString(newText, "text/html");
+
+// var oldHead = document.getElementsByTagName("head");
+// var newHead = document.createElement("head");
+// newHead.innerHTML = '<head><base href="https://appdevelopermagazine.com"></head>';  
+// document.head.replaceWith(newHead);
+
+// const options = {
+//   replace: ({ attribs, children }) => {
+//     if (attribs.className === 'head')
+//       return '<head><base href="https://appdevelopermagazine.com"/></head>';  
+//     },
+//   }
+
 var object =  document.getElementsByClassName("typography-sub-content-wrapper");
-var elements = parse(object[0].innerHTML);
-
-
-  //console.log(elements); 
+var elements = parse(object[0].innerHTML.replace('src="', 'src="https://appdevelopermagazine.com'));//console.log(elements); 
   setContents(elements);
 
 
