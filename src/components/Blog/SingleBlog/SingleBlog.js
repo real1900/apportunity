@@ -11,7 +11,13 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
 }
     return (
         <Fade bottom>
-               <Link key={id} to ={`/blog/${id}`}>
+               <Link key={id} to ={`/blog/${id}`}
+                state = {{
+                    title : title,
+                    desc : desc,
+                    image : image,
+                    url : url,
+                }}>
             <div className="singleBlog" key={id} style={{backgroundColor: theme.primary400}}>
                 <div className="singleBlog--image" style={{backgroundColor: theme.color}}>
                     <img 

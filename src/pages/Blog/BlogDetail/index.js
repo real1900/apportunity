@@ -1,10 +1,8 @@
 import React, { useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import { useParams } from "react-router";
+import { useParams, useLocation } from "react-router";
 import "./blogDetail.css";
 import { ThemeContext } from "../../../contexts/ThemeContext";
-import { projectsData } from "../../../data/projectsData";
-import { FaPlay, FaCode } from "react-icons/fa";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
@@ -14,8 +12,8 @@ import BlogDetailBody from "./blogDetailBody";
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
   const { id } = useParams();
-  const _filterArr = projectsData.filter((v, i) => v.id === parseInt(id));
-  const data = _filterArr.length > 0 ? _filterArr[0] : {};
+
+
 
   const useStyles = makeStyles((t) => ({
     homeContainer: {
@@ -76,6 +74,10 @@ function BlogDetail() {
 
   const classes = useStyles();
 const  navigate = useNavigate();
+const location = useLocation();
+const {title, desc, image,
+  //  url,
+  } = location.state;
 
   return (
     <Transitions>
@@ -99,7 +101,7 @@ const  navigate = useNavigate();
         </div>
         
         <img
-          src={data.image}
+          src={image}
           alt=""
           className="blog-detail--img"
           style={{
@@ -114,9 +116,9 @@ const  navigate = useNavigate();
           style={{ backgroundColor: theme.secondary }}
         >
           <div className="lcr--content" style={{ color: theme.tertiary }}>
-            <h1>{data.projectName}</h1>
-            <p>{data.projectDesc}</p>
-            <div
+            <h1>{title}</h1>
+            <p>{desc}</p>
+            {/* <div
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -140,7 +142,7 @@ const  navigate = useNavigate();
               >
                 <FaCode className={classes.icon} aria-label="Code" />
               </a>
-            </div>
+            </div> */}
            
           </div>
         </div>

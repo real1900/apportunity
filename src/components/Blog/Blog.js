@@ -52,7 +52,6 @@ function Blog() {
         normalization: true,
         getExtraEntryFields: (feedEntry) => {
           const mediaContent =  feedEntry["media:content"];
-       //  console.log(mediaContent["@_url"]);
           const guid = feedEntry["guid"];
           const uid =  guid.substring(0, guid.length - 1); 
           const refinedId =  uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
@@ -71,7 +70,7 @@ function Blog() {
         mode : 'no-cors',
       }).then(result =>{
               setItems(result.entries);
-             console.log(result.entries);
+           //  console.log(result.entries);
             }); 
           };
       
