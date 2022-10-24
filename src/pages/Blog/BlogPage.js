@@ -74,7 +74,7 @@ function BlogPage (){
   const classes = useStyles();
   const  navigate = useNavigate();
 
-  const [rssUrl] = useState("https://proxy.cors.sh/http://feeds.feedburner.com/appdevelopermagazine");
+  const [rssUrl] = useState("https://proxy1900.herokuapp.com/http://feeds.feedburner.com/appdevelopermagazine");
   const [items, setItems] = useState([]);
 
 

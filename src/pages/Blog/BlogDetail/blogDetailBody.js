@@ -20,27 +20,10 @@ useEffect(() => {
   { 
 
     const parser = new DOMParser();
-
 // convert html string into DOM
 const document = parser.parseFromString(text, "text/html");
- var object =  document.getElementsByClassName("profile-inner-wrapper clearfix");
- console.log(object); 
- console.log(object[0].innerHTML);
- 
- // 
-
-  //   var temp = document.createElement('div');
-  //   temp.innerHTML = text;
-  //   var htmlObject = temp.firstChild;
-  //  //var object =  htmlObject.getElementsByClassName("profile-inner-wrapper clearfix").html();
-  //   // var elements = htmlObject.childNodes;
-  //   // if (elements.item(0).childNodes.item(0).className === 'profile-inner-wrapper clearfix') {
-  //   //   setContents(elements.item(0).childNodes.item(0).innerHTML);
-  //   // }
-  //   // var testElement = htmlObject.getElementById('profile-inner-wrapper clearfix');
-  //   console.log(htmlObject.getElementsByClassName("profile-inner-wrapper clearfix")[0]);
-  
-  var elements = parse(object);
+var object =  document.getElementsByClassName("typography-sub-content-wrapper");
+var elements = parse(object[0].innerHTML);
 
 
   //console.log(elements); 
