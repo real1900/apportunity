@@ -76,6 +76,7 @@ function ProjectDetail() {
 
   const classes = useStyles();
 const  navigate = useNavigate();
+  const image = require(`../../../assets/png/projects/${id}.png`);
 
   return (
     <Transitions>
@@ -99,7 +100,7 @@ const  navigate = useNavigate();
         </div>
         
         <img
-          src={data.image}
+          src={image}
           alt=""
           className="project-detail--img"
           style={{
