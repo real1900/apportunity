@@ -14,7 +14,7 @@
 }
 
 .grayScale {
-    filter: grayscale(1);
+    /* filter: grayscale(1); */
 }
 
 .projectContent {
@@ -37,12 +37,22 @@
 
 .projectContent > img {
     /* width: 100%; */
-    height: 65%;
+    /* height: 65%; */
+    height: 80%;
+    flex:60%;
     transition: opacity 0.7s 0.3s;
+    
 }
 
 .singleProject:hover img{
-    opacity: 0;
+    /* opacity: 0.7;
+    filter: grayscale(1); */
+    filter: blur(4px);
+    transition: 1s filter ease-in-out;
+-webkit-transition: 1s -webkit-filter ease-in-out;
+-moz-transition: 1s -moz-filter ease-in-out;
+-ms-transition: 1s -ms-filter ease-in-out;
+-o-transition: 1s -o-filter ease-in-out;
 }
 
 .project--showcaseBtn {

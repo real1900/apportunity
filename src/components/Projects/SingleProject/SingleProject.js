@@ -9,15 +9,17 @@ function SingleProject({
   id,
   name,
   desc,
-  image,
   theme,
   onClick,
 }) {
 
   const imgStyle = {
-    opacity: 0.5
+    // opacity: 0.5
   }
 
+  
+
+  const image = require(`../../../assets/png/projects/${id}.png`);
 
   return (
     <button
