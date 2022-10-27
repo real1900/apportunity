@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import './Footer.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { headerData } from '../../data/headerData'
+import { Autorenew } from '@material-ui/icons'
 
 function Footer() {
 
@@ -17,13 +18,22 @@ function Footer() {
 
     return (
         <div className="footer" style={{backgroundColor: theme.secondary}}>
-            <p style={{color: theme.tertiary}}>
+            <img
+                src={headerData.image}
+                alt=""
+                className="footer--img"
+                style={{
+                    borderColor: theme.secondary,
+                }}
+            /> <p style={{color: theme.tertiary}}>
                 Made with  
                 <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
                     ❤
                 </span>
-                 by {shortname(headerData.name)}
+                 by {shortname(headerData.name)+ " Inc."}
+                 
             </p>
+           
         </div>
     )
 }

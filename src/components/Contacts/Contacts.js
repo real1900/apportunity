@@ -166,6 +166,11 @@ function Contacts() {
             id='contacts'
             style={{ backgroundColor: theme.secondary }}
         >
+            <div className="line-styling">
+                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
+                <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
+            </div>
             <div className='contacts--container'>
                 <h1 style={{ color: theme.primary }}>Contacts</h1>
                 <div className='contacts-body'>

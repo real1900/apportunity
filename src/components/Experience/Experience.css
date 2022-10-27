@@ -8,21 +8,22 @@
 
 .experience{
     min-height: 50vh;
-    padding: 20px;
-    padding-top: 100px;
     font-family: var(--primaryFont);
-}
-.experience {
     min-height: 100vh;
     position: relative;
 }
 
 .experience-body {
+    padding: 0px 1.2rem;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
     height: fit-content;
+}
+
+.experience-body > div{
+    padding: 0px 1.2rem;
 }
 
 .experience-card-description{
@@ -31,13 +32,10 @@
 }
 
 .experience-list{
-    padding-right: 2.5%;
-    padding-bottom: 2.5%;
+     padding: 0px 1.2rem;
 }
 
-.experience-column-left {
-    padding-bottom: 2.5%;
-}
+
 .experience-description {
     display: flex;
     flex-direction: column;
@@ -60,7 +58,7 @@
 .experience-description >h2 {
     margin-bottom: 40px;
     font-size: 3.5rem;
-   
+   padding: 0px 100px 0px 100px;
     text-align: center;
 }
 
@@ -71,7 +69,8 @@
 
 .experience-image > img{
     pointer-events: none;
-    width: 90%;
+    width: 80%;
+    padding: 1.2rem;
 }
 
 .expcard-img > img {

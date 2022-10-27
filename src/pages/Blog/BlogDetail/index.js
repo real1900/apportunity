@@ -101,8 +101,6 @@ function BlogDetail() {
             style={{
               opacity: `${drawerOpen ? "0" : "1"}`,
               borderColor: theme.secondary,
-              backgroundColor: "#fff",
-              objectFit: "contain",
             }}
           />
           <div
