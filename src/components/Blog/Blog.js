@@ -55,8 +55,8 @@ function Blog() {
 
   return (
     <>
-      (items !== undefined && items !== null) ?
-      {items.length > 0 && (
+      {(items !== undefined && items !== null)?
+      (items.length > 0) && (
         <div
           className="blog"
           id="blog"
@@ -98,9 +98,8 @@ function Blog() {
               </div>
             )}
           </div>
-        </div>
-      )}
-      <div></div>
+        </div>):
+      <div></div>}
     </>
   );
 };

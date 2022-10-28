@@ -90,6 +90,10 @@ function BlogDetail() {
 
   }, [location.pathname]);
 
+  if (location.state !== null){
+    console.log(location.state);
+  }
+
   return (
     <Transitions>
       <div className="blog-detail" style={{ backgroundColor: theme.primary }}>
@@ -99,15 +103,21 @@ function BlogDetail() {
             className="blog-detail--container-left"
             style={{ backgroundColor: theme.primary }}
           >
-            <div className='home' onClick={() => {
+             <div className='home' onClick={() => {
               EventEmitter.dispatch(
                 "routeChange",
                 EventEmitter.animation.backward
               );
-              navigate(-1);
+              if (location.state !== null){
+                navigate(-1);
+              } else {
+                navigate("/");
+              }
+             
             }}>
               <HiArrowLeft className={classes.home} />
-            </div>
+            </div> 
+          
           </div>
 
           <img
