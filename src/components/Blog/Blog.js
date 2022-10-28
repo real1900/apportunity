@@ -115,7 +115,7 @@ function Blog() {
 
             {items.length > 3 && (
               <div className="blog--viewAll">
-                <Link to="/blog">
+                <Link to="/blogs">
                   <button className={classes.viewAllBtn}>
                     View All
                     <HiArrowRight className={classes.viewArr} />
