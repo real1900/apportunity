@@ -9,7 +9,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { headerData } from "../../data/headerData";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../utils/events";
-import { read } from "feed-reader";
+import { fetchBlog } from "../../utils/blogFetcher";
 
 function BlogPage() {
   const [search, setSearch] = useState("");
@@ -74,40 +74,17 @@ function BlogPage() {
   const classes = useStyles();
   const navigate = useNavigate();
 
-  const [rssUrl] = useState("https://proxy1900.herokuapp.com/http://feeds.feedburner.com/appdevelopermagazine");
   const [items, setItems] = useState([]);
-
-
   useEffect(() => {
-
-
     const getRss = async (e) => {
-
-      read(rssUrl, {
-        useISODateFormat: false,
-        normalization: true,
-        getExtraEntryFields: (feedEntry) => {
-          const mediaContent = feedEntry["media:content"];
-          //  console.log(mediaContent["@_url"]);
-
-          return {
-            image: mediaContent["@_url"],
-          }
-        },
-
-      }, {
-        headers: {
-          "Access-Control-Allow-Origin": "*"
-        }
-      }).then(result => {
-        setItems(result.entries);
-    //    console.log(result.entries);
-      });
+      const blogٰItems = await fetchBlog();
+      setItems(blogٰItems);
     };
 
     getRss();
 
-  }, [rssUrl]);
+  }, []);
+
 
   return (
     <div className="blogPage" style={{ backgroundColor: theme.secondary }}>

@@ -7,11 +7,11 @@ import './SingleBlog.css'
 function SingleBlog({ theme, title, desc, date, image, url, id }) {
 
   const imgStyle = {
-    opacity: 0.8
+   // opacity: 0.8
 }
     return (
         <Fade bottom>
-               <Link key={id} to ={`/blog/${id}`}
+               <Link to ={`/blog/${id}`}
                 state = {{
                     id: id,
                     title : title,
@@ -19,7 +19,8 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
                     image : image,
                     url : url,
                     date: date,
-                }}>
+                }}
+                >
             <div className="singleBlog" key={id} style={{backgroundColor: theme.primary400}}>
                 <div className="singleBlog--image" style={{backgroundColor: theme.color}}>
                     <img 

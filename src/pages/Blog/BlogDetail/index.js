@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect, useParams } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useLocation } from "react-router";
 import "./blogDetail.css";
@@ -11,9 +11,14 @@ import BlogDetailBody from "./blogDetailBody";
 import {
   Contacts,
 } from "../../../components";
+import { fetchBlog } from "../../../utils/blogFetcher";
 
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
+
+  const location = useLocation();
+  const { title, image, id, date, url, } = location.state;
+
   const useStyles = makeStyles((t) => ({
     homeContainer: {
       position: "absolute",
@@ -73,8 +78,25 @@ function BlogDetail() {
 
   const classes = useStyles();
   const navigate = useNavigate();
-  const location = useLocation();
-  const { title, image, id, date, url, } = location.state;
+  
+
+  //"https://proxy.cors.sh/
+  const [blogItem, setBlogItem] = useState([]);
+  useEffect(() => {
+
+    const getRss = async (e) => {
+      const blogٰItems = await fetchBlog();
+      console.log(blogٰItems);
+      const _filterArr = blogٰItems.filter((v, i) => v.id === id);
+      var item = _filterArr.length > 0 ? _filterArr[0] : {};
+      console.log(item.link);
+      setBlogItem(item)
+    };
+
+    getRss();
+  
+
+  }, [id]);
 
   return (
     <Transitions>
@@ -98,7 +120,7 @@ function BlogDetail() {
           </div>
 
           <img
-            src={image}
+            src={blogItem.image}
             alt=""
             className="blog-detail--img"
             style={{
@@ -111,13 +133,13 @@ function BlogDetail() {
             style={{ backgroundColor: theme.secondary }}
           >
             <div className="lcr--content" style={{ color: theme.tertiary }}>
-              <h1>{title}</h1>
-              <p>{date}</p>
+              <h1>{blogItem.title}</h1>
+              <p>{blogItem.date}</p>
             </div>
           </div>
         </div>
       </div>
-      <BlogDetailBody {...id} guid={id} url={url} />
+      <BlogDetailBody {...blogItem.id} blogItem ={blogItem} url ={blogItem.link}/>
       <Contacts/>
     </Transitions>
   );

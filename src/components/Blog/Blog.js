@@ -6,7 +6,7 @@ import "./Blog.css";
 import { ThemeContext } from "../../contexts/ThemeContext";
 
 import SingleBlog from "./SingleBlog/SingleBlog";
-import { read } from "feed-reader";
+import { fetchBlog } from "../../utils/blogFetcher";
 
 function Blog() {
 
@@ -40,48 +40,22 @@ function Blog() {
   const classes = useStyles();
   //https://proxy1900.herokuapp.com/
   //"https://proxy.cors.sh/
-  const [rssUrl] = useState("https://proxy1900.herokuapp.com/http://feeds.feedburner.com/appdevelopermagazine");
   const [items, setItems] = useState([]);
-
-
   useEffect(() => {
     const getRss = async (e) => {
-
-      read(rssUrl, {
-        useISODateFormat: false,
-        normalization: true,
-        getExtraEntryFields: (feedEntry) => {
-          const mediaContent = feedEntry["media:content"];
-          const guid = feedEntry["guid"];
-          const uid = guid.substring(0, guid.length - 1);
-          const refinedId = uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
-
-          return {
-            image: mediaContent["@_url"],
-            id: refinedId,
-          }
-        },
-
-      }, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          'mode': "no-cors"
-        },
-        mode: 'no-cors',
-      }).then(result => {
-        setItems(result.entries);
-        //  console.log(result.entries);
-      });
+      const blogٰItems = await fetchBlog();
+      setItems(blogٰItems);
     };
 
     getRss();
 
-  }, [rssUrl]);
+  }, []);
 
 
 
   return (
     <>
+      (items !== undefined && items !== null) ?
       {items.length > 0 && (
         <div
           className="blog"
@@ -125,7 +99,7 @@ function Blog() {
             )}
           </div>
         </div>
-      )}
+      )} : null
     </>
   );
 };
