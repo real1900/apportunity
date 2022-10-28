@@ -1,17 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useLocation } from "react-router";
-import "./blogDetail.css";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
 import BlogDetailBody from "./blogDetailBody";
-import {
-  Contacts,
-} from "../../../components";
+import { Contacts } from "../../../components";
 import { fetchBlog } from "../../../utils/blogFetcher";
+import "./blogDetail.css";
 
 function BlogDetail() {
 
@@ -28,7 +26,6 @@ function BlogDetail() {
     },
     home: {
       color: theme.tertiary,
-
       position: "absolute",
       top: 25,
       left: 25,
@@ -93,8 +90,6 @@ function BlogDetail() {
 
   }, [location.pathname]);
 
-
-
   return (
     <Transitions>
       <div className="blog-detail" style={{ backgroundColor: theme.primary }}>
@@ -103,7 +98,6 @@ function BlogDetail() {
           <div
             className="blog-detail--container-left"
             style={{ backgroundColor: theme.primary }}
-
           >
             <div className='home' onClick={() => {
               EventEmitter.dispatch(
@@ -136,7 +130,7 @@ function BlogDetail() {
           </div>
         </div>
       </div>
-      <BlogDetailBody {...blogItem.id} url ={blogItem.link} id= {blogItem.id} blogItem = {blogItem}/>
+      <BlogDetailBody {...blogItem.id}/>
       <Contacts/>
     </Transitions>
   );

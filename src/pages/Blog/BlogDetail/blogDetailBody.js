@@ -4,24 +4,18 @@ import './blogDetailBody.css';
 import parse from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
 
-function BlogDetailBody({ url, blogItem}) {
+function BlogDetailBody() {
 
     const { id } = useParams();
     const [contents, setContents] = useState();
     const { theme } = useContext(ThemeContext);
-  
 
     useEffect(() => {
         const blogURL = "https://appdevelopermagazine.com"
         const replaceText = `src="${blogURL}/`
-
-        //console.log("ID:", id)
-        url = `${blogURL}/${id}/`
+        const url = `${blogURL}/${id}/`
         //console.log("URL SET ", url)
-
-
         fetch(url).then((resp) => { return resp.text() }).then((text) => {
-            // const textWithRelativeURL = text.replace('src="', replaceText);
             const parser = new DOMParser();
             const document = parser.parseFromString(text, "text/html");
             var object = document.getElementsByClassName("typography-sub-content-wrapper");
@@ -29,7 +23,7 @@ function BlogDetailBody({ url, blogItem}) {
             setContents(elements);
         })
 
-    }, [id, url,]);
+    }, [id]);
 
 
     return (
