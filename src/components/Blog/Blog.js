@@ -99,7 +99,8 @@ function Blog() {
             )}
           </div>
         </div>
-      )} : null
+      )}
+      <div></div>
     </>
   );
 };

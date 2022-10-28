@@ -7,13 +7,13 @@ import { ThemeContext } from "../../../contexts/ThemeContext";
 function BlogDetailBody({ url, }) {
 
     const { id } = useParams();
-    const [contents, setContents] = useState("<div></div>");
+    const [contents, setContents] = useState();
     const { theme } = useContext(ThemeContext);
     const blogURL = "https://appdevelopermagazine.com"
-    const replaceText = `src="${blogURL}`
+    const replaceText = `src="${blogURL}/`
 
     if (url === undefined || url == null) {
-       console.log("NO URL ")
+        console.log("NO URL ")
         // url = `${blogURL}/${id}`
         // console.log(url)
     }
@@ -21,7 +21,7 @@ function BlogDetailBody({ url, }) {
 
     useEffect(() => {
 
-        if (url !== null){
+        if (url !== null) {
             fetch(url).then((resp) => { return resp.text() }).then((text) => {
                 // const textWithRelativeURL = text.replace('src="', replaceText);
                 const parser = new DOMParser();
@@ -31,7 +31,7 @@ function BlogDetailBody({ url, }) {
                 setContents(elements);
             })
         }
-      
+
     }, [id, url, replaceText]);
 
 

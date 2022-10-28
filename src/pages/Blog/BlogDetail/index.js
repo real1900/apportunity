@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect, useParams } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { useLocation } from "react-router";
 import "./blogDetail.css";
@@ -15,10 +15,9 @@ import { fetchBlog } from "../../../utils/blogFetcher";
 
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
-
   const location = useLocation();
-  const { title, image, id, date, url, } = location.state;
-
+  const { id, } = location.state;
+  
   const useStyles = makeStyles((t) => ({
     homeContainer: {
       position: "absolute",
@@ -78,23 +77,18 @@ function BlogDetail() {
 
   const classes = useStyles();
   const navigate = useNavigate();
-  
-
   //"https://proxy.cors.sh/
   const [blogItem, setBlogItem] = useState([]);
   useEffect(() => {
 
     const getRss = async (e) => {
       const blogٰItems = await fetchBlog();
-      console.log(blogٰItems);
       const _filterArr = blogٰItems.filter((v, i) => v.id === id);
       var item = _filterArr.length > 0 ? _filterArr[0] : {};
-      console.log(item.link);
       setBlogItem(item)
     };
 
     getRss();
-  
 
   }, [id]);
 
@@ -134,12 +128,12 @@ function BlogDetail() {
           >
             <div className="lcr--content" style={{ color: theme.tertiary }}>
               <h1>{blogItem.title}</h1>
-              <p>{blogItem.date}</p>
+              <p>{blogItem.published}</p>
             </div>
           </div>
         </div>
       </div>
-      <BlogDetailBody {...blogItem.id} blogItem ={blogItem} url ={blogItem.link}/>
+      <BlogDetailBody {...blogItem.id} url ={blogItem.link}/>
       <Contacts/>
     </Transitions>
   );
