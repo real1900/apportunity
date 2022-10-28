@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useLocation } from "react-router";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { HiArrowLeft } from "react-icons/hi";
+import { FiHome } from "react-icons/fi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
@@ -27,6 +28,7 @@ function BlogDetail() {
     home: {
       color: theme.tertiary,
       position: "absolute",
+    
       top: 25,
       left: 25,
       padding: "7px",
@@ -48,15 +50,15 @@ function BlogDetail() {
       },
     },
     iconBtn: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: 40,
-      height: 40,
-      borderRadius: 50,
-      marginRight: 25,
-      border: `2px solid ${theme.tertiary}`,
-      color: theme.tertiary,
+      position: "absolute",
+      color: theme.secondary,
+      border: `3px solid ${theme.secondary}`,
+      padding:15,
+      left: 20,
+      top:20,
+      width: 80,
+      height: 80,
+      borderRadius:"20%",
       transition: "all 0.2s",
       "&:hover": {
         backgroundColor: theme.secondary,
@@ -90,13 +92,12 @@ function BlogDetail() {
 
   }, [location.pathname]);
 
-  if (location.state !== null){
-    console.log(location.state);
-  }
-
   return (
     <Transitions>
-      <div className="blog-detail" style={{ backgroundColor: theme.primary }}>
+      <div className="blog-detail" 
+      style={
+         { backgroundColor: theme.primary }
+        }>
         <div className="blog-detail--container">
 
           <div
@@ -104,10 +105,12 @@ function BlogDetail() {
             style={{ backgroundColor: theme.primary }}
           >
              <div className='home' onClick={() => {
+
               EventEmitter.dispatch(
                 "routeChange",
                 EventEmitter.animation.backward
               );
+
               if (location.state !== null){
                 navigate(-1);
               } else {
@@ -115,7 +118,11 @@ function BlogDetail() {
               }
              
             }}>
-              <HiArrowLeft className={classes.home} />
+              {
+              (location.state !== null) ? 
+               <HiArrowLeft className={classes.iconBtn} /> :
+               <FiHome className={classes.iconBtn} />
+                }
             </div> 
           
           </div>

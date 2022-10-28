@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
 .blog-detail--container {
@@ -12,8 +11,6 @@
   justify-content: center;
   height: 100%;
   position: relative;
-  
-  
 }
 
 .blog-detail--img {
@@ -40,7 +37,6 @@
 }
 
 .lcl--content {
-  
   margin: 3rem;
   width: 100%;
   display: flex;
@@ -59,7 +55,7 @@
 }
 
 .blog-detail--container-right {
-  
+ 
   flex: 65%;
   min-height: 76vh;
   display: flex;

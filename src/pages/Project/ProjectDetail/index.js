@@ -51,15 +51,15 @@ function ProjectDetail() {
       },
     },
     iconBtn: {
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      width: 40,
-      height: 40,
-      borderRadius: 50,
-      marginRight: 25,
-      border: `2px solid ${theme.tertiary}`,
-      color: theme.tertiary,
+      position: "absolute",
+      color: theme.secondary,
+      border: `3px solid ${theme.secondary}`,
+      padding: 15,
+      left: 20,
+      top: 20,
+      width: 80,
+      height: 80,
+      borderRadius: "20%",
       transition: "all 0.2s",
       "&:hover": {
         backgroundColor: theme.secondary,
@@ -89,14 +89,14 @@ const  navigate = useNavigate();
           style={{ backgroundColor: theme.primary }}
           
         >
-          <div className ='home' onClick={() => {
+            <div onClick={() => {
             EventEmitter.dispatch(
               "routeChange",
               EventEmitter.animation.backward
             );
               navigate(-1);
           }}>
-                <HiArrowLeft className={classes.home}/>
+              <HiArrowLeft className={classes.iconBtn} />
                 </div>
         </div>
         
@@ -118,7 +118,7 @@ const  navigate = useNavigate();
           <div className="lcr--content" style={{ color: theme.tertiary }}>
             <h1>{data.projectName}</h1>
             <p>{data.projectDesc}</p>
-            <div
+            {/* <div
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -142,7 +142,7 @@ const  navigate = useNavigate();
               >
                 <FaCode className={classes.icon} aria-label="Code" />
               </a>
-            </div>
+            </div> */}
            
           </div>
         </div>
