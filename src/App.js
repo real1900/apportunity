@@ -23,14 +23,14 @@ function AnimatedSwitch() {
 
   return (
     <AnimatePresence mode='wait'>
-        <Routes>
-          <Route path="/" exact element={<Main />} /> 
-          <Route path="/blog" exact element={<BlogPage />} />
-          <Route path="/projects" exact element={<ProjectPage />} />
-          <Route path="/project/:id" exact element={<ProjectDetail />} />
-          <Route path="/blog/:id" exact element={<BlogDetail />} />
-        </Routes>
-        </AnimatePresence >
+      <Routes>
+        <Route path="/" exact element={<Main />} />
+        <Route path="/blogs" exact element={<BlogPage />} />
+        <Route path="/projects" exact element={<ProjectPage />} />
+        <Route path="/project/:id" exact element={<ProjectDetail />} />
+        <Route path="/blog/:id" exact element={<BlogDetail />} />
+      </Routes>
+    </AnimatePresence >
   );
 };
 
