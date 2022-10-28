@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useParams } from "react-router";
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { projectsData } from "../../../data/projectsData";
-import { FaPlay, FaCode } from "react-icons/fa";
+// import { FaPlay, FaCode } from "react-icons/fa";
 import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
