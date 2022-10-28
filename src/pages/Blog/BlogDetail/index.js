@@ -8,6 +8,9 @@ import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
 import BlogDetailBody from "./blogDetailBody";
+import {
+  Contacts,
+} from "../../../components";
 
 function BlogDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -115,6 +118,7 @@ function BlogDetail() {
         </div>
       </div>
       <BlogDetailBody {...id} guid={id} url={url} />
+      <Contacts/>
     </Transitions>
   );
 }

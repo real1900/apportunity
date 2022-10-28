@@ -10,6 +10,10 @@ import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
 import ProjectBody from "./projectBody";
+import {
+  Contacts,
+  // Achievement,
+} from "../../../components";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -148,6 +152,7 @@ const  navigate = useNavigate();
       </div>
     </div>
     <ProjectBody {...id} />
+    <Contacts/>
     </Transitions>
   );
 }

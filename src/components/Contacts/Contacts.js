@@ -172,8 +172,9 @@ function Contacts() {
                 <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
             </div>
             <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contacts</h1>
-                <div className='contacts-body'>
+                <h1 style={{ color: theme.primary }}>Contact Us</h1>
+                <p style={{ color: theme.tertiary }}> Learn how Apportunity's product design and app development services can help you build better mobile relationships with your customers. Let's Talk About Your Project!.</p>
+                  <div className='contacts-body'>
                     <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>

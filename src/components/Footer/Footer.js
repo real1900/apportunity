@@ -2,7 +2,6 @@ import React, { useContext } from 'react'
 import './Footer.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { headerData } from '../../data/headerData'
-import { Autorenew } from '@material-ui/icons'
 
 function Footer() {
 
