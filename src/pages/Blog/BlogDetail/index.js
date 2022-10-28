@@ -14,10 +14,10 @@ import {
 import { fetchBlog } from "../../../utils/blogFetcher";
 
 function BlogDetail() {
+
   const { theme, drawerOpen } = useContext(ThemeContext);
   const location = useLocation();
-  const { id, } = location.state;
-  
+
   const useStyles = makeStyles((t) => ({
     homeContainer: {
       position: "absolute",
@@ -81,16 +81,19 @@ function BlogDetail() {
   const [blogItem, setBlogItem] = useState([]);
   useEffect(() => {
 
+    let lastPath = location.pathname.split("/").pop()
     const getRss = async (e) => {
       const blogٰItems = await fetchBlog();
-      const _filterArr = blogٰItems.filter((v, i) => v.id === id);
+      const _filterArr = blogٰItems.filter((v, i) => v.id === lastPath);
       var item = _filterArr.length > 0 ? _filterArr[0] : {};
       setBlogItem(item)
     };
 
     getRss();
 
-  }, [id]);
+  }, [location.pathname]);
+
+
 
   return (
     <Transitions>
@@ -133,7 +136,7 @@ function BlogDetail() {
           </div>
         </div>
       </div>
-      <BlogDetailBody {...blogItem.id} url ={blogItem.link}/>
+      <BlogDetailBody {...blogItem.id} url ={blogItem.link} id= {blogItem.id} blogItem = {blogItem}/>
       <Contacts/>
     </Transitions>
   );

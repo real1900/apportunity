@@ -4,35 +4,32 @@ import './blogDetailBody.css';
 import parse from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
 
-function BlogDetailBody({ url, }) {
+function BlogDetailBody({ url, blogItem}) {
 
     const { id } = useParams();
     const [contents, setContents] = useState();
     const { theme } = useContext(ThemeContext);
-    const blogURL = "https://appdevelopermagazine.com"
-    const replaceText = `src="${blogURL}/`
-
-    if (url === undefined || url == null) {
-        console.log("NO URL ")
-        // url = `${blogURL}/${id}`
-        // console.log(url)
-    }
-
+  
 
     useEffect(() => {
+        const blogURL = "https://appdevelopermagazine.com"
+        const replaceText = `src="${blogURL}/`
 
-        if (url !== null) {
-            fetch(url).then((resp) => { return resp.text() }).then((text) => {
-                // const textWithRelativeURL = text.replace('src="', replaceText);
-                const parser = new DOMParser();
-                const document = parser.parseFromString(text, "text/html");
-                var object = document.getElementsByClassName("typography-sub-content-wrapper");
-                var elements = parse(object[0].innerHTML.replace('src="', replaceText));//console.log(elements); 
-                setContents(elements);
-            })
-        }
+        //console.log("ID:", id)
+        url = `${blogURL}/${id}/`
+        //console.log("URL SET ", url)
 
-    }, [id, url, replaceText]);
+
+        fetch(url).then((resp) => { return resp.text() }).then((text) => {
+            // const textWithRelativeURL = text.replace('src="', replaceText);
+            const parser = new DOMParser();
+            const document = parser.parseFromString(text, "text/html");
+            var object = document.getElementsByClassName("typography-sub-content-wrapper");
+            var elements = parse(object[0].innerHTML.replace('src="', replaceText));
+            setContents(elements);
+        })
+
+    }, [id, url,]);
 
 
     return (

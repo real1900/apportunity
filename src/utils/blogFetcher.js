@@ -14,7 +14,7 @@ async function fetchBlog() {
                 const mediaContent = feedEntry["media:content"];
                 const guid = feedEntry["guid"];
                 const uid = guid.substring(0, guid.length - 1);
-                const refinedId = uid.substring(uid.lastIndexOf('/') + 1, uid.length - 1)
+                const refinedId = uid.substring(uid.lastIndexOf('/') + 1, uid.length)
 
                 return {
                     image: mediaContent["@_url"],
