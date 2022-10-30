@@ -9,7 +9,7 @@ import { EventEmitter } from "../../utils/events";
 import Transitions from "../../pages/Transitions";
 import Contacts from "../Contacts/Contacts";
 
-function PageDetail() {
+function PageDetail({image, header, body}) {
   const { theme, drawerOpen } = useContext(ThemeContext);
 
   const useStyles = makeStyles((t) => ({
@@ -94,7 +94,7 @@ function PageDetail() {
           </div>
 
           <img
-            src={this.props.image}
+            src={image}
             alt=""
             className="page-detail--img"
             style={{
@@ -108,12 +108,11 @@ function PageDetail() {
             className="page-detail--container-right"
             style={{ backgroundColor: theme.secondary }}
           >
-            <div className="lcr--content">{this.props.header}</div>
-            
+            <div className="lcr--content">{header}</div>
           </div>
         </div>
       </div>
-      {this.props.body}
+      {body}
       <Contacts />
     </Transitions>
   );

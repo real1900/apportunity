@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes
 } from "react-router-dom";
@@ -39,7 +39,7 @@ function AnimatedSwitch() {
 function App() {
   return (
     <div className="app">
-      <Router>
+      <Router baseline="/">
         <ScrollToTop />
         <AnimatedSwitch />
       </Router>
