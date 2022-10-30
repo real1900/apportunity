@@ -12,6 +12,8 @@ import "./App.css";
 import { EventEmitter } from "./utils/events";
 import BlogDetail from "./pages/Blog/BlogDetail";
 import PrivacyPolicy from "./pages/Privacy";
+import MessengerCustomerChat from 'react-messenger-customer-chat';
+
 
 function AnimatedSwitch() {
   const [animationClassNames, setAnimationClassNames] = useState("");
@@ -43,6 +45,10 @@ function App() {
         <ScrollToTop />
         <AnimatedSwitch />
       </Router>
+      <MessengerCustomerChat
+        pageId="118398932896752"
+        appId="872759943882027"
+      />
       <BackToTop />
     </div>
   );
