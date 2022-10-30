@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router";
 import './markdown.css';
 import Markdown from 'markdown-to-jsx';
 import { ThemeContext } from "../../contexts/ThemeContext";
