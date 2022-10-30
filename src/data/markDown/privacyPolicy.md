@@ -1,12 +1,3 @@
-
-**PRIVACY NOTICE**
-
-  
-
-**Last updated October 30, 2022**
-
-    
-
 This privacy notice for Apportunity Inc. ("**Company**," "**we**," "**us**," or "**our**"), describes how and why we might collect, store, use, and/or share ("**process**") your information when you use our services ("**Services**"), such as when you:
 
 *   Visit our website at [http://www.apportunity.io](http://www.apportunity.io), or any website of ours that links to this privacy notice
