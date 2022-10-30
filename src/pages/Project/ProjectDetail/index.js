@@ -8,9 +8,9 @@ import { HiArrowLeft } from "react-icons/hi";
 import { EventEmitter } from "../../../utils/events";
 import Transitions from "../../Transitions";
 import { useNavigate } from "react-router-dom";
-import ProjectBody from "./projectBody";
 import { Contacts } from "../../../components";
 import "./projectDetail.css";
+import MarkDownReader from "../../../components/MarkDownReader";
 
 function ProjectDetail() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -76,49 +76,50 @@ function ProjectDetail() {
   }));
 
   const classes = useStyles();
-const  navigate = useNavigate();
+  const navigate = useNavigate();
   const image = require(`../../../assets/png/projects/${id}.png`);
+  const markDownFile = require("../../../data/markDown/1.md");
 
   return (
     <Transitions>
-    <div className="project-detail"  style={{ backgroundColor: theme.primary }}>
-      <div className="project-detail--container">
-      
-        <div
-          className="project-detail--container-left"
-          style={{ backgroundColor: theme.primary }}
-          
-        >
+      <div className="project-detail" style={{ backgroundColor: theme.primary }}>
+        <div className="project-detail--container">
+
+          <div
+            className="project-detail--container-left"
+            style={{ backgroundColor: theme.primary }}
+
+          >
             <div onClick={() => {
-            EventEmitter.dispatch(
-              "routeChange",
-              EventEmitter.animation.backward
-            );
+              EventEmitter.dispatch(
+                "routeChange",
+                EventEmitter.animation.backward
+              );
               navigate(-1);
-          }}>
+            }}>
               <HiArrowLeft className={classes.iconBtn} />
-                </div>
-        </div>
-        
-        <img
-          src={image}
-          alt=""
-          className="project-detail--img"
-          style={{
-            opacity: `${drawerOpen ? "0" : "1"}`,
-            borderColor: theme.secondary,
-            backgroundColor: "#fff",
-            objectFit: "contain",
-          }}
-        />
-        <div
-          className="project-detail--container-right"
-          style={{ backgroundColor: theme.secondary }}
-        >
-          <div className="lcr--content" style={{ color: theme.tertiary }}>
-            <h1>{data.projectName}</h1>
-            <p>{data.projectDesc}</p>
-            {/* <div
+            </div>
+          </div>
+
+          <img
+            src={image}
+            alt=""
+            className="project-detail--img"
+            style={{
+              opacity: `${drawerOpen ? "0" : "1"}`,
+              borderColor: theme.secondary,
+              backgroundColor: "#fff",
+              objectFit: "contain",
+            }}
+          />
+          <div
+            className="project-detail--container-right"
+            style={{ backgroundColor: theme.secondary }}
+          >
+            <div className="lcr--content" style={{ color: theme.tertiary }}>
+              <h1>{data.projectName}</h1>
+              <p>{data.projectDesc}</p>
+              {/* <div
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -143,13 +144,13 @@ const  navigate = useNavigate();
                 <FaCode className={classes.icon} aria-label="Code" />
               </a>
             </div> */}
-           
+
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <ProjectBody {...id} />
-    <Contacts/>
+      <MarkDownReader markDownFile={markDownFile} />
+      <Contacts />
     </Transitions>
   );
 }

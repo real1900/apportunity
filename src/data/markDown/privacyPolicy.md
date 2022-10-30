@@ -440,8 +440,6 @@ A. Identifiers
 
 Contact details, such as real name, alias, postal address, telephone or mobile contact number, unique personal identifier, online identifier, Internet Protocol address, email address, and account name
 
-  
-
 NO
 
   
@@ -449,8 +447,6 @@ NO
 B. Personal information categories listed in the California Customer Records statute
 
 Name, contact information, education, employment, employment history, and financial information
-
-  
 
 NO
 
@@ -460,8 +456,6 @@ C. Protected classification characteristics under California or federal law
 
 Gender and date of birth
 
-  
-
 NO
 
   
@@ -469,8 +463,6 @@ NO
 D. Commercial information
 
 Transaction information, purchase history, financial details, and payment information
-
-  
 
 NO
 
@@ -480,8 +472,6 @@ E. Biometric information
 
 Fingerprints and voiceprints
 
-  
-
 NO
 
   
@@ -489,8 +479,6 @@ NO
 F. Internet or other similar network activity
 
 Browsing history, search history, online behavior, interest data, and interactions with our and other websites, applications, systems, and advertisements
-
-  
 
 NO
 
@@ -500,8 +488,6 @@ G. Geolocation data
 
 Device location
 
-  
-
 NO
 
   
@@ -509,8 +495,6 @@ NO
 H. Audio, electronic, visual, thermal, olfactory, or similar information
 
 Images and audio, video or call recordings created in connection with our business activities
-
-  
 
 NO
 
@@ -520,8 +504,6 @@ I. Professional or employment-related information
 
 Business contact details in order to provide you our Services at a business level or job title, work history, and professional qualifications if you apply for a job with us
 
-  
-
 NO
 
   
@@ -530,8 +512,6 @@ J. Education Information
 
 Student records and directory information
 
-  
-
 NO
 
   
@@ -539,8 +519,6 @@ NO
 K. Inferences drawn from other personal information
 
 Inferences drawn from any of the collected personal information listed above to create a profile or summary about, for example, an individual’s preferences and characteristics
-
-  
 
 NO
 
@@ -674,15 +652,7 @@ We may update this privacy notice from time to time. The updated version will be
 
   
 
-If you have questions or comments about this notice, you may email us at info@apportunity.io or by post to:
-
-  
-
-Apportunity Inc.
-
-\_\_\_\_\_\_\_\_\_\_
-
-\_\_\_\_\_\_\_\_\_\_
+If you have questions or comments about this notice, you may email us at info@apportunity.io .
 
   
 
@@ -691,6 +661,3 @@ Apportunity Inc.
   
 
 Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, change that information, or delete it. To request to review, update, or delete your personal information, please visit: [http://www.apportunity.io](http://www.apportunity.io).
-
-ul { list-style-type: square; } ul > li > ul { list-style-type: circle; } ul > li > ul > li > ul { list-style-type: square; } ol li { font-family: Arial ; }
-

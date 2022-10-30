@@ -11,6 +11,7 @@ import { AnimatePresence } from 'framer-motion';
 import "./App.css";
 import { EventEmitter } from "./utils/events";
 import BlogDetail from "./pages/Blog/BlogDetail";
+import PrivacyPolicy from "./pages/Privacy";
 
 function AnimatedSwitch() {
   const [animationClassNames, setAnimationClassNames] = useState("");
@@ -26,6 +27,7 @@ function AnimatedSwitch() {
       <Routes>
         <Route path="/" exact element={<Main />} />
         <Route path="/blogs" exact element={<BlogPage />} />
+        <Route path="/privacy" exact element={<PrivacyPolicy />} />
         <Route path="/projects" exact element={<ProjectPage />} />
         <Route path="/project/:id" exact element={<ProjectDetail />} />
         <Route path="/blog/:id" exact element={<BlogDetail />} />
