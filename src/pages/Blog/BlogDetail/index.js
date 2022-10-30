@@ -76,7 +76,6 @@ function BlogDetail() {
 
   const classes = useStyles();
   const navigate = useNavigate();
-  //"https://proxy.cors.sh/
   const [blogItem, setBlogItem] = useState([]);
   useEffect(() => {
 

@@ -38,8 +38,6 @@ function Blog() {
   }));
 
   const classes = useStyles();
-  //https://proxy1900.herokuapp.com/
-  //"https://proxy.cors.sh/
   const [items, setItems] = useState([]);
   useEffect(() => {
     const getRss = async (e) => {
