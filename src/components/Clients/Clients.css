@@ -3,8 +3,8 @@
 .clients > div {
     display: flex;
     flex-direction: column;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .client--name{
