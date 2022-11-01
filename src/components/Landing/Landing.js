@@ -10,6 +10,7 @@ import { socialsData } from "../../data/socialsData";
 
 import {
   FaTwitter,
+  FaFacebookSquare,
   FaLinkedin,
   FaGithub,
   FaYoutube,
@@ -81,6 +82,15 @@ function Landing() {
                   className="landing--social"
                   style={{ color: theme.secondary }}
                   aria-label="LinkedIn"
+                />
+              </a>
+            )}
+            {socialsData.facebook && (
+              <a href={socialsData.facebook} target="_blank" rel="noreferrer">
+                <FaFacebookSquare
+                  className="landing--social"
+                  style={{ color: theme.secondary }}
+                  aria-label="Facebook"
                 />
               </a>
             )}

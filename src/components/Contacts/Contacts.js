@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
     FaTwitter,
     FaLinkedinIn,
+    FaFacebook,
     FaGithub,
     FaYoutube,
     FaBloggerB,
@@ -347,6 +348,16 @@ function Contacts() {
                                     className={classes.socialIcon}
                                 >
                                     <FaLinkedinIn aria-label='LinkedIn' />
+                                </a>
+                            )}
+                            {socialsData.facebook && (
+                                <a
+                                    href={socialsData.facebook}
+                                    target='_blank'
+                                    rel='noreferrer'
+                                    className={classes.socialIcon}
+                                >
+                                    <FaFacebook aria-label='Facebook' />
                                 </a>
                             )}
                             {socialsData.instagram && (
