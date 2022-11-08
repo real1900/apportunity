@@ -5,13 +5,12 @@ import { makeStyles } from "@material-ui/core/styles";
 import { useNavigate, Link } from 'react-router-dom';
 import { HiArrowLeft } from "react-icons/hi";
 import "./ProjectPage.css";
-import { SingleProject } from "../../components";
+import { Footer, SingleProject, Contacts } from "../../components";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { projectsData } from "../../data/projectsData";
 import { headerData } from "../../data/headerData";
 import { EventEmitter } from "../../utils/events";
 import Transitions from "../Transitions";
-
 
 function ProjectPage() {
 
@@ -138,7 +137,11 @@ function ProjectPage() {
               ))}
             </Grid>
           </div>
+          
         </div>
+        <Contacts />
+        <Footer/>
+
       </div></Transitions>
   );
 };

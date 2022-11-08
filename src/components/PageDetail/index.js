@@ -8,6 +8,7 @@ import { ThemeContext } from "../../contexts/ThemeContext";
 import { EventEmitter } from "../../utils/events";
 import Transitions from "../../pages/Transitions";
 import Contacts from "../Contacts/Contacts";
+import Footer from "../Footer/Footer";
 
 function PageDetail({image, header, body}) {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -114,6 +115,7 @@ function PageDetail({image, header, body}) {
       </div>
       {body}
       <Contacts />
+      <Footer />
     </Transitions>
   );
 }

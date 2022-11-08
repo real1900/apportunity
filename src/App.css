@@ -5,6 +5,7 @@
 }
 
 
+
 .slide-forward-enter, .slide-forward-exit {
     transition: transform 1000ms ease-out;
 }

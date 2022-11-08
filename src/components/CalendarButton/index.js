@@ -1,17 +1,31 @@
 
-import { Button } from "@material-ui/core";
+import { Box, Button, Modal, Typography } from "@material-ui/core";
 import React, { useState, useContext, } from "react";
-import { PopupModal } from "react-calendly";
+import { InlineWidget } from "react-calendly";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { makeStyles } from "@material-ui/core/styles";
+import "./CalendarButton.css"
 
-//apportunity
 function CalendarButton({ title }) {
 
     const [isOpen, setIsOpen] = useState(false);
     const { theme } = useContext(ThemeContext);
-
     const useStyles = makeStyles((t) => ({
+
+        caledarModal: {
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+        },
+        modalContainer: {
+            borderRadius: "30px",
+            width: "80%",
+            height: "95%",
+            backgroundColor: "#f03939",
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
 
         contactBtn: {
             backgroundColor: theme.primary,
@@ -40,8 +54,8 @@ function CalendarButton({ title }) {
         backgroundColor: theme.primaryColor,
         hideEventTypeDetails: false,
         hideLandingPageDetails: false,
-        primaryColor: theme.secondary,
-        textColor: theme.primaryColor
+        primaryColor: theme.primary,
+        textColor: theme.secondary
     }
 
     //     const utm = {
@@ -87,21 +101,25 @@ function CalendarButton({ title }) {
         >{title}</Button>
     } else {
 
-        content = <PopupModal
-            url="https://calendly.com/apportunity"
-            pageSettings={pageSettings}
-            // utm={utm}
-            // prefill={prefill}
-            onModalClose={() => {
+        content = <Modal
+            className={classes.caledarModal}
+            onClose={() => {
                 setIsOpen(false);
             }}
             open={isOpen}
-            /*
-             * react-calendly uses React's Portal feature (https://reactjs.org/docs/portals.html) to render the popup modal. As a result, you'll need to
-             * specify the rootElement property to ensure that the modal is inserted into the correct domNode.
-             */
             rootElement={document.getElementById("root")}
-        />
+        >
+            <Box className={classes.modalContainer}>
+
+                <InlineWidget
+                    styles={{ width: "97%", height: "97%" }}
+                    url="https://calendly.com/apportunity"
+                    pageSettings={pageSettings}
+                // utm={utm}
+                // prefill={prefill}
+                ></InlineWidget>
+            </Box>
+        </Modal>
     }
 
     return <div>{content}</div>

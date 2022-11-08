@@ -4,7 +4,7 @@ import { Grid } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { useNavigate } from "react-router";
 import "./BlogPage.css";
-import { SingleBlog } from "../../components";
+import { Contacts, Footer, SingleBlog } from "../../components";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { headerData } from "../../data/headerData";
 import { HiArrowLeft } from "react-icons/hi";
@@ -142,6 +142,8 @@ function BlogPage() {
           </Grid>
         </div>
       </div>
+      <Contacts />
+      <Footer />
     </div>
   );
 };
