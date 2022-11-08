@@ -16,6 +16,7 @@ import {
   FaYoutube,
   FaBlogger,
 } from "react-icons/fa";
+import CalendarButton from "../CalendarButton";
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
@@ -155,7 +156,7 @@ function Landing() {
                 <Button className={classes.resumeBtn}>Contact Us</Button>
               </NavLink>
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
-                <Button className={classes.contactBtn}>Request quote</Button>
+                <CalendarButton title={"Request a quote"} />
               </NavLink>
             </div>
           </div>
