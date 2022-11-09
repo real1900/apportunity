@@ -1,5 +1,5 @@
 
-import { Box, Button, Modal, Typography } from "@material-ui/core";
+import { Box, Button, Modal } from "@material-ui/core";
 import React, { useState, useContext, } from "react";
 import { InlineWidget } from "react-calendly";
 import { ThemeContext } from "../../contexts/ThemeContext";

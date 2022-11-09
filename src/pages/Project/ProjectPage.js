@@ -122,9 +122,10 @@ function ProjectPage() {
               justifyContent="center"
             >
               {filteredArticles.map((project) => (
-                <Link to={`/project/${project.id}`}>
+                <Link to={`/project/${project.id}`} 
+                key={project.id}>
                   <SingleProject
-                    key={project.id}
+                  
                     theme={theme}
                     id={project.id}
                     name={project.projectName}
