@@ -67,6 +67,7 @@ function Projects() {
                     key={project.id}
                     theme={theme}
                     id={project.id}
+                    companyName ={project.companyName}
                     name={project.projectName}
                     desc={project.projectDesc}
                     image={project.image}

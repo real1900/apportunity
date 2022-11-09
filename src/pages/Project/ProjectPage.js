@@ -125,10 +125,10 @@ function ProjectPage() {
                 <Link to={`/project/${project.id}`} 
                 key={project.id}>
                   <SingleProject
-                  
                     theme={theme}
                     id={project.id}
                     name={project.projectName}
+                    companyName={project.companyName}
                     desc={project.projectDesc}
                     tags={project.tags}
                     code={project.code}

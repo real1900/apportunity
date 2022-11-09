@@ -8,6 +8,7 @@ import "./SingleProject.css";
 function SingleProject({
   id,
   name,
+  companyName,
   desc,
   theme,
   onClick,
@@ -35,10 +36,11 @@ function SingleProject({
           <div className="projectContent">
             <h2
               id={name.replace(" ", "-").toLowerCase()}
-              style={{ color: theme.tertiary }}
+              style={{ color: theme.secondary }}
             >
               {name}
             </h2>
+           
             <img className="grayScale" src={image ? image : placeholder} style={imgStyle} alt={name} />
             <div className="project--showcaseBtn">
               {/* <a
@@ -73,6 +75,12 @@ function SingleProject({
                 />
               </a> */}
             </div>
+            <h3
+              id={name.replace(" ", "-").toLowerCase()}
+              style={{ color: theme.tertiary }}
+            >
+              {companyName}
+            </h3>
           </div>
           <p
             className="project--desc"

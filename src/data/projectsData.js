@@ -62,8 +62,14 @@ export const projectsData = [
         id: 7,
         projectName: 'Backstage',
         companyName: 'Apple Inc.',
-        projectDesc: 'An app used by Apple for Apple Stores around the world to manage back of the house activities such as management of delieveries, inventory and returns ',
-
-        enterpriseApp: false,
+        projectDesc: 'An app used by Apple Inc. for Apple Stores around the world to manage back of the house activities such as management of delieveries, inventory and returns ',
+        enterpriseApp: true,
+    },
+    {
+        id: 8,
+        projectName: 'Hubble',
+        companyName: 'Apple Inc.',
+        projectDesc: 'An app created by us for Apple Inc. for Apple IT Staff to manage and monitor cloud infrastructure such as iTunes and iCloud datacenters across Apple',
+        enterpriseApp: true,
     },
 ]
