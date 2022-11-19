@@ -1,27 +1,53 @@
 .container {
   position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 }
-.video {
-  position: absolute;
-  width: auto;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
+
 
 .video-thumb {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   transition: opacity 400ms ease 0ms;
 }
 .tiny {
   filter: blur(20px);
   transform: scale(1.1);
   transition: visibility 0ms ease 400ms;
+}
+
+html,body {
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+}
+#videoBG {
+    position:fixed;
+    z-index: -1;
+}
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+        width:100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        width:auto;
+        height: 100%;
+    }
+    body {
+        background: url('/../apportunity/src/assets/png/video/blur.jpg');
+        background-size: cover;
+    }
 }
