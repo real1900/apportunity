@@ -18,7 +18,7 @@ function SingleProject({
     // opacity: 0.5
   }
 
-  
+
 
   const image = require(`../../../assets/png/projects/${id}.png`);
 
@@ -40,7 +40,14 @@ function SingleProject({
             >
               {name}
             </h2>
-           
+
+            <h3
+              id={name.replace(" ", "-").toLowerCase()}
+              style={{ color: theme.tertiary }}
+            >
+              {companyName}
+            </h3>
+
             <img className="grayScale" src={image ? image : placeholder} style={imgStyle} alt={name} />
             <div className="project--showcaseBtn">
               {/* <a
@@ -75,12 +82,6 @@ function SingleProject({
                 />
               </a> */}
             </div>
-            <h3
-              id={name.replace(" ", "-").toLowerCase()}
-              style={{ color: theme.tertiary }}
-            >
-              {companyName}
-            </h3>
           </div>
           <p
             className="project--desc"

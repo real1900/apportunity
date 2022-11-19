@@ -18,6 +18,7 @@ import {
   Services,
   // Achievement,
 } from "../../components";
+import Video from "../../components/Video/Video";
 import { headerData } from "../../data/headerData";
 
 function Main() {
@@ -28,7 +29,7 @@ function Main() {
           <title>{headerData.name}.io</title>
         </Helmet>
         <Navbar />
-
+        <Video />
         <Landing />
         <About />
         {/* <Education /> */}

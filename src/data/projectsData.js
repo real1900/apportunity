@@ -3,7 +3,7 @@ export const projectsData = [
     {
         id: 1,
         projectName: 'CBS Interactive',
-        companyName:'CBS',
+        companyName:'CBS Inc.',
         projectDesc: 'This app lets users watch full episodes of their favorite shows from CBS - America’s most watched network. This app was built using Swift and Objective-C',
 
         enterpriseApp: false,
@@ -12,7 +12,7 @@ export const projectsData = [
     {
         id: 2,
         projectName: 'DirecTV iPad App',
-        companyName: 'DirecTV',
+        companyName: 'DirecTV Inc.',
         projectDesc: 'An extremely app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
 
         enterpriseApp: false,
@@ -21,7 +21,7 @@ export const projectsData = [
     {
         id: 3,
         projectName: 'Submission',
-        companyName: 'Submission',
+        companyName: 'Submission Inc.',
         projectDesc: "A reference and utility app that calculates events based on solar and lunar calendar, sunset and sunrise times for a user's location and allows for reading publications such as books and newsletters online or offline, take notes , search text materials and stream or download audio visual content.",
 
         enterpriseApp: false,
@@ -34,7 +34,7 @@ export const projectsData = [
     {
         id: 4,
         projectName: 'LOOSID',
-        companyName: 'Loosid App',
+        companyName: 'Loosid App LLC',
         projectDesc: 'An extremely useful app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
 
         enterpriseApp: false,
@@ -46,15 +46,13 @@ export const projectsData = [
         projectName: 'Ask N Expert',
         companyName: 'GE Software',
         projectDesc: 'This app allows GE technicians to have instant access to have video calls and share media conveniently to shorten the time taken to resolve outages, and more',
-
         enterpriseApp:true,
     },
     {
         id: 6,
         projectName: 'EZ Golf League',
-        companyName: 'EZ Golf League',
+        companyName: 'EZ Golf League LLC.',
         projectDesc: 'EZ Golf League is great for golf club and golf league admins and golfers. With EZ Golf League you will get live scoring, live leaderboard, online payment structure and automated tracking of your entire club online.',
-
         enterpriseApp: false,
         android: "https://play.google.com/store/apps/details?id=com.ezgolfleague.golfapp&hl=en",
     },
@@ -70,6 +68,13 @@ export const projectsData = [
         projectName: 'Hubble',
         companyName: 'Apple Inc.',
         projectDesc: 'An app created by us for Apple Inc. for Apple IT Staff to manage and monitor cloud infrastructure such as iTunes and iCloud datacenters across Apple',
+        enterpriseApp: true,
+    },
+    {
+        id: 9,
+        projectName: 'SPEAR',
+        companyName: 'Apple Inc.',
+        projectDesc: "An iOS and Apple Watch app created by us for Apple Inc. for Apple IT Staff to record health hazards across Apple manufacturing facilities using just the Apple Watch and transfer to Apple's incident management system",
         enterpriseApp: true,
     },
 ]

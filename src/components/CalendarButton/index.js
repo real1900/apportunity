@@ -51,11 +51,12 @@ function CalendarButton({ title }) {
     }));
     const classes = useStyles();
     const pageSettings = {
-        backgroundColor: theme.primaryColor,
         hideEventTypeDetails: false,
         hideLandingPageDetails: false,
         primaryColor: theme.primary,
-        textColor: theme.secondary
+        textColor: theme.secondary,
+        backgroundColor: theme.primary,
+        
     }
 
     //     const utm = {
