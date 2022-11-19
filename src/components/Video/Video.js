@@ -49,7 +49,7 @@ function Video() {
     console.log("video ended");
     const section = document.querySelector('#home');
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    // vidRef.current.currentTime = 15;
+    vidRef.current.currentTime = 15;
   };
 
   const src = getVideoSrc(window.innerWidth);
