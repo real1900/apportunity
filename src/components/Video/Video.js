@@ -1,7 +1,8 @@
 
-import React, { useRef,
-   useState, useEffect
-   } from "react";
+import React, {
+  useRef,
+  useState, useEffect
+} from "react";
 
 
 import "./Video.css";
@@ -22,7 +23,7 @@ function Video() {
     const ua = navigator.userAgent.toLowerCase();
     return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
   };
-  const videoParentRef = useRef();
+
   const [shouldUseImage, setShouldUseImage] = useState(false);
 
   const getVideoSrc = width => {
@@ -36,6 +37,7 @@ function Video() {
   };
 
   const handlePlayPress = () => {
+    console.log("video  click");
     vidRef.current.pause();
     vidRef.current.currentTime = 0;
     vidRef.current.muted = !vidRef.current.muted;
@@ -44,18 +46,19 @@ function Video() {
   };
 
   const handleVideoEnded = () => {
+    console.log("video ended");
     const section = document.querySelector('#home');
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    vidRef.current.currentTime = 15;
+    // vidRef.current.currentTime = 15;
   };
 
   const src = getVideoSrc(window.innerWidth);
 
   useEffect(() => {
     // check if user agent is safari and we have the ref to the container <div />
-    if (isSafari() && videoParentRef.current) {
+    if (isSafari() && vidRef.current) {
       // obtain reference to the video element
-      const player = videoParentRef.current.children[0];
+      const player = vidRef.current;
 
       // if the reference to video player has been obtained
       if (player) {
@@ -77,7 +80,7 @@ function Video() {
               .then(() => { })
               .catch(() => {
                 // if promise fails, hide the video and fallback to <img> tag
-                videoParentRef.current.style.display = "none";
+                vidRef.current.style.display = "none";
                 setShouldUseImage(true);
               });
           }
@@ -87,33 +90,35 @@ function Video() {
   }, []);
 
   return shouldUseImage ? (
-    <img src={blurImage} alt="Muted Video" />
+    <img src={blurImage}
+      onClick={handlePlayPress}
+      alt="Muted Video" />
   ) : (
-      <div
-        className="container"
-        ref={videoParentRef}>     
+    <div
+      onClick={handlePlayPress}
+      className="container">
       <img
         src={blurImage}
         className="video-thumb tiny"
         alt="thumb"
-        style={{ opacity: isVideoLoaded ? 0 : 1 }}/>
-        
+        style={{ opacity: isVideoLoaded ? 0 : 1 }} />
+
       <video id="videoBG"
         onClick={handlePlayPress}
-        ref={{vidRef}}
+        ref={vidRef}
         muted
         autoPlay
         style={{ opacity: isVideoLoaded ? 1 : 0 }}
         onLoadedData={onLoadedData}
         onEnded={handleVideoEnded}
-          paused={false}
-          playInBackground={true}
-          playWhenInactive={true}
-          ignoreSilentSwitch="ignore"
+        paused={false}
+        playInBackground={true}
+        playWhenInactive={true}
+        ignoreSilentSwitch="ignore"
         playsinline
         preload="metadata">
-         <source src={src} type="video/mp4" />
-    </video>
+        <source src={src} type="video/mp4" />
+      </video>
     </div>
   );
 }
