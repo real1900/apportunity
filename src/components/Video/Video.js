@@ -17,8 +17,6 @@ function Video() {
   // const handleToggleMute = () => setMuted(current => !current);
   // const [muted, setMuted] = useState(true);
 
-
-
   const getVideoSrc = width => {
     if (width >= 1080) return desktopVideo;
     if (width >= 720) return tabletVideo;
@@ -38,12 +36,9 @@ function Video() {
   };
 
   const handleVideoEnded = () => {
-    console.log('Video ended!');
     const section = document.querySelector('#home');
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
     vidRef.current.currentTime = 15;
-    // var mediaElement = document.getElementById("video");
-    // mediaElement.currentTime = 0;
   };
 
   const src = getVideoSrc(window.innerWidth);
