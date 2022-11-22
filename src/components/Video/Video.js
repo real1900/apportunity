@@ -67,7 +67,8 @@ function Video() {
         player.controls = false;
         player.playsinline = true;
         player.muted = true;
-        player.setAttribute("muted", ""); // leave no stones unturned :)
+        player.setAttributee('webkit-playsinline', 'webkit-playsinline');
+        player.setAttribute('muted', 'muted');// leave no stones unturned :)
         player.autoplay = true;
 
         // Let's wait for an event loop tick and be async.
