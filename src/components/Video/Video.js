@@ -55,44 +55,44 @@ function Video() {
   const src = getVideoSrc(window.innerWidth);
 
   useEffect(() => {
-    if (isMobile) {
-      setShouldHideVideo(true);
-    }
-    // check if user agent is safari and we have the ref to the container <div />
-    if (isSafari() && vidRef.current) {
-      // obtain reference to the video element
-      const player = vidRef.current;
+    // if (isMobile) {
+    //   setShouldHideVideo(true);
+    // }
+    // // check if user agent is safari and we have the ref to the container <div />
+    // if (isSafari() && vidRef.current) {
+    //   // obtain reference to the video element
+    //   const player = vidRef.current;
 
-      // if the reference to video player has been obtained
-      if (player) {
-        // set the video attributes using javascript as per the
-        // webkit Policy
-        player.controls = false;
-        player.playsinline = true;
-        player.muted = true;
-        player.setAttributee('webkit-playsinline', 'webkit-playsinline');
-        player.setAttribute('muted', 'muted');// leave no stones unturned :)
-        player.autoplay = true;
+    //   // if the reference to video player has been obtained
+    //   if (player) {
+    //     // set the video attributes using javascript as per the
+    //     // webkit Policy
+    //     player.controls = false;
+    //     player.playsinline = true;
+    //     player.muted = true;
+    //     player.setAttributee('webkit-playsinline', 'webkit-playsinline');
+    //     player.setAttribute('muted', 'muted');// leave no stones unturned :)
+    //     player.autoplay = true;
 
-        // Let's wait for an event loop tick and be async.
-        setTimeout(() => {
-          // player.play() might return a promise but it's not guaranteed crossbrowser.
-          const promise = player.play();
-          // let's play safe to ensure that if we do have a promise
-          if (promise.then) {
-            promise
-              .then(() => { })
-              .catch((e) => {
-                // if promise fails, hide the video and fallback to <img> tag
-                vidRef.current.style.display = "none";
-                setShouldHideVideo(true);
-                alert(e);
+    //     // Let's wait for an event loop tick and be async.
+    //     setTimeout(() => {
+    //       // player.play() might return a promise but it's not guaranteed crossbrowser.
+    //       const promise = player.play();
+    //       // let's play safe to ensure that if we do have a promise
+    //       if (promise.then) {
+    //         promise
+    //           .then(() => { })
+    //           .catch((e) => {
+    //             // if promise fails, hide the video and fallback to <img> tag
+    //             vidRef.current.style.display = "none";
+    //             setShouldHideVideo(true);
+    //             alert(e);
 
-              });
-          }
-        }, 0);
-      }
-    }
+    //           });
+    //       }
+    //     }, 0);
+    //   }
+    // }
 
   }, []);
 
@@ -112,6 +112,7 @@ function Video() {
         ref={vidRef}
         autoPlay={true}
         muted={true}
+        playsinline={true}
         loop={false}
         controls={false}
         playsInline={true}
@@ -119,10 +120,6 @@ function Video() {
         onLoadedData={onLoadedData}
         onEnded={handleVideoEnded}
         paused={false}
-        playInBackground={true}
-        playWhenInactive={true}
-        ignoreSilentSwitch="ignore"
-        playsinline={true}
         preload="metadata">
         <source src={src} type="video/mp4" />
       </video>
