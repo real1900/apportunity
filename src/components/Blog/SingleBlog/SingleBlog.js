@@ -5,10 +5,6 @@ import placeholder from '../../../assets/png/placeholder.png'
 import './SingleBlog.css'
 
 function SingleBlog({ theme, title, desc, date, image, url, id }) {
-
-    const imgStyle = {
-        // opacity: 0.8
-    }
     return (
         <Fade bottom>
             <Link to={`/blog/${id}`}
@@ -19,7 +15,6 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
                 <div className="singleBlog" key={id} style={{ backgroundColor: theme.primary400 }}>
                     <div className="singleBlog--image" style={{ backgroundColor: theme.color }}>
                         <img
-                            style={imgStyle}
                             src={image ? image : placeholder}
                             alt={title}
                         />
