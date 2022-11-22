@@ -24,7 +24,7 @@ function Video() {
   //   return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
   // };
 
-  const [shouldHideVideo, 
+  const [shouldHideVideo,
     // setShouldHideVideo
   ] = useState(false);
 
@@ -36,6 +36,8 @@ function Video() {
 
   const onLoadedData = () => {
     setIsVideoLoaded(true);
+    vidRef.current.currentTime = 0;
+    handlePlayPress();
   };
 
   const handlePlayPress = () => {
