@@ -3,7 +3,7 @@ import React, {
   useRef,
   useState, useEffect
 } from "react";
-
+import { isMobile } from 'react-device-detect';
 
 import "./Video.css";
 import desktopVideo from "../../assets/mp4/intro1080.mp4";
@@ -24,7 +24,7 @@ function Video() {
     return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
   };
 
-  const [shouldUseImage, setShouldUseImage] = useState(false);
+  const [shouldHideVideo, setShouldHideVideo] = useState(false);
 
   const getVideoSrc = width => {
     if (width >= 1080) return desktopVideo;
@@ -55,6 +55,9 @@ function Video() {
   const src = getVideoSrc(window.innerWidth);
 
   useEffect(() => {
+    if (isMobile) {
+      setShouldHideVideo(true);
+    }
     // check if user agent is safari and we have the ref to the container <div />
     if (isSafari() && vidRef.current) {
       // obtain reference to the video element
@@ -82,7 +85,7 @@ function Video() {
               .catch((e) => {
                 // if promise fails, hide the video and fallback to <img> tag
                 vidRef.current.style.display = "none";
-                setShouldUseImage(true);
+                setShouldHideVideo(true);
                 alert(e);
 
               });
@@ -90,15 +93,20 @@ function Video() {
         }, 0);
       }
     }
+
   }, []);
 
-  return shouldUseImage ? (
-    <img src={blurImage}
-      onClick={handlePlayPress}
-      alt="Muted Video" />
+  return shouldHideVideo ? (
+    <div style={{ height: 0, width: 0 }} />
   ) : (
     <div onClick={handlePlayPress}
       className="container">
+      <img
+        src={blurImage}
+        className="video-thumb tiny"
+        alt="thumb"
+        style={{ opacity: isVideoLoaded ? 0 : 1 }}
+      />
       <video id="videoBG"
         onClick={handlePlayPress}
         ref={vidRef}
