@@ -27,8 +27,8 @@ function Video() {
   const [shouldHideVideo, setShouldHideVideo] = useState(false);
 
   const getVideoSrc = width => {
-    if (width >= 1080) return desktopVideo;
-    if (width >= 720) return tabletVideo;
+    // if (width >= 1080) return desktopVideo;
+    // if (width >= 720) return tabletVideo;
     return mobileVideo;
   };
 
