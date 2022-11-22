@@ -100,7 +100,7 @@ function Video() {
   }, []);
 
   return shouldHideVideo ? (
-    <div style={{ height: 0, width: 0 }} />
+     <></>
   ) : (
     <div onClick={handlePlayPress}
       className="container">
