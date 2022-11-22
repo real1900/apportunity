@@ -94,20 +94,16 @@ function Video() {
       onClick={handlePlayPress}
       alt="Muted Video" />
   ) : (
-    <div
-      onClick={handlePlayPress}
+    <div onClick={handlePlayPress}
       className="container">
-      <img
-        src={blurImage}
-        className="video-thumb tiny"
-        alt="thumb"
-        style={{ opacity: isVideoLoaded ? 0 : 1 }} />
-
       <video id="videoBG"
         onClick={handlePlayPress}
         ref={vidRef}
-        muted
-        autoPlay
+        autoPlay={true}
+        muted={true}
+        loop={false}
+        controls={false}
+        playsInline={true}
         style={{ opacity: isVideoLoaded ? 1 : 0 }}
         onLoadedData={onLoadedData}
         onEnded={handleVideoEnded}
@@ -115,7 +111,7 @@ function Video() {
         playInBackground={true}
         playWhenInactive={true}
         ignoreSilentSwitch="ignore"
-        playsinline
+        playsinline={true}
         preload="metadata">
         <source src={src} type="video/mp4" />
       </video>
