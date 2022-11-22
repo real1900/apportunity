@@ -79,10 +79,12 @@ function Video() {
           if (promise.then) {
             promise
               .then(() => { })
-              .catch(() => {
+              .catch((e) => {
                 // if promise fails, hide the video and fallback to <img> tag
                 vidRef.current.style.display = "none";
                 setShouldUseImage(true);
+                alert(e);
+
               });
           }
         }, 0);
