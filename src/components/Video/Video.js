@@ -3,11 +3,11 @@ import React, {
   useRef,
   useState, useEffect
 } from "react";
-import { isMobile } from 'react-device-detect';
+//import { isMobile } from 'react-device-detect';
 
 import "./Video.css";
-import desktopVideo from "../../assets/mp4/intro1080.mp4";
-import tabletVideo from "../../assets/mp4/intro720.mp4";
+//import desktopVideo from "../../assets/mp4/intro1080.mp4";
+//import tabletVideo from "../../assets/mp4/intro720.mp4";
 import mobileVideo from "../../assets/mp4/intro360.mp4";
 import blurImage from "../../assets/png/video/blur.jpg";
 
@@ -19,12 +19,14 @@ function Video() {
   // const handleToggleMute = () => setMuted(current => !current);
   // const [muted, setMuted] = useState(true);
 
-  const isSafari = () => {
-    const ua = navigator.userAgent.toLowerCase();
-    return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
-  };
+  // const isSafari = () => {
+  //   const ua = navigator.userAgent.toLowerCase();
+  //   return ua.indexOf("safari") > -1 && ua.indexOf("chrome") < 0;
+  // };
 
-  const [shouldHideVideo, setShouldHideVideo] = useState(false);
+  const [shouldHideVideo, 
+    // setShouldHideVideo
+  ] = useState(false);
 
   const getVideoSrc = width => {
     // if (width >= 1080) return desktopVideo;
