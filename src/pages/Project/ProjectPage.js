@@ -50,6 +50,7 @@ function ProjectPage() {
       position: "absolute",
       top: 25,
       left: 25,
+      padding: 20,
       backgroundColor: "transparent",
       border: "none",
     },
