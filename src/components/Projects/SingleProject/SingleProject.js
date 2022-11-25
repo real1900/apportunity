@@ -1,9 +1,10 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
-// import { FaPlay, FaCode } from "react-icons/fa";
+import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
+// import { Link } from "react-router-dom";
 import placeholder from "../../../assets/png/placeholder.png";
 import "./SingleProject.css";
+import GetOSIcon from "../../common/getOSIcon";
 
 function SingleProject({
   id,
@@ -12,16 +13,35 @@ function SingleProject({
   desc,
   theme,
   onClick,
+  storeLinks,
+  enterpriseApp
 }) {
 
   const imgStyle = {
     // opacity: 0.5
   }
 
-
-
   const image = require(`../../../assets/png/projects/${id}.png`);
 
+  const useStyles = makeStyles((t) => ({
+    iconBtn: {
+      color: theme.secondary,
+      // border: `3px solid ${theme.secondary}`,
+      padding: 15,
+      width: 44,
+      height: 44,
+      borderRadius: "25%",
+      transition: "all 0.2s",
+      "&:hover": {
+        backgroundColor: theme.secondary,
+        color: theme.primary,
+        transform: "scale(1.1)",
+        border: `2px solid ${theme.secondary}`,
+      },
+    },
+  }))
+
+  const classes = useStyles();
   return (
     <button
       style={{ backgroundColor: "transparent", border: "none" }}
@@ -47,41 +67,28 @@ function SingleProject({
             >
               {companyName}
             </h3>
-
-            <img className="grayScale" src={image ? image : placeholder} style={imgStyle} alt={name} />
             <div className="project--showcaseBtn">
-              {/* <a
-                href={demo}
-                target="_blank"
-                rel="noreferrer"
-                className={classes.iconBtn}
-                aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-                  .replace(" ", "-")
-                  .toLowerCase()}-demo`}
-              >
-                <FaPlay
-                  id={`${name.replace(" ", "-").toLowerCase()}-demo`}
-                  className={classes.icon}
-                  aria-label="Demo"
-                />
-              </a> */}
+              {
+                Object.keys(storeLinks).map((key, index) => (
 
-              {/* <a
-                href={code}
-                target="_blank"
-                rel="noreferrer"
-                className={classes.iconBtn}
-                aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-                  .replace(" ", "-")
-                  .toLowerCase()}-code`}
-              >
-                <FaCode
-                  id={`${name.replace(" ", "-").toLowerCase()}-code`}
-                  className={classes.icon}
-                  aria-label="Code"
-                />
-              </a> */}
+                  <a
+                    href={storeLinks[key]}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={classes.iconBtn}
+                    aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
+                      .replace(" ", "-")
+                      .toLowerCase()}-demo`}
+                  >
+                    {
+                      GetOSIcon(key)
+                    }
+                  </a>
+                ))
+              }
             </div>
+            <img className="grayScale" src={image ? image : placeholder} style={imgStyle} alt={name} />
+
           </div>
           <p
             className="project--desc"

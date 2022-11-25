@@ -13,11 +13,6 @@
     overflow: hidden;
     letter-spacing: 1px;
 }
-
-.grayScale {
-    /* filter: grayscale(1); */
-}
-
 .projectContent {
     display: flex;
     flex-direction: column;

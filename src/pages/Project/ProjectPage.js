@@ -135,6 +135,8 @@ function ProjectPage() {
                     code={project.code}
                     demo={project.demo}
                     image={project.image}
+                    storeLinks={project.storeLinks}
+                    enterpriseApp={project.enterpriseApp}
                   /></Link>
               ))}
             </Grid>

@@ -71,6 +71,8 @@ function Projects() {
                     name={project.projectName}
                     desc={project.projectDesc}
                     image={project.image}
+                    storeLinks = {project.storeLinks}
+                    enterpriseApp ={project.enterpriseApp}
                   />
                 </Link>
               ))}
