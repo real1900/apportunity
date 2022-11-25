@@ -3,10 +3,12 @@ export const projectsData = [
     {
         id: 1,
         projectName: 'CBS Interactive',
-        companyName:'CBS Inc.',
+        companyName: 'CBS Inc.',
         projectDesc: 'This app lets users watch full episodes of their favorite shows from CBS - America’s most watched network. This app was built using Swift and Objective-C',
         enterpriseApp: false,
-        ios: "https://appsto.re/us/OLBMF.i",
+        links: {
+            ios: "https://appsto.re/us/OLBMF.i"
+        },
     },
     {
         id: 2,
@@ -14,7 +16,9 @@ export const projectsData = [
         companyName: 'DirecTV Inc.',
         projectDesc: 'An extremely app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
         enterpriseApp: false,
-        ios: "https://appsto.re/us/UFLus.i",
+        links: {
+            ios: "https://appsto.re/us/UFLus.i",
+        }
     },
     {
         id: 3,
@@ -22,11 +26,13 @@ export const projectsData = [
         companyName: 'Submission Inc.',
         projectDesc: "A reference and utility app that calculates events based on solar and lunar calendar, sunset and sunrise times for a user's location and allows for reading publications such as books and newsletters online or offline, take notes , search text materials and stream or download audio visual content.",
         enterpriseApp: false,
-        ios: "HTTPS://APPSTO.RE/I6FF5NS",
-        android:"https://play.google.com/store/apps/details?id=ws.submission.my",
-        web:"https://www.submission.guide",
-        mac:"https://macappsto.re/us/KTR3X.m",
-        tvos:"https://appsto.re/i6FF5ns",
+        links: {
+            ios: "HTTPS://APPSTO.RE/I6FF5NS",
+            android: "https://play.google.com/store/apps/details?id=ws.submission.my",
+            web: "https://www.submission.guide",
+            mac: "https://macappsto.re/us/KTR3X.m",
+            tvos: "https://appsto.re/i6FF5ns",
+        }
     },
     {
         id: 4,
@@ -34,15 +40,17 @@ export const projectsData = [
         companyName: 'Loosid App LLC',
         projectDesc: 'Apportunity Inc built this extremely useful app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/loosid-sober-social-network/id1413514350",
-        android:"https://play.google.com/store/apps/details?id=com.loosidapp",
+        links: {
+            ios: "https://apps.apple.com/us/app/loosid-sober-social-network/id1413514350",
+            android: "https://play.google.com/store/apps/details?id=com.loosidapp",
+        }
     },
     {
         id: 5,
         projectName: 'Ask N Expert',
         companyName: 'GE Software',
         projectDesc: 'Apportunity inc. built this app to enable GE technicians to have instant access to have video calls and share media conveniently to shorten the time taken to resolve outages, and more',
-        enterpriseApp:true,
+        enterpriseApp: true,
     },
     {
         id: 6,
@@ -79,7 +87,9 @@ export const projectsData = [
         companyName: 'Verizon',
         projectDesc: "Built by Apportunity, this app lets you download, stream, buy or rent thousands of movies and TV shows, and watch anytime on your mobile device.",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/stream-tv-mobile/id1535456434",
+        links: {
+            ios: "https://apps.apple.com/us/app/stream-tv-mobile/id1535456434",
+        }
     },
     {
         id: 11,
@@ -87,8 +97,10 @@ export const projectsData = [
         companyName: 'Amazon',
         projectDesc: "Apportunity assisted Amazon in building support for Amazon frames with Amazon Alexa app. This app was built using React Native to manage Alexa-enabled Amazon echo frames, train and talk to Alexa using Amazon Glasses with wireless bone conducting speakers.",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/amazon-alexa/id944011620",
-        android: "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        links: {
+            ios: "https://apps.apple.com/us/app/amazon-alexa/id944011620",
+            android: "https://play.google.com/store/apps/details?id=com.amazon.dee.app",
+        }
     },
     {
         id: 12,
@@ -96,7 +108,9 @@ export const projectsData = [
         companyName: 'Nike',
         projectDesc: "Nike app provides its members with a world class shopping experience. Apportunity helped Nike streamline the signup and new user onboarding flows to provide a better shopping experience for its members.",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/nike-shoes-apparel-stories/id1095459556",
+        links: {
+            ios: "https://apps.apple.com/us/app/nike-shoes-apparel-stories/id1095459556",
+        }
     },
     {
         id: 13,
@@ -104,7 +118,9 @@ export const projectsData = [
         companyName: 'Vance & Hines',
         projectDesc: "Apportunity created this app for Vance & Hines, which makes your iPhone one of the most powerful flash tuners available. It allows users to  select the best exhaust system for your bike for optimized performance and view live sensor data essentials, and more using BLE framework. ",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/tt/app/fuelpak-fp4/id1513978426",
+        links: {
+            ios: "https://apps.apple.com/tt/app/fuelpak-fp4/id1513978426",
+        }
     },
     {
         id: 14,
@@ -112,7 +128,9 @@ export const projectsData = [
         companyName: 'Kornferry',
         projectDesc: "A technology designed by Apportunity with AI, Korn Ferry Advance app helps you build your interviewing and communication skills. This app allows users to rehearse in pri- vate on their phone in a simulated video chat environment and receive instant feedback, so they you can present themselves in the best possible light and land that job.",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/korn-ferry-advance/id1347794886",
+        links: {
+            ios: "https://apps.apple.com/us/app/korn-ferry-advance/id1347794886",
+        }
     },
     {
         id: 15,
@@ -120,7 +138,9 @@ export const projectsData = [
         companyName: 'Walmart inc.',
         projectDesc: "Apportunity built a world class shopping experience in collaboration with Walmart for its customers for both iOS and Android with features like store pickup, delivery and shipping options which has generated millions of dollars of revenue for Walmart ",
         enterpriseApp: false,
-        ios: "https://apps.apple.com/us/app/korn-ferry-advance/id1347794886",
-        android: "https://play.google.com/store/apps/details?id=com.walmart.android",
+        links: {
+            ios: "https://apps.apple.com/us/app/korn-ferry-advance/id1347794886",
+            android: "https://play.google.com/store/apps/details?id=com.walmart.android",
+        }
     },
 ]
