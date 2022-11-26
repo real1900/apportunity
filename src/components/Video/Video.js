@@ -3,12 +3,8 @@ import React, {
   useRef,
 } from "react";
 import { isMobile } from 'react-device-detect';
-
 import "./Video.css";
-//import desktopVideo from "../../assets/mp4/intro1080.mp4";
-//import tabletVideo from "../../assets/mp4/intro720.mp4";
-import mobileVideo from "../../assets/mp4/intro360.mp4";
-import blurImage from "../../assets/png/video/blur.jpg";
+
 
 function Video() {
 
@@ -17,18 +13,6 @@ function Video() {
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
   // const handleToggleMute = () => setMuted(current => !current);
   // const [muted, setMuted] = useState(true);
-
-
-  const getVideoSrc = width => {
-    // if (width >= 1080) return desktopVideo;
-    // if (width >= 720) return tabletVideo;
-    if (isMobile){
-      return null
-    }
-    
-
-    return mobileVideo;
-  };
 
   const onLoadedData = () => {
     setIsVideoLoaded(true);
@@ -50,8 +34,14 @@ function Video() {
     vidRef.current.currentTime = 15;
   };
 
-  const src = getVideoSrc(window.innerWidth);
 
+  var mobileVideo ;
+  var blurImage = require("../../assets/png/video/blur.jpg");
+
+
+  if (!isMobile){
+   mobileVideo = require("../../assets/mp4/intro360.mp4");
+  }
   return isMobile ? (
      <></>
   ) : (
@@ -77,7 +67,7 @@ function Video() {
         onEnded={handleVideoEnded}
         paused={false}
         preload="metadata">
-        <source src={src} type="video/mp4" />
+        <source src={mobileVideo} type="video/mp4" />
       </video>
     </div>
   );
