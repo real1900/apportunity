@@ -1,10 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import Fade from "react-reveal/Fade";
 // import { Link } from "react-router-dom";
 import placeholder from "../../../assets/png/placeholder.png";
 import "./SingleProject.css";
-import GetOSIcon from "../../common/getOSIcon";
+import GetStoreLink from "../../common/getStoreLink";
 
 function SingleProject({
   id,
@@ -23,25 +22,6 @@ function SingleProject({
 
   const image = require(`../../../assets/png/projects/${id}.png`);
 
-  const useStyles = makeStyles((t) => ({
-    iconBtn: {
-      color: theme.secondary,
-      // border: `3px solid ${theme.secondary}`,
-      padding: 15,
-      width: 44,
-      height: 44,
-      borderRadius: "25%",
-      transition: "all 0.2s",
-      "&:hover": {
-        backgroundColor: theme.secondary,
-        color: theme.primary,
-        transform: "scale(1.1)",
-        border: `2px solid ${theme.secondary}`,
-      },
-    },
-  }))
-
-  const classes = useStyles();
   return (
     <button
       style={{ backgroundColor: "transparent", border: "none" }}
@@ -71,19 +51,7 @@ function SingleProject({
               {
                 Object.keys(storeLinks).map((key, index) => (
 
-                  <a
-                    href={storeLinks[key]}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={classes.iconBtn}
-                    aria-labelledby={`${name.replace(" ", "-").toLowerCase()} ${name
-                      .replace(" ", "-")
-                      .toLowerCase()}-demo`}
-                  >
-                    {
-                      GetOSIcon(key)
-                    }
-                  </a>
+                  GetStoreLink(key, storeLinks[key], 32, enterpriseApp)
                 ))
               }
             </div>

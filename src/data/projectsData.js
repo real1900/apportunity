@@ -51,7 +51,9 @@ export const projectsData = [
         companyName: 'GE Software',
         projectDesc: 'Apportunity inc. built this app to enable GE technicians to have instant access to have video calls and share media conveniently to shorten the time taken to resolve outages, and more',
         enterpriseApp: true,
-        storeLinks: {}
+        storeLinks: {
+            "iOS": ""
+        }
     },
     {
         id: 6,
@@ -69,7 +71,9 @@ export const projectsData = [
         companyName: 'Apple Inc.',
         projectDesc: 'An app built by Apportunity used by Apple Inc. for Apple Stores around the world to manage back of the house activities such as management of delieveries, inventory and returns ',
         enterpriseApp: true,
-        storeLinks: {}
+        storeLinks: {
+            "iOS": ""
+        }
     },
     {
         id: 8,
@@ -77,7 +81,9 @@ export const projectsData = [
         companyName: 'Apple Inc.',
         projectDesc: 'An app created by Apportunity for Apple Inc. for Apple IT Staff to manage and monitor cloud infrastructure such as iTunes and iCloud datacenters across Apple',
         enterpriseApp: true,
-        storeLinks: {}
+        storeLinks: {
+            "iOS": ""
+        }
     },
     {
         id: 9,
@@ -85,7 +91,9 @@ export const projectsData = [
         companyName: 'Apple Inc.',
         projectDesc: "An iOS and Apple Watch app created by Apportunity for Apple Inc. for Apple IT Staff to record health hazards across Apple manufacturing facilities using just the Apple Watch and transfer to Apple's incident management system",
         enterpriseApp: true,
-        storeLinks: {}
+        storeLinks: {
+            "iOS": ""
+        }
     },
     {
         id: 10,
