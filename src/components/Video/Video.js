@@ -43,8 +43,7 @@ function Video() {
   var blurImage = require("../../assets/png/video/blur.jpg");
 
   if (!isMobile) {
-    mobileVideo = "https://nusid.net/video.mp4"
-    //require("../../assets/mp4/intro360.mp4");
+    mobileVideo = require("../../assets/mp4/intro360.mp4");
   }
 
   useLayoutEffect(() => {
