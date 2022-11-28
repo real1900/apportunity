@@ -67,12 +67,12 @@ function Video() {
     }}>
       <ReactWebMediaPlayer
         // ref={vidRef}
-        allowFullFrame={true}
-        autoplay={false}
-        muted={true}
-        width={window.innerWidth}
-        height={window.innerHeight}
-        onEnded={handleVideoEnded}
+        // allowFullFrame={true}
+        // autoplay={false}
+        // muted={true}
+        // width={window.innerWidth}
+        // height={window.innerHeight}
+        // onEnded={handleVideoEnded}
         thumbnail={blurImage}
         video={mobileVideo}
       /></div>
