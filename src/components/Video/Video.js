@@ -65,8 +65,8 @@ function Video() {
       alignItems: 'center',
       justifyContent: 'center',
     }}>
-      <ReactWebMediaPlayer 
-      // ref={vidRef}
+      <ReactWebMediaPlayer
+        // ref={vidRef}
         allowFullFrame={true}
         autoplay={false}
         muted={true}
