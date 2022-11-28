@@ -67,6 +67,7 @@ function Video() {
     }}>
       <ReactWebMediaPlayer 
       // ref={vidRef}
+        allowFullFrame={true}
         autoplay={false}
         muted={true}
         width={window.innerWidth}
