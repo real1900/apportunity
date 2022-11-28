@@ -58,7 +58,7 @@ function Video() {
   }, []);
 
 
-  return !isMobile ? (
+  return isMobile ? (
     <div style={{
       backgroundColor: "black",
       display: 'flex',
