@@ -23,7 +23,7 @@ import { headerData } from "../../data/headerData";
 
 function Main() {
   return (
-    <Transition>
+    <Transition timeout={200} >
       <div>
         <Helmet>
           <title>{headerData.name}.io</title>

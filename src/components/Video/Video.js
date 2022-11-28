@@ -1,12 +1,18 @@
 
 import React, {
-  useRef,
+  useRef, useEffect
 } from "react";
 import { isMobile } from 'react-device-detect';
 import "./Video.css";
+import ReactWebMediaPlayer from 'react-web-media-player';
 
 
+
+//document.querySelector('video').
 function Video() {
+
+
+
 
   const vidRef = useRef();
 
@@ -35,15 +41,29 @@ function Video() {
   };
 
 
-  var mobileVideo ;
+  var mobileVideo;
   var blurImage = require("../../assets/png/video/blur.jpg");
 
-
-  if (!isMobile){
-   mobileVideo = require("../../assets/mp4/intro360.mp4");
+  if (!isMobile) {
+    mobileVideo = require("../../assets/mp4/intro360.mp4");
   }
-  return isMobile ? (
-     <></>
+
+  // useEffect(() => {
+  //   const video = document.querySelector('video')
+  //   video.onEnded = { handleVideoEnded }
+  // }, []);
+
+
+  return !isMobile ? (
+    <ReactWebMediaPlayer ref={vidRef}
+      autoplay={true}
+      muted={true}
+      width ={window.innerWidth}
+      height={window.innerHeight}
+      onEnded={handleVideoEnded}
+      thumbnail={blurImage}
+      video={mobileVideo}
+    />
   ) : (
     <div onClick={handlePlayPress}
       className="container">
@@ -58,14 +78,13 @@ function Video() {
         ref={vidRef}
         autoPlay={true}
         muted={true}
-        playsinline={true}
         loop={false}
         controls={false}
         playsInline={true}
         style={{ opacity: isVideoLoaded ? 1 : 0 }}
         onLoadedData={onLoadedData}
         onEnded={handleVideoEnded}
-        paused={false}
+        paused={'false'}
         preload="metadata">
         <source src={mobileVideo} type="video/mp4" />
       </video>

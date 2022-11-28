@@ -65,7 +65,7 @@ function GetStoreLink(os, url, size, enterpriseApp) {
     if (enterpriseApp) {
         return <div key={os} style={{ paddingBottom: 10 }}>
             {element}
-            <p >ENTERPRISE APP</p>
+            <p style={{ color: theme.tertiary }}>ENTERPRISE APP</p>
         </div>
     } else {
         return <a key={os}
