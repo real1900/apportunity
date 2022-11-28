@@ -1,6 +1,6 @@
 
 import React, {
-  useRef, useEffect
+  useRef, useLayoutEffect,
 } from "react";
 import { isMobile } from 'react-device-detect';
 import "./Video.css";
@@ -17,8 +17,6 @@ function Video() {
   const vidRef = useRef();
 
   const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
-  // const handleToggleMute = () => setMuted(current => !current);
-  // const [muted, setMuted] = useState(true);
 
   const onLoadedData = () => {
     setIsVideoLoaded(true);
@@ -48,22 +46,35 @@ function Video() {
     mobileVideo = require("../../assets/mp4/intro360.mp4");
   }
 
-  // useEffect(() => {
-  //   const video = document.querySelector('video')
-  //   video.onEnded = { handleVideoEnded }
-  // }, []);
+  useLayoutEffect(() => {
+    const video = document.querySelector('video')
+    video.onended = (event) => {
+      console.log('Video stopped either because 1) it was over, ' +
+        'or 2) no further data is available.');
+
+      handleVideoEnded();
+    };
+    console.log('a.lo');
+  }, []);
 
 
   return !isMobile ? (
-    <ReactWebMediaPlayer ref={vidRef}
-      autoplay={true}
-      muted={true}
-      width ={window.innerWidth}
-      height={window.innerHeight}
-      onEnded={handleVideoEnded}
-      thumbnail={blurImage}
-      video={mobileVideo}
-    />
+    <div style={{
+      backgroundColor: "black",
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+    }}>
+      <ReactWebMediaPlayer 
+      // ref={vidRef}
+        autoplay={true}
+        muted={true}
+        width={window.innerWidth}
+        height={window.innerHeight}
+        onEnded={handleVideoEnded}
+        thumbnail={blurImage}
+        video={mobileVideo}
+      /></div>
   ) : (
     <div onClick={handlePlayPress}
       className="container">
