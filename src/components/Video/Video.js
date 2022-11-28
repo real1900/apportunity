@@ -58,7 +58,7 @@ function Video() {
   }, []);
 
 
-  return isMobile ? (
+  return !isMobile ? (
     <div style={{
       backgroundColor: "black",
       display: 'flex',
@@ -88,18 +88,20 @@ function Video() {
       <video id="videoBG"
         onClick={handlePlayPress}
         ref={vidRef}
-        autoPlay={true}
-        muted={true}
+        autoplay
+        muted
+        playsinline
+        width="250"
         loop={false}
         controls={false}
-        playsInline={true}
         style={{ opacity: isVideoLoaded ? 1 : 0 }}
         onLoadedData={onLoadedData}
         onEnded={handleVideoEnded}
         paused={'false'}
-        preload="metadata">
-        <source src={mobileVideo} type="video/mp4" />
-      </video>
+        preload="metadata"
+        src={mobileVideo}
+        type="video/mp4"
+      />
     </div>
   );
 }
