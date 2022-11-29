@@ -4,7 +4,8 @@ import React, {
 } from "react";
 import { isMobile } from 'react-device-detect';
 import "./Video.css";
-import ReactWebMediaPlayer from 'react-web-media-player';
+// import ReactWebMediaPlayer from 'react-web-media-player';
+import { Player } from "video-react";
 
 
 
@@ -58,24 +59,8 @@ function Video() {
   }, []);
 
 
-  return !isMobile ? (
-    <div style={{
-      backgroundColor: "black",
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-    }}>
-      <ReactWebMediaPlayer
-        // ref={vidRef}
-        // allowFullFrame={true}
-        // autoplay={false}
-        // muted={true}
-        // width={window.innerWidth}
-        // height={window.innerHeight}
-        // onEnded={handleVideoEnded}
-        thumbnail={blurImage}
-        video={mobileVideo}
-      /></div>
+  return isMobile ? (
+    <Player id="videoBG" src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
   ) : (
     <div onClick={handlePlayPress}
       className="container">
