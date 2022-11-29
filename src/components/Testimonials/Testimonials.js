@@ -69,9 +69,10 @@ function Testimonials() {
                                                 style={{
                                                     backgroundColor:
                                                         theme.secondary,
+                                                 
                                                 }}
                                             >
-                                                <img
+                                                <img style = {{ borderRadius: "50%", }}
                                                     src={test.image}
                                                     alt={test.name}
                                                 />
