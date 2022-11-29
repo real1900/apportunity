@@ -60,7 +60,10 @@ function Video() {
 
 
   return isMobile ? (
-    <Player id="videoBG" src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+    <Player id="videoBG"
+      width={window.innerWidth}
+      height={window.innerHeight}
+      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
   ) : (
     <div onClick={handlePlayPress}
       className="container">
