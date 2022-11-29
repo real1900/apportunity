@@ -13,7 +13,7 @@ export const testimonialsData = [
         id: 1,
         name: 'Nicholas Gordon',
         title: 'Chief Architech - Brooks Fashions',
-        text: "My journey of finding the right iOS development partner finally came to an end with Apportunity. In one word I will call them stalwart in their industry.",
+        text: "My journey of finding the right iOS development partner finally came to an end with Apportunity. They are the stalwart in their industry.",
         image: boy2
     },
     {
@@ -27,8 +27,8 @@ export const testimonialsData = [
         id: 3,
         name: 'Tamara Hall',
         title: 'Director of Engineering - Sun Foods',
-        text: "I couldn’t be happier with my app as well as the quick service in updating the app when iOS updates went out. I highly recommend Apportunity",
-        image: girl1
+        text: "I couldn’t be happier with my app as well as the quick service in updating the app. I highly recommend Apportunity",
+        image: girl3
     },
     {
         id: 4,
@@ -41,14 +41,14 @@ export const testimonialsData = [
         id: 5,
         name: 'Jackie Miller',
         title: 'CEO - Galaxy Man',
-        text: 'The development team is wonderful, and great to work with. I’m very glad that we went with Apportunity and am very satisfied with the finished product.',
-        image: girl3
+        text: 'The development team is wonderful, and great to work with. I am very satisfied with the finished product.',
+        image: girl1
     },
     {
         id: 6,
         name: 'Darrell Jeffries',
         title: 'President - Matrix Interior Design',
-        text: "We have had an incredible experience; timelines actually being met, creative collaborations. Apportunity has exceeded our expectations and showed us what working with professionals was like.",
+        text: "We have had an incredible experience. Apportunity has exceeded our expectations and showed us what working with professionals was like.",
         image: boy3
     }
 ]
