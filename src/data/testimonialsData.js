@@ -48,7 +48,7 @@ export const testimonialsData = [
         id: 6,
         name: 'Darrell Jeffries',
         title: 'President - Matrix Interior Design',
-        text: "We have had an incredible experience. Apportunity has exceeded our expectations and showed us what working with professionals was like.",
+        text: "Apportunity has exceeded our expectations and showed us what working with professionals was like.",
         image: boy3
     }
 ]
