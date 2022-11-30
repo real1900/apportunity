@@ -5,7 +5,7 @@ import React, {
 import { isMobile } from 'react-device-detect';
 import "./Video.css";
 // import ReactWebMediaPlayer from 'react-web-media-player';
-import { Player } from "video-react";
+// import { Player } from "video-react";
 
 
 
@@ -58,12 +58,19 @@ function Video() {
 
   }, []);
 
+  // const src =
+  //   "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+ 
 
   return isMobile ? (
-    <Player id="videoBG"
+     <video  id="videoBG" playsinline muted autoplay
       width={window.innerWidth}
-      height={window.innerHeight}
-      src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
+      height={window.innerHeight}>
+      <source src={mobileVideo} type="video/mp4" />
+    Sorry, your browser doesn't support videos.
+  </video>
+    // <Player
+    //   src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
   ) : (
     <div onClick={handlePlayPress}
       className="container">
