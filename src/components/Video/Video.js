@@ -1,20 +1,8 @@
 
-import React, {
-  useRef, useLayoutEffect,
-} from "react";
-import { isMobile } from 'react-device-detect';
+import React, {  useRef, useLayoutEffect,} from "react";
 import "./Video.css";
-// import ReactWebMediaPlayer from 'react-web-media-player';
-// import { Player } from "video-react";
 
-
-
-//document.querySelector('video').
 function Video() {
-
-
-
-
   const vidRef = useRef();
 
   // const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
@@ -41,11 +29,6 @@ function Video() {
 
 
   var mobileVideo = require("../../assets/mp4/intro360.mp4");
-  // var blurImage = require("../../assets/png/video/blur.jpg");
-
-  if (!isMobile) {
-    mobileVideo = require("../../assets/mp4/intro360.mp4");
-  }
 
   useLayoutEffect(() => {
     const video = document.querySelector('video')
