@@ -23,14 +23,14 @@ function Video() {
   //   setIsVideoLoaded(true);
   // };
 
-  // const handlePlayPress = () => {
-  //   console.log("video  click");
-  //   vidRef.current.pause();
-  //   vidRef.current.currentTime = 0;
-  //   vidRef.current.muted = !vidRef.current.muted;
-  //   vidRef.current.loop = false;
-  //   vidRef.current.play();
-  // };
+  const handlePlayPress = () => {
+    console.log("video  click");
+    vidRef.current.pause();
+    vidRef.current.currentTime = 0;
+    vidRef.current.muted = !vidRef.current.muted;
+    vidRef.current.loop = false;
+    vidRef.current.play();
+  };
 
   const handleVideoEnded = () => {
     console.log("video ended");
@@ -59,7 +59,11 @@ function Video() {
   }, []);
 
   return <div className="container">
-    <video playsInline muted autoPlay controls width={window.innerWidth} height={window.innerHeight}
+    <video 
+    playsInline muted autoPlay 
+      onClick={handlePlayPress}
+      ref={vidRef}
+     width={window.innerWidth} height={window.innerHeight}
     >
       <source src={mobileVideo} type="video/mp4" />
       Sorry, your browser doesn't support videos.
