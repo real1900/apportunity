@@ -28,7 +28,7 @@ function Video() {
   };
 
 
-  var mobileVideo = require("../../assets/mp4/intro360.mp4");
+  var mobileVideo = require("../../assets/mp4/apportunity-intro.mp4");
 
   useLayoutEffect(() => {
     const video = document.querySelector('video')
