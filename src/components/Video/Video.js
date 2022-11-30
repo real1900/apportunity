@@ -60,15 +60,14 @@ function Video() {
 
   // const src =
   //   "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
- 
 
-  return isMobile ? (
-     <video  id="videoBG" playsinline muted autoplay
-      width={window.innerWidth}
-      height={window.innerHeight}>
+
+  return !isMobile ? (
+    <video playsInline muted autoPlay
+      width="250">
       <source src={mobileVideo} type="video/mp4" />
-    Sorry, your browser doesn't support videos.
-  </video>
+      Sorry, your browser doesn't support videos.
+    </video>
     // <Player
     //   src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
   ) : (
