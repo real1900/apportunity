@@ -63,11 +63,13 @@ function Video() {
 
 
   return !isMobile ? (
+  <div>
     <video playsInline muted autoPlay
       width="250">
       <source src={mobileVideo} type="video/mp4" />
       Sorry, your browser doesn't support videos.
     </video>
+  </div>
     // <Player
     //   src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
   ) : (
