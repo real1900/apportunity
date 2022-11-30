@@ -17,20 +17,20 @@ function Video() {
 
   const vidRef = useRef();
 
-  const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
+  // const [isVideoLoaded, setIsVideoLoaded] = React.useState(false);
 
-  const onLoadedData = () => {
-    setIsVideoLoaded(true);
-  };
+  // const onLoadedData = () => {
+  //   setIsVideoLoaded(true);
+  // };
 
-  const handlePlayPress = () => {
-    console.log("video  click");
-    vidRef.current.pause();
-    vidRef.current.currentTime = 0;
-    vidRef.current.muted = !vidRef.current.muted;
-    vidRef.current.loop = false;
-    vidRef.current.play();
-  };
+  // const handlePlayPress = () => {
+  //   console.log("video  click");
+  //   vidRef.current.pause();
+  //   vidRef.current.currentTime = 0;
+  //   vidRef.current.muted = !vidRef.current.muted;
+  //   vidRef.current.loop = false;
+  //   vidRef.current.play();
+  // };
 
   const handleVideoEnded = () => {
     console.log("video ended");
@@ -40,8 +40,8 @@ function Video() {
   };
 
 
-  var mobileVideo;
-  var blurImage = require("../../assets/png/video/blur.jpg");
+  var mobileVideo = require("../../assets/mp4/intro360.mp4");
+  // var blurImage = require("../../assets/png/video/blur.jpg");
 
   if (!isMobile) {
     mobileVideo = require("../../assets/mp4/intro360.mp4");
@@ -58,59 +58,50 @@ function Video() {
 
   }, []);
 
-  // const src =
-  //   "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
+  return <div className="container">
+    <video playsInline muted autoPlay controls width={window.innerWidth} height={window.innerHeight}
+    >
+      <source src={mobileVideo} type="video/mp4" />
+      Sorry, your browser doesn't support videos.
+    </video>
+  </div>
+
+  // !isMobile ? 
 
 
-  return !isMobile ? (
-    <div>
-      <video playsInline muted autoPlay controls 
-        width="250">
-        <source src={mobileVideo} type="video/mp4" />
-        Sorry, your browser doesn't support videos.
-      </video>
-      <video playsInline muted autoPlay controls
-        width="250">
-        <source src={mobileVideo} type="video/mp4" />
-        Sorry, your browser doesn't support videos.
-      </video>
-      <video playsInline muted autoPlay controls
-        width="250">
-        <source src={mobileVideo} type="video/mp4" />
-        Sorry, your browser doesn't support videos.
-      </video>
-    </div>
-    // <Player
-    //   src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4" />
-  ) : (
-    <div onClick={handlePlayPress}
-      className="container">
-      <img
-        src={blurImage}
-        className="video-thumb tiny"
-        alt="thumb"
-        style={{ opacity: isVideoLoaded ? 0 : 1 }}
-      />
-      <video id="videoBG"
-        onClick={handlePlayPress}
-        ref={vidRef}
-        autoplay
-        muted
-        playsinline
-        width="250"
-        loop={false}
-        controls={false}
-        style={{ opacity: isVideoLoaded ? 1 : 0 }}
-        onLoadedData={onLoadedData}
-        onEnded={handleVideoEnded}
-        paused={'false'}
-        preload="metadata"
-        src={mobileVideo}
-        type="video/mp4"
-      />
-    </div>
-  );
 }
+
+
+
+// : (
+//   <div onClick={handlePlayPress}
+//     className="container">
+//     <img
+//       src={blurImage}
+//       className="video-thumb tiny"
+//       alt="thumb"
+//       style={{ opacity: isVideoLoaded ? 0 : 1 }}
+//     />
+//     <video id="videoBG"
+//       onClick={handlePlayPress}
+//       ref={vidRef}
+//       autoplay
+//       muted
+//       playsinline
+//       width="250"
+//       loop={false}
+//       controls={false}
+//       style={{ opacity: isVideoLoaded ? 1 : 0 }}
+//       onLoadedData={onLoadedData}
+//       onEnded={handleVideoEnded}
+//       paused={'false'}
+//       preload="metadata"
+//       src={mobileVideo}
+//       type="video/mp4"
+//     />
+//   </div>
+// );
+//}
 
 
 export default Video;
