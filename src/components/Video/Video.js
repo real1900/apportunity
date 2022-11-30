@@ -62,7 +62,7 @@ function Video() {
   //   "https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
 
 
-  return !isMobile ? (
+  return isMobile ? (
   <div>
     <video playsInline muted autoPlay
       width="250">
