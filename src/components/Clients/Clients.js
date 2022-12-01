@@ -1,4 +1,4 @@
-import React,{ useContext } from 'react';
+import React, { useContext } from 'react';
 import Marquee from "react-fast-marquee";
 
 import './Clients.css'
@@ -21,34 +21,36 @@ function Clients() {
     }
 
     return (
-        <div className="clients" style={{backgroundColor: theme.primary}}>
+        <div className="clients" style={{ backgroundColor: theme.primary }}>
             <div className="clientsHeader">
-                <h2 style={{color: theme.secondary}}>Clients</h2>
-             
+                <h2 style={{ color: theme.secondary }}>Clients</h2>
+
             </div>
             <div className="clientsDescription">
-                <p style={{color:theme.secondary}}>{clientsDescriptionData}</p></div>
+                <p style={{ color: theme.secondary }}>{clientsDescriptionData}</p></div>
             <div className="clientsContainer">
                 <div className="client--scroll">
-                    <Marquee 
-                        gradient={false} 
-                        speed={80} 
+                    <Marquee
+                        gradient={false}
+                        speed={80}
                         pauseOnHover={true}
-                        pauseOnClick={true} 
+                        pauseOnClick={true}
                         delay={0}
-                        play={true} 
+                        play={true}
                         direction="left"
                     >
-                        {clientsData.map((client, id) => (
-                            <div key={id} className="client--name">
-                            <div className="client--box" key={id} style={clientBoxStyle}>
-                                <img src={clientsImage(client)} alt={client}  style={clientsImageStyle}/>
-                                
-                            </div>
-                            <h3 style={{color: theme.tertiary}}>  {client}</h3> 
-                            </div>
-                     
-                        ))}
+                        {
+                            clientsData.map(
+                                (client, id) => (
+                                    <div key={id} className="client--name">
+                                        <div className="client--box" key={id} style={clientBoxStyle}>
+                                            <img src={clientsImage(client.name)} alt={client.name} style={clientsImageStyle} />
+                                        </div>
+                                        <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
+                                    </div>
+                                )
+                            )
+                        }
                     </Marquee>
                 </div>
             </div>
