@@ -6,6 +6,7 @@ import './Clients.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { clientsData, clientsDescriptionData } from '../../data/clientsData'
 import { clientsImage } from '../../utils/clientsImage'
+import { Link } from 'react-router-dom';
 
 function Clients() {
 
@@ -43,10 +44,12 @@ function Clients() {
                             clientsData.map(
                                 (client, id) => (
                                     <div key={id} className="client--name">
-                                        <div className="client--box" key={id} style={clientBoxStyle}>
-                                            <img src={clientsImage(client.name)} alt={client.name} style={clientsImageStyle} />
-                                        </div>
-                                        <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
+                                        <a href={client.website} rel="noreferrer" target="_blank" >
+                                            <div className="client--box" key={id} style={clientBoxStyle}>
+                                                <img src={clientsImage(client.name)} alt={client.name} style={clientsImageStyle} />
+                                            </div>
+                                            <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
+                                        </a>
                                     </div>
                                 )
                             )
