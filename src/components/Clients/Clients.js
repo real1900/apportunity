@@ -6,7 +6,6 @@ import './Clients.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { clientsData, clientsDescriptionData } from '../../data/clientsData'
 import { clientsImage } from '../../utils/clientsImage'
-import { Link } from 'react-router-dom';
 
 function Clients() {
 

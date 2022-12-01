@@ -210,13 +210,14 @@
     width: 90%;
   }
   .lcr-buttonContainer {
-    margin: 0 auto;
+   margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .lcr-buttonContainer button {
-    margin-top: -20%;
+    margin-top: 20%;
+    
   }
 }
 
@@ -240,5 +241,13 @@
     --img-size: 150px;
     left: 50%;
     top: 20%;
+  }
+
+    .lcr-buttonContainer {
+ flex-direction: column;
+  }
+  .lcr-buttonContainer button {
+    margin-top: 20%;
+    
   }
 }

@@ -109,7 +109,7 @@ function PageDetail({image, header, body}) {
             className="page-detail--container-right"
             style={{ backgroundColor: theme.secondary }}
           >
-            <div className="lcr--content" style={{ color: theme.tertiary }}>{header}</div>
+            <div className="page-detail--content" style={{ color: theme.tertiary }}>{header}</div>
           </div>
         </div>
       </div>

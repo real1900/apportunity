@@ -62,7 +62,7 @@ function Landing() {
         border: `3px solid ${theme.tertiary}`,
       },
       [t.breakpoints.down("sm")]: {
-        display: "none",
+        width: "180px",
       },
     },
   }));
@@ -152,6 +152,7 @@ function Landing() {
             <p>{headerData.desciption}</p>
 
             <div className="lcr-buttonContainer">
+
               <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
                 <Button className={classes.resumeBtn}>Contact Us</Button>
               </NavLink>
