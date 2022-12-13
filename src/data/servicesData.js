@@ -63,7 +63,7 @@ export const servicesData = [
         title: 'Our Commitment',
         image: commitment,
         icon: <FaTabletAlt />,
-        desc:"We offer a 45 day warranty period on all the products we build. We encourage our clients to hire a third-party consultant to vigrously test our products, and find a bug or two. For service-level agreements we offer various models to suit your budget and requirments.",
+        desc:"We offer a 45 day warranty period on all the products we build. We encourage our clients to hire a third-party consultant to vigorously test our products, and find a bug or two. For service-level agreements we offer various models to suit your budget and requirements.",
     },
 
 ]
