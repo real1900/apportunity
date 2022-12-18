@@ -10,12 +10,10 @@ import { clientsImage } from '../../utils/clientsImage'
 function Clients() {
 
     const { theme } = useContext(ThemeContext);
-
     const clientBoxStyle = {
         backgroundColor: theme.secondary,
         boxShadow: `0px 0px 30px ${theme.secondary}`
     }
-
     const clientsImageStyle = {
         width: '120px'
     }
@@ -24,7 +22,6 @@ function Clients() {
         <div className="clients" style={{ backgroundColor: theme.primary }}>
             <div className="clientsHeader">
                 <h2 style={{ color: theme.secondary }}>Clients</h2>
-
             </div>
             <div className="clientsDescription">
                 <p style={{ color: theme.secondary }}>{clientsDescriptionData}</p></div>
