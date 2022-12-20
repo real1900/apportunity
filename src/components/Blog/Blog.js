@@ -38,11 +38,12 @@ function Blog() {
   }));
 
   const classes = useStyles();
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState();
   useEffect(() => {
     const getRss = async (e) => {
-      const blogٰItems = await fetchBlog();
-      setItems(blogٰItems);
+      const blogItems = await fetchBlog();
+
+      setItems(blogItems);
     };
 
     getRss();
@@ -53,51 +54,51 @@ function Blog() {
 
   return (
     <>
-      {(items !== undefined && items !== null)?
-      (items.length > 0) && (
-        <div
-          className="blog"
-          id="blog"
-          style={{ backgroundColor: theme.secondary }}
-        >
-          <div className="blog--header">
-            <h1 style={{ color: theme.primary }}>Blog</h1>
-          </div>
-          <div className="blog--body">
-            <div className="blog--bodyContainer">
-              {items
-                .slice(0, 3)
-                .reverse()
-                .map((item) => {
-
-                  return <SingleBlog
-                    theme={theme}
-                    title={item.title}
-                    desc={item.description}
-                    date={item.published}
-                    image={item.image}
-                    url={item.link}
-                    key={item.id}
-                    id={item.id}
-                  />;
-                }
-
-                )}
+      {(items !== undefined && items !== null) ?
+        (items.length > 0) && (
+          <div
+            className="blog"
+            id="blog"
+            style={{ backgroundColor: theme.secondary }}
+          >
+            <div className="blog--header">
+              <h1 style={{ color: theme.primary }}>Blog</h1>
             </div>
+            <div className="blog--body">
+              <div className="blog--bodyContainer">
+                {items
+                  .slice(0, 3)
+                  .reverse()
+                  .map((item) => {
 
-            {items.length > 3 && (
-              <div className="blog--viewAll">
-                <Link to="/blogs">
-                  <button className={classes.viewAllBtn}>
-                    View All
-                    <HiArrowRight className={classes.viewArr} />
-                  </button>
-                </Link>
+                    return <SingleBlog
+                      theme={theme}
+                      title={item.title._text}
+                      desc={item.description._text}
+                      date={item.pubDate._text}
+                      image={item['media:content']._attributes.url}
+                      url={item.link._text}
+                      key={item.link._text}
+                      id={item.link._text}
+                    />;
+                  }
+
+                  )}
               </div>
-            )}
-          </div>
-        </div>):
-      <div></div>}
+
+              {items.length > 3 && (
+                <div className="blog--viewAll">
+                  <Link to="/blogs">
+                    <button className={classes.viewAllBtn}>
+                      View All
+                      <HiArrowRight className={classes.viewArr} />
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>) :
+        <div></div>}
     </>
   );
 };
