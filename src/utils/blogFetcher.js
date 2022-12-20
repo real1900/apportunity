@@ -1,41 +1,21 @@
 import { read } from "feed-reader";
+import React, { useState, useEffect } from "react";
 
 
 async function fetchBlog() {
-    //https://proxy.cors.sh/
-    //https://proxy1900.herokuapp.com/
     try {
 
-        const rssUrl = "/appdevelopermagazine";
 
-        const result = await read(rssUrl, {
-            useISODateFormat: false,
-            normalization: true,
-            getExtraEntryFields: (feedEntry) => {
-                const mediaContent = feedEntry["media:content"];
-                const guid = feedEntry["guid"];
-                const uid = guid.substring(0, guid.length - 1);
-                const refinedId = uid.substring(uid.lastIndexOf('/') + 1, uid.length)
+        const response = await fetch('/appdevelopermagazine',)
+        const names = await response.text();
+        console.log(names);
+        console.log('======success=======');
 
-                return {
-                    image: mediaContent["@_url"],
-                    id: refinedId,
-                }
-            },
 
-        }, {
-            headers: {
-                "Access-Control-Allow-Origin": "*",
-                'mode': "no-cors"
-            },
-            mode: 'no-cors',
-        });
-
-        console.log(result.entries)
-
-        return result.entries;
+        return [];
     }
     catch (e) {
+        console.log('======failure=======');
         console.error(e);
         return [];
     }
