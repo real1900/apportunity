@@ -2,13 +2,13 @@ import { read } from "feed-reader";
 
 
 async function fetchBlog() {
- //https://proxy.cors.sh/
- //https://proxy1900.herokuapp.com/
+    //https://proxy.cors.sh/
+    //https://proxy1900.herokuapp.com/
     try {
 
-        const rssUrl = "https://proxy.cors.sh/http://feeds.feedburner.com/appdevelopermagazine";
+        const rssUrl = "http://feeds.feedburner.com/appdevelopermagazine";
 
-        const result =  await read(rssUrl, {
+        const result = await read(rssUrl, {
             useISODateFormat: false,
             normalization: true,
             getExtraEntryFields: (feedEntry) => {
