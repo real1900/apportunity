@@ -127,7 +127,7 @@ function BlogPage() {
             alignItems="center"
             justifyContent="center"
           >
-            {items.reverse().map((item) => {
+            {items.map((item) => {
               const url = item.link._text
               const formattedURL = url.slice(0, -1)
               const lastPath = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
