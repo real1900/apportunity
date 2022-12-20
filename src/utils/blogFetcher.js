@@ -6,7 +6,7 @@ async function fetchBlog() {
     //https://proxy1900.herokuapp.com/
     try {
 
-        const rssUrl = "http://feeds.feedburner.com/appdevelopermagazine";
+        const rssUrl = "/appdevelopermagazine";
 
         const result = await read(rssUrl, {
             useISODateFormat: false,
@@ -30,6 +30,8 @@ async function fetchBlog() {
             },
             mode: 'no-cors',
         });
+
+        console.log(result.entries)
 
         return result.entries;
     }
