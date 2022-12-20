@@ -70,6 +70,9 @@ function Blog() {
                   .slice(0, 3)
                   .reverse()
                   .map((item) => {
+                    const url = item.link._text
+                    const formattedURL = url.slice(0, -1)
+                    const lastPath = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
 
                     return <SingleBlog
                       theme={theme}
@@ -78,8 +81,8 @@ function Blog() {
                       date={item.pubDate._text}
                       image={item['media:content']._attributes.url}
                       url={item.link._text}
-                      key={item.link._text}
-                      id={item.link._text}
+                      key={lastPath}
+                      id={lastPath}
                     />;
                   }
 

@@ -127,18 +127,23 @@ function BlogPage() {
             alignItems="center"
             justifyContent="center"
           >
-            {items.reverse().map((item) => (
-              <SingleBlog
+            {items.reverse().map((item) => {
+              const url = item.link._text
+              const formattedURL = url.slice(0, -1)
+              const lastPath = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
+
+              return <SingleBlog
                 theme={theme}
-                title={item.title}
-                desc={item.description}
-                date={item.published}
-                image={item.image}
-                url={item.link}
-                key={item.id}
-                id={item.id}
-              />
-            ))}
+                title={item.title._text}
+                desc={item.description._text}
+                date={item.pubDate._text}
+                image={item['media:content']._attributes.url}
+                url={item.link._text}
+                key={lastPath}
+                id={lastPath}
+              />;
+            }
+            )}
           </Grid>
         </div>
       </div>
