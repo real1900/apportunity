@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c420a64.css",
-    "main.js": "/static/js/main.fc457d17.js",
+    "main.css": "/static/css/main.2e2f5258.css",
+    "main.js": "/static/js/main.d4662216.js",
     "static/js/787.3ad3eb91.chunk.js": "/static/js/787.3ad3eb91.chunk.js",
     "static/media/apportunity-intro.mp4": "/static/media/apportunity-intro.4ed52da48665443ad9cd.mp4",
     "static/media/14.png": "/static/media/14.f18630125e1429e4ffea.png",
@@ -176,12 +176,12 @@
     "static/media/1.md": "/static/media/1.6a9c3e88b940da008831.md",
     "static/media/vuetifyjs.svg": "/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
-    "main.0c420a64.css.map": "/static/css/main.0c420a64.css.map",
-    "main.fc457d17.js.map": "/static/js/main.fc457d17.js.map",
+    "main.2e2f5258.css.map": "/static/css/main.2e2f5258.css.map",
+    "main.d4662216.js.map": "/static/js/main.d4662216.js.map",
     "787.3ad3eb91.chunk.js.map": "/static/js/787.3ad3eb91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0c420a64.css",
-    "static/js/main.fc457d17.js"
+    "static/css/main.2e2f5258.css",
+    "static/js/main.d4662216.js"
   ]
 }
