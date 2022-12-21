@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext, } from "react";
-import { useParams } from "react-router";
 import './blogDetailBody.css';
 import parse from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
