@@ -1,6 +1,7 @@
 {
   "name": "apportunity",
   "homepage": "https://apportunity.io",
+  "proxy":"https://feeds.feedburner.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
