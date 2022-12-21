@@ -70,17 +70,19 @@ function Blog() {
                   .slice(0, 3)
                   .reverse()
                   .map((item) => {
-                    const url = item.link._text
+                    const url = item.link
                     const formattedURL = url.slice(0, -1)
                     const lastPath = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
 
+                    console.log("ITEM IS ", item)
+
                     return <SingleBlog
                       theme={theme}
-                      title={item.title._text}
-                      desc={item.description._text}
-                      date={item.pubDate._text}
-                      image={item['media:content']._attributes.url}
-                      url={item.link._text}
+                      title={item.title}
+                      desc={item.description}
+                      date={item.published}
+                      image={item.media.content.url}
+                      url={item.link}
                       key={lastPath}
                       id={lastPath}
                     />;

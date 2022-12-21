@@ -17,7 +17,7 @@ function BlogDetail() {
     const getRss = async (e) => {
       const blogItems = await fetchBlog();
       const _filterArr = blogItems.filter((v, i) => {
-        const theURL = v.guid._text;
+        const theURL = v.link;
         const formattedURL = theURL.slice(0, -1)
         const theLastCompo = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
         // console.log("theLastCompo Is", theLastCompo);
@@ -32,20 +32,23 @@ function BlogDetail() {
 
   }, [location.pathname]);
 
-  const theImage = blogItem['media:content']
+  const theImage = blogItem.media
 
   var body = <></>
 
   if (theImage) {
     const header = <div>
-      <h1>{blogItem.title._text}</h1>
-      <p>{blogItem.pubDate._text}</p>
+      <h1>{blogItem.title}</h1>
+      <p>{blogItem.published}</p>
     </div>
-    const blogDetailBody = <BlogDetailBody {...blogItem.id} />
+    const content = blogItem.content.replace("<![CDATA[", "").replace("]]>", "");
+
+    console.log("content IS", content)
     // console.log("blogItem IS", blogItem)
-    const image = blogItem['media:content']._attributes.url;
+    const blogDetailBody = <BlogDetailBody content={content} />
+
     // console.log("blogItem content IS", image)
-    body = <PageDetail image={image} header={header} body={blogDetailBody} ></PageDetail>
+    body = <PageDetail image={blogItem.media.content.url} header={header} body={blogDetailBody} ></PageDetail>
 
   }
 
