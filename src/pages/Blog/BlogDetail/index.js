@@ -48,7 +48,7 @@ function BlogDetail() {
     const blogDetailBody = <BlogDetailBody content={content} />
 
     // console.log("blogItem content IS", image)
-    body = <PageDetail image={blogItem.media.content.url} header={header} body={blogDetailBody} ></PageDetail>
+    body = <PageDetail image={blogItem.media.content.url} header={header} body={blogDetailBody} shouldContainImage={false}></PageDetail>
 
   }
 

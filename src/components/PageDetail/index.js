@@ -10,7 +10,7 @@ import Transitions from "../../pages/Transitions";
 import Contacts from "../Contacts/Contacts";
 import Footer from "../Footer/Footer";
 
-function PageDetail({image, header, body}) {
+function PageDetail({ image, header, body, shouldContainImage }) {
   const { theme, drawerOpen } = useContext(ThemeContext);
 
   const useStyles = makeStyles((t) => ({
@@ -102,7 +102,7 @@ function PageDetail({image, header, body}) {
               opacity: `${drawerOpen ? "0" : "1"}`,
               borderColor: theme.secondary,
               backgroundColor: "#fff",
-              objectFit: "contain",
+              objectFit: shouldContainImage === true ? "contain" : "cover",
             }}
           />
           <div

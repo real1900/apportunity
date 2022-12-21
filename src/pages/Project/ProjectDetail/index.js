@@ -30,7 +30,7 @@ function ProjectDetail() {
   </div>
 
   return (
-    <PageDetail image={image} header={header} body={body} ></PageDetail>
+    <PageDetail image={image} header={header} body={body} shouldContainImage={true}></PageDetail>
   );
 }
 
