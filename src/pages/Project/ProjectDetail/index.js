@@ -4,6 +4,7 @@ import { projectsData } from "../../../data/projectsData";
 import MarkDownReader from "../../../components/MarkDownReader";
 import PageDetail from "../../../components/PageDetail";
 import GetStoreLink from "../../../components/common/getStoreLink";
+import './projectDetail.css';
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -15,9 +16,9 @@ function ProjectDetail() {
   const body = <MarkDownReader markDownFile={markDownFile} />
   const storeLinks = data.storeLinks
 
-  const header = <div>
+  const header = <div className="project--header">
     <h1>{data.projectName}</h1>
-    <p>{data.projectDesc}</p>
+    <h5>{data.projectDesc}</h5>
 
     <div className="project--showcaseBtn">
       {

@@ -3,6 +3,8 @@ import { useLocation } from "react-router";
 import BlogDetailBody from "./blogDetailBody";
 import { fetchBlog } from "../../../utils/blogFetcher";
 import PageDetail from "../../../components/PageDetail";
+import './blogDetail.css';
+import { convertUnixDateToDateTime } from "../../../utils/blogFetcher copy";
 
 function BlogDetail() {
   const location = useLocation();
@@ -37,9 +39,9 @@ function BlogDetail() {
   var body = <></>
 
   if (theImage) {
-    const header = <div>
+    const header = <div className="blog--header">
       <h1>{blogItem.title}</h1>
-      <p>{blogItem.published}</p>
+      <h5>{convertUnixDateToDateTime(blogItem.published)}</h5>
     </div>
     const content = blogItem.content.replace("<![CDATA[", "").replace("]]>", "");
 

@@ -105,11 +105,8 @@ function PageDetail({ image, header, body, shouldContainImage }) {
               objectFit: shouldContainImage === true ? "contain" : "cover",
             }}
           />
-          <div
-            className="page-detail--container-right"
-            style={{ backgroundColor: theme.secondary }}
-          >
-            <div className="page-detail--content" style={{ color: theme.tertiary }}>{header}</div>
+          <div className="page-detail--container-right" style={{ backgroundColor: theme.secondary }}>
+            {header}
           </div>
         </div>
       </div>

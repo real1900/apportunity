@@ -3,14 +3,10 @@ import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import placeholder from '../../../assets/png/placeholder.png'
 import './SingleBlog.css'
+import { convertUnixDateToDateTime } from '../../../utils/blogFetcher copy';
 
 function SingleBlog({ theme, title, desc, date, image, url, id }) {
 
-    function getDate(unixTimeStamp) {
-        var date = new Date(unixTimeStamp).toLocaleDateString()
-        var time = new Date(unixTimeStamp).toLocaleTimeString()
-        return date + " " + time
-    }
 
     function truncateWords(sentence, amount, tail) {
         const words = sentence.split(' ');
@@ -42,7 +38,7 @@ function SingleBlog({ theme, title, desc, date, image, url, id }) {
                         />
                     </div>
                     <div className="singleBlog--body">
-                        <p style={{ color: theme.tertiary }}>{getDate(date)}</p>
+                        <p style={{ color: theme.tertiary }}>{convertUnixDateToDateTime(date)}</p>
                         <h3 style={{ color: theme.secondary }}>{title}</h3>
                         <h6 style={{ color: theme.secondary }}>{shortDescString}</h6>
                     </div>

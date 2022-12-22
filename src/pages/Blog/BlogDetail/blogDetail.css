@@ -1,0 +1,39 @@
+
+.blog--header {
+     font-family: "var(--primaryFont)", sans-serif;
+ 
+    display: flex;
+  flex-direction:column;
+    text-align: right;
+    align-items: flex-end;
+}
+.blog--header h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgba(234, 234, 234, 1);
+  margin-left: 200px;
+  margin-right: 20px;
+   font-size: 2.5rem;
+}
+
+
+.blog--header h5 {
+ color: rgba(234, 234, 234, 0.5);
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+ .blog--header {
+   
+    text-align: center;
+    align-items: center;
+}
+
+.blog--header h1 {
+      margin-left: 20px;
+}
+
+}
