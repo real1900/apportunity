@@ -1,50 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {
   HashRouter as Router,
-  Route,
-  Routes
 } from "react-router-dom";
-import { Main, BlogPage, ProjectPage, ProjectDetail } from "./pages";
 import { BackToTop } from "./components";
 import ScrollToTop from "./utils/ScrollToTop";
-import { AnimatePresence } from 'framer-motion';
-import { EventEmitter } from "./utils/events";
-import BlogDetail from "./pages/Blog/BlogDetail";
-import PrivacyPolicy from "./pages/Privacy";
 import Messenger from "./components/Messenger";
 import "./App.css";
-
-function AnimatedSwitch() {
-  const [animationClassNames, setAnimationClassNames] = useState("");
-
-  useEffect(() => {
-    EventEmitter.subscribe("routeChange", (className) =>
-      setAnimationClassNames(className)
-    );
-  }, [animationClassNames]);
-
-  return (
-    <AnimatePresence mode='wait'>
-      <Routes>
-        <Route path="/" exact element={<Main />} />
-        <Route path="/blogs" exact element={<BlogPage />} />
-        <Route path="/privacy" exact element={<PrivacyPolicy />} />
-        <Route path="/projects" exact element={<ProjectPage />} />
-        <Route path="/project/:id" exact element={<ProjectDetail />} />
-        <Route path="/blog/:id" exact element={<BlogDetail />} />
-      </Routes>
-    </AnimatePresence >
-  );
-};
+import TagManager from 'react-gtm-module'
+import AnimatedRoutes from "./AnimatedRoutes";
 
 function App() {
+
+  useEffect(() => {
+    const tagManagerArgs = {
+      gtmId: 'GTM-5QW5PZJ'
+    }
+
+    TagManager.initialize(tagManagerArgs);
+  }, []);
+
   return (
     <div className="app">
       <Router baseline="/">
         <ScrollToTop />
-        <AnimatedSwitch />
+        <AnimatedRoutes />
       </Router>
-      <Messenger/>
+      <Messenger />
       <BackToTop />
     </div>
   );
