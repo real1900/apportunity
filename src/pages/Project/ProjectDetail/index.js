@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router";
 import { projectsData } from "../../../data/projectsData";
-import MarkDownReader from "../../../components/MarkDownReader";
 import PageDetail from "../../../components/PageDetail";
 import GetStoreLink from "../../../components/common/getStoreLink";
 import './projectDetail.css';
