@@ -9,7 +9,7 @@ export const projectsData = [
         storeLinks: {
             "iOS": "https://appsto.re/us/OLBMF.i"
         },
-        aboutCompany:"CBS Interactive is a media company that operates a number of online platforms, including popular websites and digital brands. It is a division of CBS Corporation, a mass media company that is one of the largest in the world. CBS Interactive's portfolio includes well-known sites such as CBS.com, CBS News, CBS Sports, CNET, GameSpot, and TVGuide.com, as well as a number of other digital properties. The company's mission is to provide users with high-quality, engaging content across a variety of platforms, including desktop and mobile devices. CBS Interactive works to create an immersive and interactive experience for users through its diverse range of content, including news, sports, entertainment, and technology.",
+        aboutCompany: "CBS Interactive is a media company that operates a number of online platforms, including popular websites and digital brands. It is a division of CBS Corporation, a mass media company that is one of the largest in the world. CBS Interactive's portfolio includes well-known sites such as CBS.com, CBS News, CBS Sports, CNET, GameSpot, and TVGuide.com, as well as a number of other digital properties. The company's mission is to provide users with high-quality, engaging content across a variety of platforms, including desktop and mobile devices. CBS Interactive works to create an immersive and interactive experience for users through its diverse range of content, including news, sports, entertainment, and technology.",
 
     },
     {
@@ -70,7 +70,7 @@ export const projectsData = [
         storeLinks: {
             "Android": "https://play.google.com/store/apps/details?id=com.ezgolfleague.golfapp&hl=en",
         },
-        aboutCompany:"EZ Golf League LLC is a company that specializes in providing a mobile app to manage golf leagues and tournaments. Their app allows golfers to easily organize and track their golf games and competitions. With features such as score tracking, handicap calculation, and the ability to schedule and manage tournaments, their app makes it easy for golfers to stay organized and up-to-date on their golf activities. They believe that their app will revolutionize the way that golf leagues and tournaments are run, making it easier for golfers to stay connected and engaged in the game they love. Whether you are a seasoned pro or a beginner just starting out, EZ Golf League LLC has something to offer for every level of golfer."
+        aboutCompany: "EZ Golf League LLC is a company that specializes in providing a mobile app to manage golf leagues and tournaments. Their app allows golfers to easily organize and track their golf games and competitions. With features such as score tracking, handicap calculation, and the ability to schedule and manage tournaments, their app makes it easy for golfers to stay organized and up-to-date on their golf activities. They believe that their app will revolutionize the way that golf leagues and tournaments are run, making it easier for golfers to stay connected and engaged in the game they love. Whether you are a seasoned pro or a beginner just starting out, EZ Golf League LLC has something to offer for every level of golfer."
     },
     {
         id: 7,

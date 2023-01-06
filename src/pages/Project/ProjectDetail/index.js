@@ -5,6 +5,7 @@ import MarkDownReader from "../../../components/MarkDownReader";
 import PageDetail from "../../../components/PageDetail";
 import GetStoreLink from "../../../components/common/getStoreLink";
 import './projectDetail.css';
+import CaseStudy from "../CaseStudy";
 
 function ProjectDetail() {
   const { id } = useParams();
@@ -12,8 +13,7 @@ function ProjectDetail() {
   const data = _filterArr.length > 0 ? _filterArr[0] : {};
 
   const image = require(`../../../assets/png/projects/${id}.png`);
-  const markDownFile = require("../../../data/markDown/1.md");
-  const body = <MarkDownReader markDownFile={markDownFile} />
+  const body = <CaseStudy caseID={id} image={image}/>
   const storeLinks = data.storeLinks
 
   const header = <div className="project--header">

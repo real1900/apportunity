@@ -42,7 +42,7 @@ function Video() {
   }, []);
 
   return <div className="container">
-    <video
+    <video className="videoBG"
       playsInline muted autoPlay
       onClick={handlePlayPress}
       ref={vidRef}

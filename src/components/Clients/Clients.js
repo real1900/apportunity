@@ -4,8 +4,7 @@ import Marquee from "react-fast-marquee";
 import './Clients.css'
 
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { clientsData, clientsDescriptionData } from '../../data/clientsData'
-import { clientsImage } from '../../utils/clientsImage'
+import { clients } from '../../data/clientsData'
 
 function Clients() {
 
@@ -18,13 +17,15 @@ function Clients() {
         width: '120px'
     }
 
+    const svgDir = require.context('../../assets/svg/clients');
+
     return (
         <div className="clients" style={{ backgroundColor: theme.primary }}>
             <div className="clientsHeader">
                 <h2 style={{ color: theme.secondary }}>Clients</h2>
             </div>
             <div className="clientsDescription">
-                <p style={{ color: theme.secondary }}>{clientsDescriptionData}</p></div>
+                <p style={{ color: theme.secondary }}>{clients.description}</p></div>
             <div className="clientsContainer">
                 <div className="client--scroll">
                     <Marquee
@@ -37,12 +38,12 @@ function Clients() {
                         direction="left"
                     >
                         {
-                            clientsData.map(
+                            clients.list.map(
                                 (client, id) => (
                                     <div key={id} className="client--name">
                                         <a href={client.website} rel="noreferrer" target="_blank" >
                                             <div className="client--box" key={id} style={clientBoxStyle}>
-                                                <img src={clientsImage(client.name)} alt={client.name} style={clientsImageStyle} />
+                                                <img src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} style={clientsImageStyle} />
                                             </div>
                                             <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
                                         </a>

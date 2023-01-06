@@ -302,6 +302,7 @@ export const caseStudyData = [
     }, {
         id: 15,
         challenge: [
+            
         ],
         solution: [
         ],

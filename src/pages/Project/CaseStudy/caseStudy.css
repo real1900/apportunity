@@ -1,0 +1,56 @@
+.caseStudy {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.4);
+  background-color: rgb(33, 33, 33);
+  color: rgb(173, 173, 173);
+  max-height: 50;
+  padding: 30px;
+  font-family: var(--primaryFont);
+  line-height: 1.5rem;
+}
+
+.caseStudy p {
+  padding-top: 10px;
+  text-align: justify;
+  padding-bottom: 10px;
+  color: rgb(234, 234, 234);
+}
+
+.caseStudy h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: rgb(234, 234, 234);
+}
+
+.caseStudy h2 {
+   line-height: 2.5rem;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  color: rgb(234, 234, 234);
+}
+
+.caseStudy a {
+  color: rgb(222, 74, 66);
+  text-decoration: underline;
+}
+
+.caseStudy img {
+  padding: 20px;
+  max-width: 80%;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+}
+
+/* overriding from previous common.css file */
+.line-styling {
+  position: relative;
+  top: 0px;
+}
+
+@media screen and (max-width: 600px) {
+  .caseStudy {
+    border-top: none;
+  }
+}

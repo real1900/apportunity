@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-body {
+.videoBG body {
         background: url('/../apportunity/src/assets/jpg/video/intro.jpg');
         background-size: cover;
     }
