@@ -28,7 +28,7 @@ function Video() {
 
 
   var mobileVideo = require("../../assets/mp4/apportunity-intro.mp4");
-  var videoPoster = require("../../assets/png/video/intro.jpg");
+  var videoPoster = require("../../assets/jpg/video/intro.jpg");
 
   useLayoutEffect(() => {
     const video = document.querySelector('video')
