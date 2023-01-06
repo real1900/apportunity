@@ -7,6 +7,11 @@
   height: 100vh;
 }
 
+body {
+        background: url('/../apportunity/src/assets/jpg/video/intro.jpg');
+        background-size: cover;
+    }
+
 .container video {
   /* Make video to at least 100% wide and tall */
   min-width: 100%; 
@@ -64,8 +69,5 @@ html,body {
         width:auto;
         height: 100%;
     }
-    body {
-        background: url('/../apportunity/src/assets/png/video/blur.jpg');
-        background-size: cover;
-    }
+    
 }
