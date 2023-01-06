@@ -16,7 +16,7 @@ export const projectsData = [
         id: 2,
         projectName: 'DirecTV iPad',
         companyName: 'DirecTV Inc.',
-        projectDesc: 'An extremely app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
+        projectDesc: 'An extremely entertaining app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
         enterpriseApp: false,
         storeLinks: {
             "iOS": "https://appsto.re/us/UFLus.i",
@@ -42,13 +42,13 @@ export const projectsData = [
         id: 4,
         projectName: 'LOOSID',
         companyName: 'Loosid App LLC',
-        projectDesc: 'Apportunity Inc built this extremely useful app that lets users watch videos on iPad, stream liveTV, set DVR remotely, turn iPad into a remote control, and more',
+        projectDesc: 'Apportunity Inc built this extremely useful app that allows users to browse and RSVP to events such as support group meetings, fitness classes, and cultural events, all of which are free of alcohol.They also offer resources and tools to help individuals in recovery build a strong support network and stay on track with their recovery journey and more. ',
         enterpriseApp: false,
         storeLinks: {
             "iOS": "https://apps.apple.com/us/app/loosid-sober-social-network/id1413514350",
             "Android": "https://play.google.com/store/apps/details?id=com.loosidapp",
         },
-        aboutCompany: "LOOSID LLC. is dedicated to helping individuals in recovery from alcohol addiction maintain their sobriety and live fulfilling lives. They offer a range of support services, including an online app that helps connect recovering alcoholics with alcohol-free social events and activities in their area.The app allows users to browse and RSVP to events such as support group meetings, fitness classes, and cultural events, all of which are free of alcohol.They also offer resources and tools to help individuals in recovery build a strong support network and stay on track with their recovery journey.They believe that recovery is a lifelong process, and our goal is to provide a safe and supportive community for those seeking to overcome their addiction.They understand the challenges that come with recovery, and offer the help and support needed to succeed."
+        aboutCompany: "LOOSID LLC. is dedicated to helping individuals in recovery from alcohol addiction maintain their sobriety and live fulfilling lives. They offer a range of support services, including an online app that helps connect recovering alcoholics with alcohol-free social events and activities in their area. The app allows users to browse and RSVP to events such as support group meetings, fitness classes, and cultural events, all of which are free of alcohol.They also offer resources and tools to help individuals in recovery build a strong support network and stay on track with their recovery journey. They believe that recovery is a lifelong process, and our goal is to provide a safe and supportive community for those seeking to overcome their addiction.They understand the challenges that come with recovery, and offer the help and support needed to succeed."
     },
     {
         id: 5,
@@ -76,7 +76,7 @@ export const projectsData = [
         id: 7,
         projectName: 'Backstage',
         companyName: 'Apple Inc.',
-        projectDesc: 'An app built by Apportunity used by Apple Inc. for Apple Stores around the world to manage back of the house activities such as management of delieveries, inventory and returns ',
+        projectDesc: 'An app built by Apportunity used by Apple Inc. for Apple Stores around the world to manage back of the house activities such as management of deliveries, inventory and returns ',
         enterpriseApp: true,
         storeLinks: {
             "iOS": ""
