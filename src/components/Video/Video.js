@@ -1,5 +1,5 @@
 
-import React, {  useRef, useLayoutEffect,} from "react";
+import React, { useRef, useLayoutEffect, } from "react";
 import "./Video.css";
 
 function Video() {
@@ -28,6 +28,7 @@ function Video() {
 
 
   var mobileVideo = require("../../assets/mp4/apportunity-intro.mp4");
+  var videoPoster = require("../../assets/png/video/intro.jpg");
 
   useLayoutEffect(() => {
     const video = document.querySelector('video')
@@ -41,11 +42,12 @@ function Video() {
   }, []);
 
   return <div className="container">
-    <video 
-    playsInline muted autoPlay 
+    <video
+      playsInline muted autoPlay
       onClick={handlePlayPress}
       ref={vidRef}
-     width={window.innerWidth} height={window.innerHeight}
+      poster={videoPoster}
+      width={window.innerWidth} height={window.innerHeight}
     >
       <source src={mobileVideo} type="video/mp4" />
       Sorry, your browser doesn't support videos.
