@@ -39,7 +39,7 @@ function BlogDetail() {
   var body = <></>
 
   if (theImage) {
-    const header = <div className="blog--header">
+    const header = <div className="blog-detail--header">
       <h1>{blogItem.title}</h1>
       <h5>{convertUnixDateToDateTime(blogItem.published)}</h5>
     </div>

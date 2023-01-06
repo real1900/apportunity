@@ -1,5 +1,5 @@
 
-.blog--header {
+.blog-detail--header {
      font-family: "var(--primaryFont)", sans-serif;
  
     display: flex;
@@ -7,7 +7,7 @@
     text-align: right;
     align-items: flex-end;
 }
-.blog--header h1 {
+.blog-detail--header h1 {
   padding-top: 20px;
   padding-bottom: 20px;
   color: rgba(234, 234, 234, 1);
@@ -17,7 +17,7 @@
 }
 
 
-.blog--header h5 {
+.blog-detail--header h5 {
  color: rgba(234, 234, 234, 0.5);
   padding-top: 20px;
   padding-bottom: 20px;
@@ -26,13 +26,13 @@
 }
 
 @media (max-width: 600px) {
- .blog--header {
+ .blog-detail--header {
    
     text-align: center;
     align-items: center;
 }
 
-.blog--header h1 {
+.blog-detail--header h1 {
       margin-left: 20px;
 }
 
