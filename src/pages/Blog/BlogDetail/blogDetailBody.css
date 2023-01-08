@@ -44,12 +44,6 @@
   border-radius: 25px;
 }
 
-/* overriding from previous common.css file */
-.line-styling {
-  position: relative;
-  top: 0px;
-}
-
 @media screen and (max-width: 600px) {
   .blogDetailBody {
     border-top: none;

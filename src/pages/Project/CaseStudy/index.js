@@ -1,23 +1,14 @@
 import React, {
-    // useState,
-    useEffect, useContext
+    useContext
 } from "react";
 import './caseStudy.css';
-// import Markdown from 'markdown-to-jsx';
 import { ThemeContext } from "../../../contexts/ThemeContext";
 import { projectsData } from '../../../data/projectsData'
 import { caseStudyData } from '../../../data/caseStudyData'
 
 function CaseStudy({ caseID, image }) {
-    // const [markdown, setMarkdown] = useState("");
     const { theme } = useContext(ThemeContext);
 
-    useEffect(() => {
-
-        // fetch(markDownFile)
-        //     .then((res) => res.text())
-        //     .then((text) => setMarkdown(text));
-    });
 
     const caseStudy = caseStudyData[caseID - 1];
     const project = projectsData[caseID - 1];
@@ -37,6 +28,12 @@ function CaseStudy({ caseID, image }) {
                 alt={`Case study for ${caseID}`}
                 style={{ objectFit: "cover", }}
             />
+            <div className="line-styling" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+
+                <div className="style-line" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+            </div>
             <h2>Challenge</h2>
             <div>
                 {caseStudy.challenge.map((currElement, index) => {
@@ -44,12 +41,24 @@ function CaseStudy({ caseID, image }) {
                 })
                 }
             </div>
+            <div className="line-styling" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+
+                <div className="style-line" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+            </div>
             <h2>Solution</h2>
             <div>
                 {caseStudy.solution.map((currElement, index) => {
                     return <p>{currElement}</p>; //equivalent to list[index]
                 })
                 }
+            </div>
+            <div className="line-styling" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
+
+                <div className="style-line" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
+                <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
             </div>
             <h2>Result</h2>
             <div>

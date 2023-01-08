@@ -107,161 +107,164 @@ function Contacts() {
 
     const classes = useStyles();
     return (
-        <div
-            className='contacts'
-            id='contacts'
-            style={{ backgroundColor: theme.secondary }
-            }
-        >
+        <div style={{ backgroundColor: theme.secondary }} >
             <div className="line-styling">
                 <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
                 <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
                 <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
             </div>
-            <div className='contacts--container'>
-                <h1 style={{ color: theme.primary }}>Contact Us</h1>
-                <p style={{ color: theme.tertiary, paddingBottom: "20px", textAlign: "center" }}> Learn how Apportunity's product design and app development services can help you build better mobile relationships with your customers. Let's Talk About Your Project!.</p>
-                <CalendarButton title="Request a meeting" />
-                <div className='socialmedia-icons'>
-                    {contactsData.phone && (
-                        <a
-                            className={classes.detailsIcon}
-                            href={"tel:" + contactsData.phone}>
-                            <FiPhone />
-                        </a>
-                    )}
-                    {contactsData.email && (
-                        <a
-                            className={classes.detailsIcon}
-                            href={"mailto:" + contactsData.email}>
-                            <FiMail />
-                        </a>
-                    )}
-                    {socialsData.twitter && (
-                        <a
-                            href={socialsData.twitter}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaTwitter aria-label='Twitter' />
-                        </a>
-                    )}
-                    {socialsData.github && (
-                        <a
-                            href={socialsData.github}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaGithub aria-label='GitHub' />
-                        </a>
-                    )}
-                    {socialsData.linkedIn && (
-                        <a
-                            href={socialsData.linkedIn}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaLinkedinIn aria-label='LinkedIn' />
-                        </a>
+            <div
+                className='contacts'
+                id='contacts'
+                style={{ backgroundColor: theme.secondary }
+                }
+            >
 
-                    )}
-                    {socialsData.facebook && (
-                        <a
-                            href={socialsData.facebook}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaFacebook aria-label='Facebook' />
-                        </a>
-                    )}
-                    {socialsData.instagram && (
-                        <a
-                            href={socialsData.instagram}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaInstagram aria-label='Instagram' />
-                        </a>
-                    )}
-                    {socialsData.medium && (
-                        <a
-                            href={socialsData.medium}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaMediumM aria-label='Medium' />
-                        </a>
-                    )}
-                    {socialsData.blogger && (
-                        <a
-                            href={socialsData.blogger}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaBloggerB aria-label='Blogger' />
-                        </a>
-                    )}
-                    {socialsData.youtube && (
-                        <a
-                            href={socialsData.youtube}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaYoutube aria-label='YouTube' />
-                        </a>
-                    )}
-                    {socialsData.reddit && (
-                        <a
-                            href={socialsData.reddit}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaRedditAlien aria-label='Reddit' />
-                        </a>
-                    )}
-                    {socialsData.stackOverflow && (
-                        <a
-                            href={socialsData.stackOverflow}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaStackOverflow aria-label='Stack Overflow' />
-                        </a>
-                    )}
-                    {socialsData.codepen && (
-                        <a
-                            href={socialsData.codepen}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaCodepen aria-label='CodePen' />
-                        </a>
-                    )}
-                    {socialsData.gitlab && (
-                        <a
-                            href={socialsData.gitlab}
-                            target='_blank'
-                            rel='noreferrer'
-                            className={classes.socialIcon}
-                        >
-                            <FaGitlab aria-label='GitLab' />
-                        </a>
-                    )}
+                <div className='contacts--container'>
+                    <h1 style={{ color: theme.primary }}>Contact Us</h1>
+                    <p style={{ color: theme.tertiary, paddingBottom: "20px", textAlign: "center" }}> Learn how Apportunity's product design and app development services can help you build better mobile relationships with your customers. Let's Talk About Your Project!.</p>
+                    <CalendarButton title="Request a meeting" />
+                    <div className='socialmedia-icons'>
+                        {contactsData.phone && (
+                            <a
+                                className={classes.detailsIcon}
+                                href={"tel:" + contactsData.phone}>
+                                <FiPhone />
+                            </a>
+                        )}
+                        {contactsData.email && (
+                            <a
+                                className={classes.detailsIcon}
+                                href={"mailto:" + contactsData.email}>
+                                <FiMail />
+                            </a>
+                        )}
+                        {socialsData.twitter && (
+                            <a
+                                href={socialsData.twitter}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaTwitter aria-label='Twitter' />
+                            </a>
+                        )}
+                        {socialsData.github && (
+                            <a
+                                href={socialsData.github}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaGithub aria-label='GitHub' />
+                            </a>
+                        )}
+                        {socialsData.linkedIn && (
+                            <a
+                                href={socialsData.linkedIn}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaLinkedinIn aria-label='LinkedIn' />
+                            </a>
 
+                        )}
+                        {socialsData.facebook && (
+                            <a
+                                href={socialsData.facebook}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaFacebook aria-label='Facebook' />
+                            </a>
+                        )}
+                        {socialsData.instagram && (
+                            <a
+                                href={socialsData.instagram}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaInstagram aria-label='Instagram' />
+                            </a>
+                        )}
+                        {socialsData.medium && (
+                            <a
+                                href={socialsData.medium}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaMediumM aria-label='Medium' />
+                            </a>
+                        )}
+                        {socialsData.blogger && (
+                            <a
+                                href={socialsData.blogger}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaBloggerB aria-label='Blogger' />
+                            </a>
+                        )}
+                        {socialsData.youtube && (
+                            <a
+                                href={socialsData.youtube}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaYoutube aria-label='YouTube' />
+                            </a>
+                        )}
+                        {socialsData.reddit && (
+                            <a
+                                href={socialsData.reddit}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaRedditAlien aria-label='Reddit' />
+                            </a>
+                        )}
+                        {socialsData.stackOverflow && (
+                            <a
+                                href={socialsData.stackOverflow}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaStackOverflow aria-label='Stack Overflow' />
+                            </a>
+                        )}
+                        {socialsData.codepen && (
+                            <a
+                                href={socialsData.codepen}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaCodepen aria-label='CodePen' />
+                            </a>
+                        )}
+                        {socialsData.gitlab && (
+                            <a
+                                href={socialsData.gitlab}
+                                target='_blank'
+                                rel='noreferrer'
+                                className={classes.socialIcon}
+                            >
+                                <FaGitlab aria-label='GitLab' />
+                            </a>
+                        )}
+
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     );
 }

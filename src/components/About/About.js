@@ -29,7 +29,7 @@ function About() {
                     />
                 </div>
             </div>
-            <div className="line-styling" style={{ paddingTop: '40px' }}>
+            <div className="line-styling" style={{ paddingTop: '100px', paddingBottom: '60px' }}>
 
                 <div className="style-line" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
                 <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>

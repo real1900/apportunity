@@ -43,51 +43,59 @@ function Projects() {
   return (
     <>
       {projectsData.length > 0 && (
-        <div
-          className="projects"
-          id="projects"
-          style={{ backgroundColor: theme.secondary }}
-        >
-          <div className="projects--header">
-            <h1 style={{ color: theme.primary }}>Projects</h1>
+        <div style={{ backgroundColor: theme.secondary }}>
+          <div className="line-styling">
+            <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
+            <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
+            <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
           </div>
-          <div className="projects--body">
-            <div className="projects--bodyContainer">
-              {projectsData.slice(0, 3).map((project) => (
-                <Link key={project.id} to={`/project/${project.id}`}>
+          <div
+            className="projects"
+            id="projects"
+            style={{ backgroundColor: theme.secondary }}
+          >
 
-                  <SingleProject
-                    onClick={() => {
-                      EventEmitter.dispatch(
-                        "routeChange",
-                        EventEmitter.animation.forward
-                      );
-
-                    }}
-                    key={project.id}
-                    theme={theme}
-                    id={project.id}
-                    companyName ={project.companyName}
-                    name={project.projectName}
-                    desc={project.projectDesc}
-                    image={project.image}
-                    storeLinks = {project.storeLinks}
-                    enterpriseApp ={project.enterpriseApp}
-                  />
-                </Link>
-              ))}
+            <div className="projects--header">
+              <h1 style={{ color: theme.primary }}>Projects</h1>
             </div>
+            <div className="projects--body">
+              <div className="projects--bodyContainer">
+                {projectsData.slice(0, 3).map((project) => (
+                  <Link key={project.id} to={`/project/${project.id}`}>
 
-            {projectsData.length > 3 && (
-              <div className="projects--viewAll">
-                <Link to="/projects">
-                  <button className={classes.viewAllBtn}>
-                    View All
-                    <HiArrowRight className={classes.viewArr} />
-                  </button>
-                </Link>
+                    <SingleProject
+                      onClick={() => {
+                        EventEmitter.dispatch(
+                          "routeChange",
+                          EventEmitter.animation.forward
+                        );
+
+                      }}
+                      key={project.id}
+                      theme={theme}
+                      id={project.id}
+                      companyName={project.companyName}
+                      name={project.projectName}
+                      desc={project.projectDesc}
+                      image={project.image}
+                      storeLinks={project.storeLinks}
+                      enterpriseApp={project.enterpriseApp}
+                    />
+                  </Link>
+                ))}
               </div>
-            )}
+
+              {projectsData.length > 3 && (
+                <div className="projects--viewAll">
+                  <Link to="/projects">
+                    <button className={classes.viewAllBtn}>
+                      View All
+                      <HiArrowRight className={classes.viewArr} />
+                    </button>
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
         </div>
       )}
