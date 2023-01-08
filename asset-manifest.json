@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a6f0370.css",
-    "main.js": "/static/js/main.1ab1aded.js",
+    "main.css": "/static/css/main.9e891676.css",
+    "main.js": "/static/js/main.e67f867d.js",
     "static/js/787.3ad3eb91.chunk.js": "/static/js/787.3ad3eb91.chunk.js",
     "static/media/apportunity-intro.mp4": "/static/media/apportunity-intro.4ed52da48665443ad9cd.mp4",
     "static/media/14.png": "/static/media/14.f18630125e1429e4ffea.png",
@@ -12,7 +12,6 @@
     "static/media/9.png": "/static/media/9.0d2130100ec03c302f19.png",
     "static/media/suleman.jpg": "/static/media/suleman.9358824cb1dba36f54fd.jpg",
     "static/media/13.png": "/static/media/13.5408b1c843080614b067.png",
-    "static/media/intro.jpg": "/static/media/intro.34b24b5a6775164be5a4.jpg",
     "static/media/placeholder.png": "/static/media/placeholder.3fcbbdcd05f3e458d129.png",
     "static/media/expOrange.svg": "/static/media/expOrange.9383b2df918bf4e0ce67e3f289602562.svg",
     "static/media/expGreen.svg": "/static/media/expGreen.dffa1cc66a55ae11be49b61753f4c221.svg",
@@ -34,6 +33,7 @@
     "static/media/3.png": "/static/media/3.1317bf8e6fc88bd08f1c.png",
     "static/media/logo.png": "/static/media/logo.34e1f647338b6a4369ff.png",
     "static/media/BestermindRegular.ttf": "/static/media/BestermindRegular.e58a192233afb30a6a59.ttf",
+    "static/media/intro.jpg": "/static/media/intro.02b1f540f9edf7a0a8bf.jpg",
     "static/media/privacy.jpg": "/static/media/privacy.c7f732c781a4c4367b5f.jpg",
     "static/media/expertise.png": "/static/media/expertise.f4dbb622341cb988fd54.png",
     "static/media/privacyPolicy.md": "/static/media/privacyPolicy.5f694f8f4e1df830f596.md",
@@ -177,12 +177,12 @@
     "static/media/vue.svg": "/static/media/vue.47bdfb5a7a54d8ade2aa4c61d5148668.svg",
     "static/media/vuetifyjs.svg": "/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
-    "main.7a6f0370.css.map": "/static/css/main.7a6f0370.css.map",
-    "main.1ab1aded.js.map": "/static/js/main.1ab1aded.js.map",
+    "main.9e891676.css.map": "/static/css/main.9e891676.css.map",
+    "main.e67f867d.js.map": "/static/js/main.e67f867d.js.map",
     "787.3ad3eb91.chunk.js.map": "/static/js/787.3ad3eb91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a6f0370.css",
-    "static/js/main.1ab1aded.js"
+    "static/css/main.9e891676.css",
+    "static/js/main.e67f867d.js"
   ]
 }
