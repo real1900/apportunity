@@ -1,12 +1,3 @@
-a {
- color: darkred;
- font-weight: bold;
-
-}
-
-a :hover{
- color: brown;
-}
 
 
 .clients > div {
@@ -46,8 +37,22 @@ a :hover{
 
 .client-about-company{
     font-family: var(--primaryFont);
+
+    
    
 }
+
+/* .client-about-company a {
+ color: darkred;
+ font-weight: bold;
+
+}
+
+.client-about-company a :hover{
+    color: white;
+   transform: scale(1.1);
+}
+ */
 
 .vertical-line {
   border-left: 5px solid black;
@@ -68,7 +73,7 @@ a :hover{
 
 
 .client-about-company p{
-    font-size: 20px;
+    font-size: 15px;
     text-align: 'justify';
     padding-top: 20px;
 }

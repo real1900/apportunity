@@ -7,6 +7,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { clients } from '../../data/clientsData'
 import { Button, } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
+import HoverElement from '../HoverElement/hoverElement';
 
 function Clients() {
 
@@ -68,9 +69,7 @@ function Clients() {
                             <div className='client-about-company'>
                                 <h3 style={{ color: theme.tertiary }}>About {companyName}</h3>
                                 <p>{aboutCompany}</p>
-                                <a href={companyWebsite} rel="noreferrer" target="_blank" >
-                                    <p style={{ textAlign: 'right', }}>More Information</p>
-                                </a>
+                                <HoverElement style={{ textAlign: 'right', }} target="_blank" text="More Information" href={companyWebsite}></HoverElement>
                             </div>
                         </Fade>
                     }
