@@ -35,7 +35,7 @@ function About() {
                 <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
                 <div className="style-circle" style={{ backgroundColor: theme.tertiary80, opacity: 0.2 }}></div>
             </div>
-            <YoutubeEmbed embedId="J03dRpngTPY" style={{ padding: '0px' }} />
+            <YoutubeEmbed embedId="J03dRpngTPY" />
         </div>
 
     )
