@@ -1,10 +1,18 @@
+a {
+ color: darkred;
+ font-weight: bold;
+
+}
+
+a :hover{
+ color: brown;
+}
 
 
 .clients > div {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
-    padding-right: 20px;
 }
 
 
@@ -22,6 +30,7 @@
 .client--name{
     justify-content: center;
     align-items: center;
+     
 }
 
 
@@ -34,6 +43,37 @@
     justify-content: center;
     align-items: center;
 }
+
+.client-about-company{
+    font-family: var(--primaryFont);
+   
+}
+
+.vertical-line {
+  border-left: 5px solid black;
+  width: 5px;
+  height: 50px;
+    margin: 0 auto;
+}
+
+
+.client-about-company {
+  border-radius: 25px;
+  border: 5px solid black;
+  padding: 20px;
+  margin-bottom: 40px;
+  margin-left: 50;
+}
+
+
+
+.client-about-company p{
+    font-size: 20px;
+    text-align: 'justify';
+    padding-top: 20px;
+}
+
+
 
 .clientsHeader h2 {
     font-family: var(--primaryFont);
@@ -106,14 +146,7 @@
     letter-spacing: 1px;
     font-size: 12px;
     text-align: center;
-    margin-top: 1rem;
 }
-
-
-.marquee {
-    padding: 3rem 0;
-}
-
 
 @media (min-width: 992px) and (max-width: 1380px) {
     .clients {

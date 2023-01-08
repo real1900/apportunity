@@ -1,12 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import Marquee from "react-fast-marquee";
 
 import './Clients.css'
 
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { clients } from '../../data/clientsData'
+import { Button, } from '@material-ui/core';
+import Fade from 'react-reveal/Fade';
 
 function Clients() {
+
+    const [show, setShow] = useState(false);
+    const [clientID, setClientID] = useState(0);
+    const [aboutCompany, setAboutCompany] = useState("");
+    const [companyName, setCompanyName] = useState("");
+    const [companyWebsite, setCompanyWebsite] = useState("");
+    const target = useRef(null);
 
     const { theme } = useContext(ThemeContext);
     const clientBoxStyle = {
@@ -33,25 +42,53 @@ function Clients() {
                         delay={0}
                         play={true}
                         direction="left"
-                    >
-                        {
-                            clients.list.map(
-                                (client, id) => (<div key={id} className="client--name">
-                                    <a href={client.website} rel="noreferrer" target="_blank" >
-                                        <div className="client--box" key={id} style={clientBoxStyle}>  
-                                            <img className={(client.id === 17 || client.id === 18) ? "clients-image-inverted" : "clients-image"} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
+                    ><Fade top >
+                            {
+                                clients.list.map(
+                                    (client, id) => (
+                                        <div key={id} className="client--name">
+                                            <Button ref={target} onClick={() => selectClient(client, !show)} onMouseOver={() => selectClient(client, true)} >
+                                                {/* <a href={client.website} rel="noreferrer" target="_blank" > */}
+                                                <div className="client--box" key={id} style={clientBoxStyle}>
+                                                    <img className={(client.id === 17 || client.id === 18) ? "clients-image-inverted" : "clients-image"} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
+
+                                                </div>
+                                            </Button>
+                                            {(client.id === clientID && show === true) && <div className='vertical-line'></div>}
+                                            <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
+                                            {(client.id === clientID && show === true) && <div className='vertical-line'></div>}
                                         </div>
-                                        <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
-                                    </a>
-                                </div>
+                                    )
                                 )
-                            )
-                        }
-                    </Marquee>
+                            }
+                        </Fade> </Marquee>
+                    {show === true &&
+
+                        <Fade>
+                            <div className='client-about-company'>
+                                <h3 style={{ color: theme.tertiary }}>About {companyName}</h3>
+                                <p>{aboutCompany}</p>
+                                <a href={companyWebsite} rel="noreferrer" target="_blank" >
+                                    <p style={{ textAlign: 'right', }}>More Information</p>
+                                </a>
+                            </div>
+                        </Fade>
+                    }
                 </div>
             </div>
-        </div>
+        </div >
     )
+
+    function selectClient(client, isShown) {
+        setClientID(client.id);
+        setCompanyName(client.name);
+        setAboutCompany(client.aboutCompany);
+        setCompanyWebsite(client.website);
+
+        if (client.id === clientID) {
+            setShow(isShown);
+        }
+    }
 }
 
 export default Clients
