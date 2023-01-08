@@ -4,7 +4,7 @@ import BlogDetailBody from "./blogDetailBody";
 import { fetchBlog } from "../../../utils/blogFetcher";
 import PageDetail from "../../../components/PageDetail";
 import './blogDetail.css';
-import { convertUnixDateToDateTime } from "../../../utils/blogFetcher copy";
+import { convertUnixDateToDateTime } from "../../../utils/date";
 
 function BlogDetail() {
   const location = useLocation();

@@ -13,9 +13,6 @@ function Clients() {
         backgroundColor: theme.secondary,
         boxShadow: `0px 0px 30px ${theme.secondary}`
     }
-    const clientsImageStyle = {
-        width: '120px'
-    }
 
     const svgDir = require.context('../../assets/svg/clients');
 
@@ -39,15 +36,14 @@ function Clients() {
                     >
                         {
                             clients.list.map(
-                                (client, id) => (
-                                    <div key={id} className="client--name">
-                                        <a href={client.website} rel="noreferrer" target="_blank" >
-                                            <div className="client--box" key={id} style={clientBoxStyle}>
-                                                <img src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} style={clientsImageStyle} />
-                                            </div>
-                                            <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
-                                        </a>
-                                    </div>
+                                (client, id) => (<div key={id} className="client--name">
+                                    <a href={client.website} rel="noreferrer" target="_blank" >
+                                        <div className="client--box" key={id} style={clientBoxStyle}>  
+                                            <img className={(client.id === 17 || client.id === 18) ? "clients-image-inverted" : "clients-image"} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
+                                        </div>
+                                        <h3 style={{ color: theme.tertiary }}>  {client.name}</h3>
+                                    </a>
+                                </div>
                                 )
                             )
                         }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Fade from 'react-reveal/Fade';
 import placeholder from '../../../assets/png/placeholder.png'
 import './SingleBlog.css'
-import { convertUnixDateToDateTime } from '../../../utils/blogFetcher copy';
+import { convertUnixDateToDateTime } from '../../../utils/date';
 
 function SingleBlog({ theme, title, desc, date, image, url, id }) {
 
