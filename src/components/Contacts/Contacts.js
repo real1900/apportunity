@@ -20,6 +20,7 @@ import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 import CalendarButton from '../CalendarButton';
+import Seperator from '../common/Separator';
 
 function Contacts() {
 
@@ -108,11 +109,7 @@ function Contacts() {
     const classes = useStyles();
     return (
         <div style={{ backgroundColor: theme.secondary }} >
-            <div className="line-styling">
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-            </div>
+            <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
             <div
                 className='contacts'
                 id='contacts'

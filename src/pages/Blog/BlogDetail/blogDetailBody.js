@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext, } from "react";
 import './blogDetailBody.css';
 import parse from 'html-react-parser';
 import { ThemeContext } from "../../../contexts/ThemeContext";
+import Seperator from "../../../components/common/Separator";
 
 function BlogDetailBody({ content }) {
 
@@ -15,11 +16,7 @@ function BlogDetailBody({ content }) {
 
     return (
         <div className="blogDetailBody"  >
-            <div className="line-styling">
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-            </div>
+            <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
             <div>{contents}</div>
         </div>
     );

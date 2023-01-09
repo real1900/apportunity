@@ -5,6 +5,7 @@ import { experienceData } from '../../data/experienceData'
 import ExperienceCard from './ExperienceCard';
 import expimg from '../../assets/png/experience/expertise.png'
 import './Experience.css';
+import Seperator from '../common/Separator';
 
 function Experience() {
 
@@ -12,12 +13,7 @@ function Experience() {
     return (
 
         <div className="experience" id="experience" style={{ backgroundColor: theme.secondary }}>
-            <div className="line-styling">
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-
-            </div>
+            <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
             <div className="experience-description">
                 <h2 style={{ color: theme.primary }}>{experienceData.title}</h2>
 

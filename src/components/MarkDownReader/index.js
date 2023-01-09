@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import './markdown.css';
 import Markdown from 'markdown-to-jsx';
 import { ThemeContext } from "../../contexts/ThemeContext";
+import Seperator from "../common/Separator";
 
 function MarkDownReader({ markDownFile }) {
     const [markdown, setMarkdown] = useState("");
@@ -18,11 +19,7 @@ function MarkDownReader({ markDownFile }) {
 
     return (
         <div className="markdown"  >
-            <div className="line-styling">
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-                <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-            </div>
+            <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
             <Markdown>{markdown}</Markdown>;
         </div>
     );

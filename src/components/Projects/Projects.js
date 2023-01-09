@@ -7,6 +7,7 @@ import { HiArrowRight } from "react-icons/hi";
 import SingleProject from "./SingleProject/SingleProject";
 import { EventEmitter } from "../../utils/events";
 import "./Projects.css";
+import Seperator from "../common/Separator";
 
 function Projects() {
   const { theme } = useContext(ThemeContext);
@@ -44,11 +45,7 @@ function Projects() {
     <>
       {projectsData.length > 0 && (
         <div style={{ backgroundColor: theme.secondary }}>
-          <div className="line-styling">
-            <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-            <div className="style-circle" style={{ backgroundColor: theme.primary }}></div>
-            <div className="style-line" style={{ backgroundColor: theme.primary }}></div>
-          </div>
+          <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
           <div
             className="projects"
             id="projects"
