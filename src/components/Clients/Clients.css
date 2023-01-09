@@ -13,8 +13,8 @@
 
 .clients-image-inverted {
     width: 120px;
-    -webkit-filter: invert(.75); /* safari 6.0 - 9.0 */
-          filter: invert(.75);
+    -webkit-filter: invert(11); /* safari 6.0 - 9.0 */
+          filter: invert(1);
 }
 
 
@@ -68,6 +68,10 @@
   padding: 20px;
   margin-bottom: 40px;
   margin-left: 50;
+
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 

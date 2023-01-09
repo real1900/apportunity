@@ -67,9 +67,15 @@ function Clients() {
 
                         <Slide top>
                             <div className='client-about-company'>
-                                <h3 style={{ color: theme.tertiary }}>About {companyName}</h3>
-                                <p>{aboutCompany}</p>
-                                <HoverElement style={{ textAlign: 'right', }} target="_blank" text="More Information" href={companyWebsite}></HoverElement>
+                                <Fade left>
+                                    <img className={(
+                                        clientID === 8 ||
+                                        clientID === 9 ||
+                                        clientID === 17 ||
+                                        clientID === 18) ? "clients-image-inverted" : "clients-image"} src={svgDir(`./${companyName.toLowerCase()}.svg`)} alt={companyName.name} /></Fade>
+
+                                <Slide right> <p style={{ paddingBottom: '10px' }}>{aboutCompany}</p></Slide>
+                                <Slide left> <HoverElement style={{ textAlign: 'right', }} target="_blank" text="More Information" href={companyWebsite}></HoverElement></Slide>
                             </div>
                         </Slide>
                     }
