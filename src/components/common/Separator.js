@@ -1,6 +1,5 @@
 import React, {
 } from "react";
-import { Slide } from "react-reveal";
 
 function Seperator({ backgroundColor, opacity, paddingTop, paddingBottom }) {
     return (
