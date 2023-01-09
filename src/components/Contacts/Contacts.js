@@ -21,6 +21,7 @@ import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 import CalendarButton from '../CalendarButton';
 import Seperator from '../common/Separator';
+import { Slide } from 'react-reveal';
 
 function Contacts() {
 
@@ -109,7 +110,9 @@ function Contacts() {
     const classes = useStyles();
     return (
         <div style={{ backgroundColor: theme.secondary }} >
-            <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
+            <Slide left>
+                <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
+            </Slide> 
             <div
                 className='contacts'
                 id='contacts'

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { Fade } from 'react-reveal';
+import { Fade, Slide } from 'react-reveal';
 import { experienceData } from '../../data/experienceData'
 import ExperienceCard from './ExperienceCard';
 import expimg from '../../assets/png/experience/expertise.png'
@@ -13,7 +13,9 @@ function Experience() {
     return (
 
         <div className="experience" id="experience" style={{ backgroundColor: theme.secondary }}>
+            <Slide left> 
             <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
+            </Slide>
             <div className="experience-description">
                 <h2 style={{ color: theme.primary }}>{experienceData.title}</h2>
 
