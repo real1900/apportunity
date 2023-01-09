@@ -91,8 +91,8 @@
 .clientsDescription p{
     font-family: var(--primaryFont);
     font-style: normal;
-    font-weight: normal;
-    font-size: 1.15rem;
+    font-weight: bold;
+    font-size:  0.95rem;
     text-align: center;
 }
 

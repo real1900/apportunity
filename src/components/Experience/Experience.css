@@ -21,7 +21,7 @@
     align-items: flex-start;
     justify-content: space-around;
     height: fit-content;
-    padding: 50px;
+   
 }
 
 .experience-body > div{
@@ -35,6 +35,7 @@
 
 .experience-list{
      padding: 0px 1.2rem;
+     
 }
 
 

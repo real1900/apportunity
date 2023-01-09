@@ -6,7 +6,7 @@ import './Clients.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { clients } from '../../data/clientsData'
 import { Button, } from '@material-ui/core';
-import Fade from 'react-reveal/Fade';
+import { Fade, Slide } from 'react-reveal';
 import HoverElement from '../HoverElement/hoverElement';
 
 function Clients() {
@@ -65,13 +65,13 @@ function Clients() {
                         </Fade> </Marquee>
                     {show === true &&
 
-                        <Fade>
+                        <Slide top>
                             <div className='client-about-company'>
                                 <h3 style={{ color: theme.tertiary }}>About {companyName}</h3>
                                 <p>{aboutCompany}</p>
                                 <HoverElement style={{ textAlign: 'right', }} target="_blank" text="More Information" href={companyWebsite}></HoverElement>
                             </div>
-                        </Fade>
+                        </Slide>
                     }
                 </div>
             </div>
