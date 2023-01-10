@@ -43,7 +43,7 @@ function Clients() {
                         delay={0}
                         play={true}
                         direction="left"
-                    ><Fade top >
+                    ><Slide right>
                             {
                                 clients.list.map(
                                     (client, id) => (
@@ -62,7 +62,7 @@ function Clients() {
                                     )
                                 )
                             }
-                        </Fade> </Marquee>
+                        </Slide> </Marquee>
                     {show === true &&
 
                         <Slide top>

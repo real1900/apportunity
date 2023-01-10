@@ -78,7 +78,7 @@ function CaseStudy({ caseID, image }) {
 
             <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
 
-            <Slide left>    <h2>Challenge</h2>
+            <Slide bottom>    <h2 style={{ color: theme.primary }}>Challenge</h2>
             </Slide>
             <div>
                 {caseStudy.challenge.map((currElement, index) => {
@@ -91,7 +91,7 @@ function CaseStudy({ caseID, image }) {
 
             <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
 
-            <Slide left>   <h2>Solution</h2>
+            <Slide bottom>   <h2 style={{ color: theme.primary }}>Solution</h2>
             </Slide>
             <div>
                 {caseStudy.solution.map((currElement, index) => {
@@ -104,7 +104,7 @@ function CaseStudy({ caseID, image }) {
             </Slide>
             <Slide right>    <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
             </Slide>
-            <Slide left>    <h2>Result</h2>
+            <Slide bottom>    <h2 style={{ color: theme.primary }}>Result</h2>
             </Slide>
             <div>
                 {caseStudy.result.map((currElement, index) => {

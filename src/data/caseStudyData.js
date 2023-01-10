@@ -262,10 +262,20 @@ export const caseStudyData = [
     }, {
         id: 10,
         challenge: [
+            "When Verizon approached Apportunity Inc.to develop their new mobile app, Stream TV Mobile, they faced several challenges that needed to be addressed in order to ensure the success of the project.The existing codebase for the app was large and had been worked on by multiple developers, making it difficult to maintain and update.Additionally, there was a lack of unit test coverage, integration tests, and UI tests, which had resulted in a high number of bugs in the app.Furthermore, usability testing had not been done, making it difficult to understand how users were interacting with the app and how to improve their experience.Finally, a lot of new features had to be developed from scratch, adding to the complexity of the project."
+
         ],
         solution: [
+            "In order to address these challenges, Apportunity Inc.employed a two - pronged approach that focused on both technical and user - centered solutions.On the technical side, they first focused on cleaning up the existing codebase and ensuring that it was well - organized and easy to maintain.This was done by implementing best coding practices and modern software development technologies such as React Native and Redux.",
+
+            "To address the issue of bugs, Apportunity Inc.introduced a comprehensive testing strategy that included unit testing, integration testing, and UI testing.This was done to ensure that the codebase was stable and that new features could be added with minimal risk of introducing new bugs.",
+
+            "To improve the app's user experience, Apportunity Inc. also performed usability testing. This helped them to identify pain points in the app's UI and UX design, which they then addressed by making design changes that improved user flow and made the app more intuitive to use."
         ],
         result: [
+            "Thanks to the hard work of the Apportunity Inc.team, Stream TV Mobile was successfully launched and became a huge hit for Verizon, becoming one of the most popular mobile apps for streaming movies and TV shows.The app had a wide user base and became extremely profitable for Verizon, with millions of dollars generated from downloads, in -app purchases, and subscriptions.",
+
+            "The app was also able to maintain a high rating on the App Store, with users praising the app for its user - friendly design, high - quality streaming and easy to use interface.Overall, the success of Stream TV Mobile is a testament to Apportunity's ability to effectively address the challenges presented and deliver a high-quality product that exceeded expectations."
         ],
     }, {
         id: 11,
@@ -302,7 +312,7 @@ export const caseStudyData = [
     }, {
         id: 15,
         challenge: [
-            
+
         ],
         solution: [
         ],
