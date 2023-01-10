@@ -21,8 +21,7 @@ import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
 import CalendarButton from '../CalendarButton';
 import Seperator from '../common/Separator';
-import { Bounce, Fade, Slide, Zoom } from 'react-reveal';
-import { ZoomIn } from '@material-ui/icons';
+import { Bounce, Slide, Zoom } from 'react-reveal';
 
 function Contacts() {
 
