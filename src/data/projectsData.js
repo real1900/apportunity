@@ -7,7 +7,7 @@ export const projectsData = [
         projectDesc: 'This app lets users watch full episodes of their favorite shows from CBS - America’s most watched network. This app was built using Swift and Objective-C',
         enterpriseApp: false,
         storeLinks: {
-            "iOS": "https://appsto.re/us/OLBMF.i"
+            "iOS": "https://apps.apple.com/us/app/cbs/id1540866664"
         },
         companyID: 17,
     },
