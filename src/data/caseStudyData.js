@@ -280,26 +280,90 @@ export const caseStudyData = [
     }, {
         id: 11,
         challenge: [
+
+            "When Amazon Inc.approached Apportunity Inc.to develop a cross - platform mobile app for their Amazon Frames with Alexa, the app had a large codebase that had been worked on by multiple developers.Furthermore, there was no unit test coverage, integration tests or UI tests had been written, there were a lot of bugs and no usability testing had been done.Additionally, there were a lot of new features that needed to be developed from scratch, and the javascript to native communication was very complex to debug."
+
+
+
         ],
         solution: [
+
+            "Apportunity Inc.knew that in order to address these challenges, they would have to take a holistic approach.To begin with, Apportunity Inc.identified the core issues and worked on a comprehensive plan to address them.First, they set up a dedicated development team to work on the project, consisting of experienced developers who were well- versed in React Native, TypeScript and Alexa.",
+
+            "Next, Apportunity Inc.implemented a robust testing framework that included unit tests, integration tests and UI tests to cover all aspects of the app.This helped to ensure that all bugs were identified and fixed early on in the development process.",
+
+            "In order to make sure that the app was easy to use, Apportunity Inc.focused on usability testing.They worked with a team of usability experts who conducted extensive user testing to identify any usability issues and provide feedback on how to improve the user experience.",
+
+            "Given the large codebase and complexity of javascript to native communication, Apportunity Inc.employed a modular architecture approach to break down the app into smaller, more manageable components.This made it easier for the developers to understand and work with the codebase and allowed them to focus on specific sections of the app.",
+
+            "To tackle these challenges, Apportunity Inc proposed the use of TypeScript and React Native as the main development platform.This allowed for the development of a cross - platform app that could manage Alexa - enabled Amazon echo frames, train and talk to Alexa using Amazon Glasses with wireless bone conducting speakers.",
+
+            "The development team at Apportunity Inc began by thoroughly analyzing the existing codebase and identifying the bugs and issues that needed to be fixed.A comprehensive unit test coverage, integration tests, and UI tests were written to ensure that the codebase was thoroughly tested and to prevent bugs from appearing in the future.The development team also performed usability testing to ensure that the app was user - friendly and easy to navigate.",
+
+            "To address the challenges of the javascript to native communication, the development team used a framework called Native Code Modules which was a solution for better debugging, performance and maintenance.This framework enabled the developers to write the code using Javascript and use React Native to communicate with the native code.",
+
+            "Finally, Apportunity Inc.trained the Amazon internal development team on the latest development trends and coding standards, which allowed them to maintain the newly developed codebase in the future."
         ],
         result: [
+            "As a result of the comprehensive approach taken by Apportunity Inc., the app development process was completed within the set timeframe and under budget.The app, called 'Amazon Alexa', was launched successfully and received positive feedback from users.The app was downloaded over 100, 000 times in the App Store during the first week of launch.The app received positive reviews from users for its user - friendly interface, easy navigation, and the ability to stream and download movies and TV shows on the go.The number of active users on the app increased by 20 % within the first month of the launch, and the number of daily transactions on the app increased by 15 %.The app also received a rating of 4.5 out of 5 stars on the App Store and Google Play."
         ],
     }, {
         id: 12,
         challenge: [
+            "The Nike app already had a large user base, but the company wanted to improve the user onboarding experience for new members in order to increase conversion rates and retain more users.Specifically, the signup and onboarding process was found to be confusing and time- consuming for new users.This resulted in a high drop - off rate during the onboarding process."
+
         ],
         solution: [
+            " Apportunity worked closely with Nike's design and development teams to understand the specific challenges they were facing with the current user onboarding experience. Through a series of user research studies, usability testing, and design sprints, Apportunity was able to identify key pain points and areas for improvement.",
+
+            "To address these issues, Apportunity proposed a complete redesign of the user onboarding experience.This included simplifying the signup process, reducing the number of steps required to create an account, and providing clear and concise messaging throughout the process.Apportunity also proposed a mobile - first design approach, ensuring that the new onboarding experience would be optimized for mobile devices.",
+
+            "Apportunity also proposed a redesign of the visual design of the app to make it more visually appealing and intuitive to use.The team employed a modern design system and a consistent design language across the app and made sure the process flows and interactions are simple, interactive and easy to follow.",
+
+            "To ensure the success of the redesign, Apportunity proposed a series of user acceptance testing and A / B testing to validate the new design and measure its effectiveness.The team also suggested to run usability testing with a representative sample of users to validate their design decisions and identify any pain points before launching the redesign."
         ],
         result: [
+            "As a result of the project, the Nike team was able to improve the user onboarding experience and achieve better engagement with their app.The user onboarding process was now more streamlined, with a lower drop - off rate during the sign - up process.Additionally, the new UI design was well - received by users, resulting in improved user satisfaction.",
+
+            "The revamped onboarding process implemented by Apportunity resulted in a significant improvement in Nike's app performance. The abandonment rate for new users dropped by 35%, leading to an increase in signups and new members for Nike. Additionally, the retention rate among new users also saw a significant boost, as the improved onboarding experience helped to introduce them to the full range of features available within the app. As a result of the improved user experience, Nike's app saw a 20 % increase in daily active users and a 25 % increase in purchase conversions.",
+
+            "Beyond the quantifiable success in terms of user acquisition and retention, feedback from members was overwhelmingly positive, praising the new onboarding process as simple, easy and fast, and it was perfect to showcase the features and benefits of the app.This led to a boost in the overall satisfaction of members, which helped in driving repeat purchases and ultimately increased revenue for Nike.",
+
+            "To measure the success of the project, Apportunity Inc.and the Nike team conducted a series of A / B tests and usability studies.The results showed a 20 % increase in user retention and a 15 % increase in overall app usage.In addition, user feedback was overwhelmingly positive, with users praising the new, streamlined user onboarding process and the improved UI design.",
+
+            "In conclusion, Apportunity Inc.was able to successfully deliver a comprehensive solution that met the needs of the Nike team and helped improve the user onboarding experience for their app.Our user - centered design approach and thorough testing and validation helped achieve significant improvements in user retention and app usage."
+
+
         ],
     }, {
         id: 13,
         challenge: [
+            "Vance & Hines, a company that specializes in high performance motorcycle exhaust systems, approached Apportunity Inc.with a challenge: to create a mobile app that would allow customers to select the best exhaust system for their bike, view live sensor data, and more.However, the development of this app was not without its difficulties.The team at Apportunity quickly identified a number of obstacles that needed to be overcome in order to create a successful mobile app for Vance & Hines. ",
+
+            "One of the biggest challenges was that the app needed to be able to connect to a wide range of Bluetooth Low Energy(BLE) sensors, in order to gather live sensor data from the user's motorcycle. This required a deep understanding of the BLE framework and how to effectively utilize it in the app.  ",
+
+            "Another major challenge was the complexity of the app.Vance & Hines wanted the app to be able to gather and display a wide range of data, such as live sensor data, engine parameters, and more.This required a complex, data- intensive app architecture that could handle a large amount of data and process it efficiently.Furthermore, creating a user - friendly interface to display this data in a way that was easy for users to understand was also a challenge.",
+
+            "Lastly, the company was looking for a way to have a seamless integration of data from their website to the App.This required a robust back - end and a data pipeline that would be able to transfer the data quickly and efficiently.This was a challenge as the company had a large dataset, and the data pipeline had to be able to handle this data and make it available for the app to use."
         ],
         solution: [
+            "Apportunity Inc.tackled the challenges presented by Vance & Hines by utilizing a number of different development strategies and technologies.",
+
+            "First, the team focused on mastering the BLE framework, in order to be able to connect the app to a wide range of BLE sensors.This required extensive testing and experimentation in order to determine the best ways to connect to and communicate with the sensors.",
+
+            "To address these challenges, Apportunity decided to completely rebuild the app from scratch using the latest version of iOS and the latest technologies.They used Swift and Objective C programming languages to build the app in a way that would be easily maintainable and updatable in the future.They also focused heavily on the user interface and user experience of the app, with a goal of making it simple and intuitive for users to navigate.",
+
+            "One of the main features that Apportunity focused on was the ability for users to select the best exhaust system for their bike based on their specific make and model.Apportunity also implemented a system that would allow users to view live sensor data essentials using BLE framework and other parameters, so that users could monitor the performance of their bike in real time.",
+
+            "In addition to these features, Apportunity also implemented a number of other features and functionality that users had requested, such as the ability to view and track orders, access customer support, and more."
         ],
         result: [
+            "As a result of Apportunity's efforts, Fuel PaK 4 app was able to achieve a tremendous success, receiving positive feedback and a high number of downloads. The number of active users increased by 150% in just the first quarter of launch. In addition, the app received an average rating of 4.5 stars on the App Store, with users praising its user-friendly interface and useful features. The app also helped increase Vance & Hines's sales by 20 % due to the better optimization and data analytics it provided to the customers.In the first three months following the launch, the app saw over 100, 000 downloads and a 4.5 - star rating in the App Store.Vance & Hines also reported an increase in customer satisfaction, with feedback indicating that the app's ability to see live sensor data was particularly useful in optimizing performance.",
+
+            "Overall, the project was a huge success for both Apportunity and Vance & Hines.Apportunity was able to deliver a high - quality product on time and within budget, and Vance & Hines was able to offer their customers a new and valuable tool for optimizing their exhaust systems.Apportunity Inc.was able to take a complex and large project and break it down into manageable parts so that each part can be delivered on time.Their experience in iOS development was able to provide a solid foundation for the app and help to overcome the challenges presented by the project, such as a large codebase and lack of testing.",
+
+            "The Fuel PaK 4 app continues to be popular among Vance & Hines customers, with regular updates and new features being added to enhance the user experience.Vance & Hines has plans to expand their app to Android devices in the near future, and Apportunity is excited to continue working with them on this next phase of the project.",
+
         ],
     }, {
         id: 14,
