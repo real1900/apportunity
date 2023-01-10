@@ -44,10 +44,13 @@ function CaseStudy({ caseID, image }) {
 
     return (
         <div className="caseStudy"  >
-            <Slide left>
-                <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator> </Slide>
 
-            <Slide left>   <h2>About {clientName}</h2>
+            <Slide left>
+                <Seperator backgroundColor={theme.primary} opacity={1} paddingTop={'0px'} paddingBottom={'0px'}></Seperator>
+            </Slide>
+
+            <Slide left>
+                <h2 style={{ color: theme.primary }}>About {clientName}</h2>
             </Slide>
             {showClient &&
                 <div>
@@ -55,7 +58,8 @@ function CaseStudy({ caseID, image }) {
                         <img style={clientImageStyle} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
 
                     </Slide>
-                    <Slide right>    <p>{client.aboutCompany}</p>
+                    <Slide right>
+                        <p>{client.aboutCompany}</p>
                     </Slide>
 
                 </div>
@@ -78,7 +82,8 @@ function CaseStudy({ caseID, image }) {
 
             <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
 
-            <Slide bottom>    <h2 style={{ color: theme.primary }}>Challenge</h2>
+            <Slide bottom>
+                <h2 style={{ color: theme.primary }}>Challenge</h2>
             </Slide>
             <div>
                 {caseStudy.challenge.map((currElement, index) => {
@@ -91,7 +96,8 @@ function CaseStudy({ caseID, image }) {
 
             <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
 
-            <Slide bottom>   <h2 style={{ color: theme.primary }}>Solution</h2>
+            <Slide bottom>
+                <h2 style={{ color: theme.primary }}>Solution</h2>
             </Slide>
             <div>
                 {caseStudy.solution.map((currElement, index) => {
@@ -100,16 +106,18 @@ function CaseStudy({ caseID, image }) {
                 })
                 }
             </div>
+
             <Slide right>
+                <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
             </Slide>
-            <Slide right>    <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
-            </Slide>
-            <Slide bottom>    <h2 style={{ color: theme.primary }}>Result</h2>
+            <Slide bottom>
+                <h2 style={{ color: theme.primary }}>Result</h2>
             </Slide>
             <div>
                 {caseStudy.result.map((currElement, index) => {
                     return <Slide bottom>
-                        <p>{currElement}</p> </Slide>; //equivalent to list[index]
+                        <p>{currElement}</p>
+                    </Slide>; //equivalent to list[index]
                 })
                 }
             </div>

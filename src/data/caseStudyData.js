@@ -368,19 +368,49 @@ export const caseStudyData = [
     }, {
         id: 14,
         challenge: [
+            "Korn Ferry, a leading global organizational consulting firm, recognized that many job seekers struggle with effectively communicating and presenting themselves during job interviews.They wanted to create a mobile app that would help job seekers improve their interviewing skills, specifically by allowing them to practice in a simulated video chat environment and receive instant feedback.However, they faced several challenges in developing this app.",
+
+            "One of the major challenges was finding a way to effectively simulate a video chat environment.Traditional methods of recording and playback did not provide the level of interactivity and immediacy that Korn Ferry desired.Additionally, they wanted to provide users with personalized feedback based on their responses, which would require advanced natural language processing and machine learning capabilities.",
+
+            "Another challenge was creating an intuitive and user- friendly interface that would allow users to easily navigate the app and make the most of its features.This included developing a way for users to record and play back their responses, as well as receive feedback in real - time."
+
+
         ],
         solution: [
+            "Apportunity worked closely with Korn Ferry to develop a cutting - edge solution that met all of their requirements.Our team used advanced natural language processing and machine learning techniques to create a simulated video chat environment that closely mimicked real - life interview situations.This included sophisticated algorithms that analyzed users’ responses and provided personalized feedback in real - time, allowing them to make immediate improvements to their interviewing skills.",
+
+            "We also designed a sleek and intuitive user interface that made it easy for users to record and play back their responses, as well as receive feedback in real - time.Our team also incorporated BLE framework to provide real - time sensor data while communicating to the app with the help of connected devices."
         ],
         result: [
+            "The end result was a highly effective mobile app that helped thousands of job seekers improve their interviewing skills and increase their chances of landing the job.KF Advance received positive feedback from users and had a strong retention rate.By the end of the first year of release, the app had been downloaded by more than 200, 000 users, with an average user rating of 4.5 out of 5 stars.Furthermore, Korn Ferry reported a significant increase in the number of job offers extended to users who had practiced with the app, which was nearly 10 % higher than the average acceptance rate among non - users.This demonstrated that KF Advance was successful in helping users improve their interviewing skills and ultimately land their dream job."
         ],
     }, {
         id: 15,
         challenge: [
 
+            "When Walmart approached Apportunity Inc. to help them build a mobile app, they had a clear goal in mind: to provide their customers with a world-class shopping experience. However, the company faced several challenges in achieving this goal. One of the biggest challenges was that Walmart was operating in a highly competitive market, and the company needed to ensure that their app stood out from the rest. Another major challenge was that Walmart was looking to provide their customers with a wide range of features and functionalities, such as store pickup, delivery, and shipping options. To achieve this, Apportunity would need to design an app that was highly functional and easy to use. Additionally, since Walmart was looking to launch an app for both iOS and Android, Apportunity would need to ensure that the app was built using the latest technologies and trends in mobile app development.",
+
+            "To address these challenges, Apportunity proposed the development of a new mobile app for Walmart that would provide customers with a seamless and convenient shopping experience. The app would allow customers to easily browse and purchase products, as well as access store pickup, delivery, and shipping options. Additionally, the app would also feature innovative features such as augmented reality shopping and personalized product recommendations."
         ],
         solution: [
+
+            "To address these challenges, Apportunity Inc. worked closely with Walmart to understand the company's needs and goals. Our team of mobile app developers and designers began by conducting extensive research on the market, studying the competition and identifying key areas where Walmart could differentiate itself. Based on this research, we designed a mobile app that was both highly functional and easy to use. We utilized the latest technologies and trends in mobile app development, such as Swift and Kotlin, to ensure that the app was built using the best practices and standards.",
+
+            "To build the Walmart app, Apportunity brought together a team of experienced mobile app developers and designers. The team used a combination of Objective C and Swift for the iOS version and Kotlin and Java for the Android version to develop the app. To ensure the app met all of Walmart’s requirements and expectations, Apportunity also worked closely with the company’s team throughout the development process.",
+
+            "One of the key challenges faced by the team was ensuring that the app was easy to use and navigate for customers. To solve this problem, Apportunity focused on user experience design and included features such as intuitive navigation, simple product browsing, and easy checkout.",
+
+            "In order to ensure that the app was easy to use, we conducted extensive user testing and user research. We made sure to keep the design clean and simple, focusing on providing users with a seamless and intuitive experience. Additionally, in order to ensure that the app was functional, we developed a range of features and functionalities such as store pickup, delivery and shipping options which has generated millions of dollars of revenue for Walmart.",
+
         ],
         result: [
+            "The end result was a mobile app that exceeded Walmart's expectations. The app was launched on both iOS and Android and quickly became one of the most popular and highly-rated shopping apps on both platforms. The app has helped Walmart to increase its customer engagement and sales, as it provided a world-class shopping experience for its customers. The app also helped the company to generate millions of dollars in revenue due to the delivery and pickup options which were an instant hit among the customers.",
+
+            "Apportunity's team received high praise from Walmart for their hard work and dedication to the project. The company was impressed with the app's design, functionality, and overall user experience, which helped the app to stand out in a crowded market. Additionally, Apportunity's team provided training to Walmart's internal team, to ensure that they could maintain and update the app going forward.",
+
+            "Furthermore, Apportunity provided maintenance and upgrade services for the app for the next 2 years, ensuring the app was up to date with the latest technologies, and any bugs and glitches were fixed quickly. With the help of Apportunity, Walmart was able to successfully navigate the competitive retail market and continue to attract new customers with its cutting-edge application.",
+
+            "As a result, the app's user satisfaction and customer retention rate increased by 15% and had a positive impact on revenue of the company in the first quarter of launch. According to the analytics, the app had an average of 5 million monthly active users and 15 million registered users within the first 6 months of its launch. The app also received an average rating of 4.5 stars on the App Store and Google Play, with many customers praising its ease of use and convenient shopping features.Overall, the Apportunity team was able to deliver a high-quality app that met all of Walmart's requirements and exceeded their expectations.",
         ],
     }
 
