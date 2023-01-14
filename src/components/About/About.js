@@ -36,7 +36,7 @@ function About() {
             <Slide left>
                 <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
             </Slide>
-            <YoutubeEmbed embedId="qUqmTNA7oBM" />
+            <YoutubeEmbed embedId="Pi2v2vx5640" />
         </div>
 
     )
