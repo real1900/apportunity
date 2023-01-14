@@ -17,7 +17,7 @@ import {
   FaBlogger,
 } from "react-icons/fa";
 import CalendarButton from "../CalendarButton";
-import { Bounce, Fade, Slide } from "react-reveal";
+import { Bounce } from "react-reveal";
 
 function Landing() {
   const { theme, drawerOpen } = useContext(ThemeContext);
