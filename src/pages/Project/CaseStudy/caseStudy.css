@@ -1,20 +1,43 @@
 .caseStudy {
+  
   border-top: 0.5px solid rgba(255, 255, 255, 0.4);
   background-color: rgb(33, 33, 33);
   color: rgb(173, 173, 173);
   max-height: 50;
-  padding: 30px;
   font-family: var(--primaryFont);
   line-height: 1.5rem;
+}
+
+.caseStudy div{
+   align-items: center;
+    justify-content: center;
 }
 
 .caseStudy-body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 8rem;
+    justify-content: center;
     height: fit-content;
+}
+
+.caseStudy-column-text{
+  padding-right: 2rem;
+  padding-left: 2rem;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex: 6;
+   display: flex;
+   flex-direction: column;
+}
+
+.caseStudy-column-image{
+   align-content: center;
+  align-items: center;
+   flex: 4;
+    display: flex;
+      margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -22,6 +45,7 @@
   padding-top: 10px;
   text-align: justify;
   padding-bottom: 10px;
+  font-weight: 500;
   color: rgb(234, 234, 234);
 }
 
@@ -47,14 +71,34 @@
 
 .caseStudy img {
   object-fit: contain;
-  padding: 20px;
+  padding: 10px;
   max-width: 80vw;
   max-height: 80vh;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 25px;
+  border-radius: 50px;
+  margin: 50px;
+
+  box-shadow: 19px 27px 89px 17px rgba(0,0,0,0.6);
+  -webkit-box-shadow: 19px 27px 89px 17px rgba(0,0,0,0.6);
+  -moz-box-shadow: 19px 27px 89px 17px rgba(0,0,0,0.6);
 }
+
+.caseStudy-phone-image {
+ background:   rgba(0,0,0,0.6);
+ background: rgb(36,0,9);
+background: linear-gradient(155deg, rgba(36,0,9,1) 0%, rgba(121,9,14,1) 35%, rgba(79,18,2,1) 100%);
+ 
+}
+
+.caseStudy-phone-image--invert {
+ background:   #c93210;
+  background:  linear-gradient(330deg,#870c0c 0%, #c93210 80%);
+  background: -webkit-linear-gradient(330deg,#870c0c 0%, #c93210 80%);
+  background: -moz-linear-gradient(330deg,#870c0c 0%, #c93210 80%);
+}
+
 
 /* overriding from previous common.css file */
 .line-styling {
@@ -70,6 +114,15 @@
         flex-direction: column-reverse;
         align-items: center;
         justify-content: space-evenly;
+        border-top: none;
+    }
+
+    .caseStudy-column-text{
+       width:100%;
+    }
+
+      .caseStudy-column-image{
+       width:100%;
     }
 
   }
