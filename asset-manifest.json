@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.18f6ae97.css",
-    "main.js": "/static/js/main.b3f21cec.js",
+    "main.css": "/static/css/main.31fd6655.css",
+    "main.js": "/static/js/main.2d21a1f0.js",
     "static/js/787.3ad3eb91.chunk.js": "/static/js/787.3ad3eb91.chunk.js",
     "static/media/apportunity-intro.mp4": "/static/media/apportunity-intro.4ed52da48665443ad9cd.mp4",
     "static/media/14.png": "/static/media/14.f18630125e1429e4ffea.png",
+    "static/media/2.webp": "/static/media/2.d9e5651ddc7fb3b6aa3b.webp",
     "static/media/15.png": "/static/media/15.824c6f4ce8c25e664a29.png",
     "static/media/12.png": "/static/media/12.e833c6878ac90a4d1727.png",
     "static/media/6.png": "/static/media/6.3c5da6a2c8840aa3ec8d.png",
+    "static/media/4.webp": "/static/media/4.a19e9bf096c4070bab91.webp",
     "static/media/11.png": "/static/media/11.5d9966f573c5ab3ac23a.png",
     "static/media/9.png": "/static/media/9.0d2130100ec03c302f19.png",
     "static/media/suleman.jpg": "/static/media/suleman.9358824cb1dba36f54fd.jpg",
+    "static/media/3.webp": "/static/media/3.afc7a50b95b773b34746.webp",
     "static/media/13.png": "/static/media/13.5408b1c843080614b067.png",
     "static/media/placeholder.png": "/static/media/placeholder.3fcbbdcd05f3e458d129.png",
     "static/media/expOrange.svg": "/static/media/expOrange.9383b2df918bf4e0ce67e3f289602562.svg",
@@ -21,6 +24,7 @@
     "static/media/expPink.svg": "/static/media/expPink.40a7690a4f1db23209db1a06c4b8c10a.svg",
     "static/media/expPurple.svg": "/static/media/expPurple.96a6bf6351cdcf2af2a140c708d9912b.svg",
     "static/media/expYellow.svg": "/static/media/expYellow.22be417c6d1c281c3b4b6ee0e80f0a5f.svg",
+    "static/media/1.webp": "/static/media/1.8a25e2b8f7c3f997fd4a.webp",
     "static/media/10.png": "/static/media/10.0769eeec69a499c5203e.png",
     "static/media/1.png": "/static/media/1.c36c3141d72b8158de68.png",
     "static/media/7.png": "/static/media/7.5788846bb5ab6b90103d.png",
@@ -177,12 +181,12 @@
     "static/media/vue.svg": "/static/media/vue.47bdfb5a7a54d8ade2aa4c61d5148668.svg",
     "static/media/vuetifyjs.svg": "/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
-    "main.18f6ae97.css.map": "/static/css/main.18f6ae97.css.map",
-    "main.b3f21cec.js.map": "/static/js/main.b3f21cec.js.map",
+    "main.31fd6655.css.map": "/static/css/main.31fd6655.css.map",
+    "main.2d21a1f0.js.map": "/static/js/main.2d21a1f0.js.map",
     "787.3ad3eb91.chunk.js.map": "/static/js/787.3ad3eb91.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.18f6ae97.css",
-    "static/js/main.b3f21cec.js"
+    "static/css/main.31fd6655.css",
+    "static/js/main.2d21a1f0.js"
   ]
 }
