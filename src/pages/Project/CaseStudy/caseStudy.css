@@ -8,6 +8,16 @@
   line-height: 1.5rem;
 }
 
+.caseStudy-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 8rem;
+    height: fit-content;
+}
+
+
 .caseStudy p {
   padding-top: 10px;
   text-align: justify;
@@ -52,8 +62,22 @@
   top: 0px;
 }
 
+@media screen and (max-width: 992px){
+
+    .caseStudy-body {
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+  }
+
 @media screen and (max-width: 600px) {
   .caseStudy {
     border-top: none;
   }
 }
+
+

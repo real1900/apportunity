@@ -21,7 +21,7 @@ export const projectsData = [
             "iOS": "https://appsto.re/us/UFLus.i",
         },
         companyID: 4,
-   },
+    },
     {
         id: 3,
         projectName: 'Submission',
@@ -29,14 +29,14 @@ export const projectsData = [
         projectDesc: "A reference and utility app that calculates events based on solar and lunar calendar, sunset and sunrise times for a user's location and allows for reading publications such as books and newsletters online or offline, take notes , search text materials and stream or download audio visual content.",
         enterpriseApp: false,
         storeLinks: {
-            "iOS": "HTTPS://APPSTO.RE/I6FF5NS",
+            "iOS": "https://appsto.re/i6FF5ns",
             "Android": "https://play.google.com/store/apps/details?id=ws.submission.my",
             "web": "https://www.submission.guide",
             "macOS": "https://macappsto.re/us/KTR3X.m",
             "tvOS": "https://appsto.re/i6FF5ns",
         },
         companyID: 19,
-     },
+    },
     {
         id: 4,
         projectName: 'LOOSID',
@@ -169,7 +169,7 @@ export const projectsData = [
         projectDesc: "Apportunity built a world class shopping experience in collaboration with Walmart for its customers for both iOS and Android with features like store pickup, delivery and shipping options which has generated millions of dollars of revenue for Walmart ",
         enterpriseApp: false,
         storeLinks: {
-            "iOS": "https://apps.apple.com/us/app/korn-ferry-advance/id1347794886",
+            "iOS": "https://apps.apple.com/us/app/walmart-shopping-grocery/id338137227",
             "Android": "https://play.google.com/store/apps/details?id=com.walmart.android",
         },
         companyID: 16,

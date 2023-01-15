@@ -52,33 +52,40 @@ function CaseStudy({ caseID, image }) {
             <Slide left>
                 <h2 style={{ color: theme.primary }}>About {clientName}</h2>
             </Slide>
-            {showClient &&
-                <div>
-                    <Slide right>
-                        <img style={clientImageStyle} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
+            
+            <div className="caseStudy-body">
 
-                    </Slide>
-                    <Slide right>
-                        <p>{client.aboutCompany}</p>
-                    </Slide>
+             
+                {showClient &&
+                    <div>
+                        <Slide right>
+                            <img style={clientImageStyle} src={svgDir(`./${client.name.toLowerCase()}.svg`)} alt={client.name} />
 
-                </div>
-            }
-            {!showClient && project.aboutCompany &&
-                <div>
+                        </Slide>
+                        <Slide right>
+                            <p>{client.aboutCompany}</p>
+                        </Slide>
 
-                    <Slide right>    <p>{project.aboutCompany}</p>
-                    </Slide>
+                    </div>
+                }
+                {!showClient && project.aboutCompany &&
+                    <div>
 
-                </div>
-            }
-            <Slide right>
-                <img
-                    src={image}
-                    alt={`Case study for ${caseID}`}
-                    style={{ objectFit: "cover", }}
-                />
-            </Slide>
+                        <Slide right>    <p>{project.aboutCompany}</p>
+                        </Slide>
+
+                    </div>
+                }
+                <Slide right>
+                    <img
+                        src={image}
+                        alt={`Case study for ${caseID}`}
+                        style={{ objectFit: "cover", }}
+                    />
+                </Slide>
+
+            </div>
+
 
             <Seperator backgroundColor={theme.tertiary80} opacity={0.2} paddingTop={'100px'} paddingBottom={'60px'}></Seperator>
 
