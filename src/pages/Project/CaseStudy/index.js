@@ -48,15 +48,13 @@ function CaseStudy({ caseID, image }) {
 
     function getImageClassName({ isInvert }) {
         var className = null;
-        if (project.enterpriseApp === false) {
+       
             if (isInvert === true) {
                 className = "caseStudy-phone-image--invert"
             } else {
                 className = "caseStudy-phone-image"
             }
-        } else {
-            className = null;
-        }
+        
         return className;
     }
 
