@@ -163,10 +163,10 @@ function Landing() {
 
               <div className="lcr-buttonContainer">
 
-                <NavLink to="contacts" smooth={true} spy="true" duration={2000}>
+                <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
                   <Button className={classes.resumeBtn}>Contact Us</Button>
                 </NavLink>
-                <NavLink to="contacts" smooth={true} spy="true" duration={2000}>
+                <NavLink to="/#contacts" smooth={true} spy="true" duration={2000}>
                   <CalendarButton title={"Request a quote"} />
                 </NavLink>
               </div>
