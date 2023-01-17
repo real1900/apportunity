@@ -23,7 +23,7 @@ function AnimatedRoutes() {
     return (
         <AnimatePresence mode='wait'>
             <Routes>
-                <Route path="/" exact element={<Main />} />
+                <Route path="" exact element={<Main />} />
                 <Route path="/blogs" exact element={<BlogPage />} />
                 <Route path="/privacy" exact element={<PrivacyPolicy />} />
                 <Route path="/projects" exact element={<ProjectPage />} />

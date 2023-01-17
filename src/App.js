@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
 } from "react-router-dom";
 import { BackToTop } from "./components";
 import ScrollToTop from "./utils/ScrollToTop";
