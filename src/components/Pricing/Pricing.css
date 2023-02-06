@@ -1,0 +1,25 @@
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    font-family: var(--primaryFont);
+}
+
+.stack{
+   padding: 100px; 
+}
+
+
+.pricing h1 {
+    font-size: 4rem;
+}
+
+.box{
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+}

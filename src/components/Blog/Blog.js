@@ -74,7 +74,7 @@ function Blog() {
                     const formattedURL = url.slice(0, -1)
                     const lastPath = formattedURL.substring(formattedURL.lastIndexOf('/') + 1)
 
-                    console.log("ITEM IS ", item)
+               //     console.log("ITEM IS ", item)
 
                     return <SingleBlog
                       theme={theme}

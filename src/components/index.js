@@ -15,5 +15,5 @@ export { default as Services } from'./Services/Services'
 export { default as SingleProject } from './Projects/SingleProject/SingleProject'
 export { default as SingleService } from './Services/SingleService/SingleService'
 export { default as Achievement } from './Achievement/Achievement'
-
+export { default as Pricing } from './Pricing/Pricing'
 export { default as BackToTop } from'./BackToTop/BackToTop'

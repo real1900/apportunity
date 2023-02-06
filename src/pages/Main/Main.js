@@ -16,10 +16,12 @@ import {
   Contacts,
   Projects,
   Services,
+  Pricing,
   // Achievement,
 } from "../../components";
 import Video from "../../components/Video/Video";
 import { headerData } from "../../data/headerData";
+import { appInDebugMode } from "../../utils";
 
 function Main() {
   return (
