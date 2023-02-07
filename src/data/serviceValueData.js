@@ -1,4 +1,5 @@
-export const serviceValueData = [
+export const serviceValueData = {
+    regular: [
     "User experience(UX) and user interface(UI) design",
     "Mobile app testing and quality assurance",
     "Mobile app marketing and app store optimization(ASO)",
@@ -14,15 +15,14 @@ export const serviceValueData = [
     "Mobile app reporting and analytics",
     "Mobile app branding and visual design",
     "Integration with social media platforms",
-    "Mobile app deployment and hosting services",
-    "Cross - platform app development for multiple operating systems",
     "Mobile app monetization strategy and consultancy",
-    "Regular security updates and vulnerability assessments",
-    "User engagement and retention strategy",
-    "Custom training and education for clients' teams",
-    "Analytics and data - driven decision making",
-    "Continuous improvement through software updates",
-    "Regular security updates and vulnerability assessments",
-    "Consultancy on industry trends and technology advancements",
-    "Customer feedback and integration"
-]
+], 
+    bonus: ["Regular security updates and vulnerability assessments",
+        "User engagement and retention strategy",
+        "Custom training and education for clients' teams",
+        "Analytics and data - driven decision making",
+        "Continuous improvement through software updates",
+        "Regular security updates and vulnerability assessments",
+        "Consultancy on industry trends and technology advancements",
+        "Customer feedback and integration"]
+}

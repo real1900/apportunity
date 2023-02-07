@@ -1,12 +1,19 @@
-import React, { useContext, useState, useEffect, useCallback } from 'react'
+import React, { useContext, useState, useEffect, } from 'react'
 import './Pricing.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import Stack from '@mui/material/Stack';
 
-import { Avatar, Box, Button, ButtonGroup, Card, Chip, Divider, FormControl, FormControlLabel, FormLabel, IconButton, List, ListItem, Radio, RadioGroup, Slider, Switch, Typography } from '@material-ui/core';
-import { CheckCircle, Edit, LocationOn } from '@material-ui/icons';
+import { Card, Divider, FormControlLabel, List, ListItem, Radio, RadioGroup, Slider } from '@material-ui/core';
+import { CheckCircle} from '@material-ui/icons';
 import { serviceValueData } from '../../data/serviceValueData';
 import { makeStyles } from "@material-ui/core/styles";
+import { appInDebugMode } from '../../utils';
+
+const teamList = [
+  "Project Manager",
+  "Mobile Development Architect",
+  "UI/UX Architect"
+]
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -51,6 +58,7 @@ function Pricing() {
   const [totalCost, setTotalCost] = useState(0);
   const [teamLocation, setTeamLocation] = useState('onShore');
   const [laborCost, setLaborCost] = useState(0);
+  const [saving, setSaving] = useState(0);
 
   const workHoursInOneMonth = 173.333;
   const onShoreLaborCost = 100.00;
@@ -58,23 +66,25 @@ function Pricing() {
 
   const onChangeNoOfDevsPerPlatform = (event, value) => {
     setNoOfDevsPerPlatform(value);
+
     getTotalCost();
   };
 
   const onChangeNoOfPlatforms = (event, value) => {
     setNoOfPlatforms(value);
+
     getTotalCost();
   };
 
   const onChangeTeamLocation = (event, value) => {
     setTeamLocation(value);
+
     getTotalCost();
   };
 
   const getNoOfPlatformsTextValue = (value) => `${noOfPlatforms}`;
 
   const getNoOfDevsPerPlatformsTextValue = (value) => `${noOfDevsPerPlatform}`;
-
 
 
   const onChangeNoOfMonths = (event, value) => {
@@ -109,10 +119,13 @@ function Pricing() {
     // console.log(`total price: ${totalPrice}`)
     // console.log(`discount value: ${discount}%`)
     // console.log(`Money saved: ${discountedMoney}`)
-
+    setSaving(discountedMoney)
     setTotalCost(totalPrice - discountedMoney);
   }
 
+  if (appInDebugMode){
+    return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE</h1></div>
+  }
 
 
   return (
@@ -124,7 +137,7 @@ function Pricing() {
         <Card raised style={{
           backgroundColor: theme.primary[80],
           padding: '30px',
-          margin: '30px'
+          margin: '10px'
         }}>
 
 
@@ -148,7 +161,7 @@ function Pricing() {
             </Stack>
 
             <Stack direction="column" spacing={2}>
-              <h3>{`No. of Platforms Supported: ${noOfPlatforms}`}</h3>
+              {`No. of Platforms Supported: ${noOfPlatforms}`}
               <Slider
                 classes={{
                   thumb: classes.thumb,
@@ -168,10 +181,10 @@ function Pricing() {
                 onChange={onChangeNoOfPlatforms} />
 
             </Stack>
-            {/* onChangeNoOfDevsPerPlatform */}
+
 
             <Stack direction="column" spacing={2}>
-              <h3>{`No. of Devs for each platform: ${noOfDevsPerPlatform}`}</h3>
+              {`No. of Devs for each platform: ${noOfDevsPerPlatform}`}
               <Slider
                 classes={{
                   thumb: classes.thumb,
@@ -194,7 +207,7 @@ function Pricing() {
 
 
             <Stack direction="column" spacing={2}>
-              <h3>{`Duration of contract :     ${noOfMonths}`}</h3>
+              {`Duration of contract :     ${noOfMonths}`}
               <Slider
                 classes={{
                   thumb: classes.thumb,
@@ -215,46 +228,66 @@ function Pricing() {
 
             </Stack>
 
-            <FormControlLabel disabled control={<Switch defaultChecked />} label="Project Manager: included" />
+            <Stack direction="column" spacing={2}>
+              <h3>Team members included:</h3>
+              <List>
+                {teamList.map(member => (
 
-            <FormControlLabel disabled control={<Switch defaultChecked />} label="Senior Architect: included" />
+                  <ListItem>
 
-            <h2>{currencyFormat(totalCost / noOfMonths)} /month</h2>
-            <h2>Total:{currencyFormat(totalCost)}</h2>
+                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />   <h5> {member}</h5>
+
+                  </ListItem>))
+                }
+              </List> </Stack>
+
+            <Stack direction="column" spacing={2} justifyContent="end">
+
+              <h3 style={{ textAlign: "end" }}>Monthly: {currencyFormat(totalCost / noOfMonths)}</h3>
+              <Divider />
+              <h3 style={{ textAlign: "end" }}>Total: {currencyFormat(totalCost)}</h3>
+              <Divider />
+              {saving > 0 &&
+
+                <h5 style={{ textAlign: "end", color: 'gray' }}>Saving: {currencyFormat(saving)} after %{discount} discount</h5>
+              }
+            </Stack>
           </Stack>
         </Card>
 
         <Card raised style={{
           backgroundColor: theme.primary[80],
-          padding: '30px', margin: '30px'
+          padding: '30px', margin: '10px'
         }}>
 
 
-          <Stack direction="column" spacing={5}>
-            <h2>Services included</h2>
+          <Stack direction="column" spacing={1}>
+            <h2>Services included:</h2>
 
-            <Stack direction="column" spacing={5}>
-              <List>
-                {serviceValueData.map(service => (
+            <List>
+              {serviceValueData.regular.map(service => (
 
-                  <ListItem>
+                <ListItem>
+                  <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                </ListItem>))
+              }
+            </List>
+          </Stack>
 
-                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+          <Stack direction="column" spacing={1}>
+            <h2>Bonus:</h2>
 
-                  </ListItem>))
-                }
-              </List>
-            </Stack>
+            <List>
+              {serviceValueData.bonus.map(service => (
 
+                <ListItem>
+                  <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                </ListItem>))
+              }
+            </List>
           </Stack>
         </Card>
       </div>
-
-
-
-
-
-
     </div >
   )
 }
