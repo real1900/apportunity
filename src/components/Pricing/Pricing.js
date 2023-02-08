@@ -4,7 +4,7 @@ import { ThemeContext } from '../../contexts/ThemeContext'
 import Stack from '@mui/material/Stack';
 
 import { Card, Divider, FormControlLabel, List, ListItem, Radio, RadioGroup, Slider } from '@material-ui/core';
-import { CheckCircle} from '@material-ui/icons';
+import { CheckCircle } from '@material-ui/icons';
 import { serviceValueData } from '../../data/serviceValueData';
 import { makeStyles } from "@material-ui/core/styles";
 import { appInDebugMode } from '../../utils';
@@ -123,10 +123,9 @@ function Pricing() {
     setTotalCost(totalPrice - discountedMoney);
   }
 
-  if (appInDebugMode){
+  if (!appInDebugMode) {
     return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE</h1></div>
   }
-
 
   return (
     <div className="pricing" id="pricing" style={{ backgroundColor: theme.primary }}>
