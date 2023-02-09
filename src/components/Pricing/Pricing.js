@@ -7,7 +7,6 @@ import { Card, Divider, FormControlLabel, List, ListItem, Radio, RadioGroup, Sli
 import { CheckCircle } from '@material-ui/icons';
 import { serviceValueData } from '../../data/serviceValueData';
 import { makeStyles } from "@material-ui/core/styles";
-import { appInDebugMode } from '../../utils';
 import { Fade } from 'react-reveal';
 
 const teamList = [
@@ -124,7 +123,7 @@ function Pricing() {
     setTotalCost(totalPrice - discountedMoney);
   }
 
-  if (!appInDebugMode) {
+  if (window.location.origin.includes("localhost") === false) {
     return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE 8-) </h1></div>
   } else {
 
