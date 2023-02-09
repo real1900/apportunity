@@ -133,6 +133,10 @@ function Pricing() {
 
       <h1 style={{ color: theme.secondary }}>Pricing </h1>
 
+      {appInDebugMode &&
+        <h1 style={{ color: theme.secondary }}>DEBUG </h1>
+      }
+
       <div class="box">
         <Card raised style={{
           backgroundColor: theme.primary[80],
