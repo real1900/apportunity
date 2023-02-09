@@ -126,189 +126,190 @@ function Pricing() {
 
   if (!appInDebugMode) {
     return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE 8-) </h1></div>
-  } else {}
+  } else {
 
-  return (
-    <div className="pricing" id="pricing" style={{ backgroundColor: theme.primary }}>
+    return (
+      <div className="pricing" id="pricing" style={{ backgroundColor: theme.primary }}>
 
-      <h1 style={{ color: theme.secondary }}>Pricing </h1>
-
-
-      <div class="box">
-        <Card raised style={{
-          backgroundColor: theme.primary[80],
-          padding: '30px',
-          margin: '10px',
-          minWidth: '350px',
-          flex: 1,
-        }}>
+        <h1 style={{ color: theme.secondary }}>Pricing </h1>
 
 
-
-          <Stack direction="column" spacing={5}>
-
-
-            <Stack direction="column" spacing={0}>
-              <h3>Team Location</h3>
-
-              <RadioGroup row
-                aria-labelledby="demo-radio-buttons-group-label"
-                defaultValue="onShore"
-                name="radio-buttons-group"
-                onChange={onChangeTeamLocation}
-              >
-                <FormControlLabel value="onShore" control={<Radio />} label="On Shore" />
-                <FormControlLabel value="offShore" control={<Radio />} label="Off Shore" />
-              </RadioGroup>
-
-            </Stack>
-
-            <Stack direction="column" spacing={2}>
-              {`No. of Platforms Supported: ${noOfPlatforms}`}
-              <Slider
-                classes={{
-                  thumb: classes.thumb,
-                  rail: classes.rail,
-                  track: classes.track,
-                  valueLabel: classes.valueLabel,
-                  mark: classes.mark
-                }}
-                style={{ width: 300 }}
-                min={1}
-                max={5}
-                step={1}
-                marks
-                value={noOfPlatforms}
-                valueLabelDisplay="auto"
-                getAriaValueText={getNoOfPlatformsTextValue}
-                onChange={onChangeNoOfPlatforms} />
-
-            </Stack>
+        <div class="box">
+          <Card raised style={{
+            backgroundColor: theme.primary[80],
+            padding: '30px',
+            margin: '10px',
+            minWidth: '350px',
+            flex: 1,
+          }}>
 
 
-            <Stack direction="column" spacing={2}>
-              {`No. of Devs for each platform: ${noOfDevsPerPlatform}`}
-              <Slider
-                classes={{
-                  thumb: classes.thumb,
-                  rail: classes.rail,
-                  track: classes.track,
-                  valueLabel: classes.valueLabel,
-                  mark: classes.mark
-                }}
-                style={{ width: 300 }}
-                min={1}
-                max={5}
-                step={1}
-                marks
-                value={noOfDevsPerPlatform}
-                valueLabelDisplay="auto"
-                getAriaValueText={getNoOfDevsPerPlatformsTextValue}
-                onChange={onChangeNoOfDevsPerPlatform} />
 
-            </Stack>
+            <Stack direction="column" spacing={5}>
 
 
-            <Stack direction="column" spacing={2}>
-              {`Duration of contract :     ${noOfMonths}`}
-              <Slider
-                classes={{
-                  thumb: classes.thumb,
-                  rail: classes.rail,
-                  track: classes.track,
-                  valueLabel: classes.valueLabel,
-                  mark: classes.mark
-                }}
-                style={{ width: 300 }}
-                min={6}
-                max={12}
-                step={3}
-                marks
-                value={noOfMonths}
-                valueLabelDisplay="auto"
-                getAriaValueText={getNoOfMonthsTextValue}
-                onChange={onChangeNoOfMonths} />
+              <Stack direction="column" spacing={0}>
+                <h3>Team Location</h3>
 
-            </Stack>
+                <RadioGroup row
+                  aria-labelledby="demo-radio-buttons-group-label"
+                  defaultValue="onShore"
+                  name="radio-buttons-group"
+                  onChange={onChangeTeamLocation}
+                >
+                  <FormControlLabel value="onShore" control={<Radio />} label="On Shore" />
+                  <FormControlLabel value="offShore" control={<Radio />} label="Off Shore" />
+                </RadioGroup>
 
-            <Stack direction="column" spacing={2}>
-              <h3>Team members included:</h3>
-              <List>
-                {teamList.map(member => (
+              </Stack>
 
-                  <ListItem>
+              <Stack direction="column" spacing={2}>
+                {`No. of Platforms Supported: ${noOfPlatforms}`}
+                <Slider
+                  classes={{
+                    thumb: classes.thumb,
+                    rail: classes.rail,
+                    track: classes.track,
+                    valueLabel: classes.valueLabel,
+                    mark: classes.mark
+                  }}
+                  style={{ width: 300 }}
+                  min={1}
+                  max={5}
+                  step={1}
+                  marks
+                  value={noOfPlatforms}
+                  valueLabelDisplay="auto"
+                  getAriaValueText={getNoOfPlatformsTextValue}
+                  onChange={onChangeNoOfPlatforms} />
 
-                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />   <h5> {member}</h5>
+              </Stack>
 
-                  </ListItem>))
+
+              <Stack direction="column" spacing={2}>
+                {`No. of Devs for each platform: ${noOfDevsPerPlatform}`}
+                <Slider
+                  classes={{
+                    thumb: classes.thumb,
+                    rail: classes.rail,
+                    track: classes.track,
+                    valueLabel: classes.valueLabel,
+                    mark: classes.mark
+                  }}
+                  style={{ width: 300 }}
+                  min={1}
+                  max={5}
+                  step={1}
+                  marks
+                  value={noOfDevsPerPlatform}
+                  valueLabelDisplay="auto"
+                  getAriaValueText={getNoOfDevsPerPlatformsTextValue}
+                  onChange={onChangeNoOfDevsPerPlatform} />
+
+              </Stack>
+
+
+              <Stack direction="column" spacing={2}>
+                {`Duration of contract :     ${noOfMonths}`}
+                <Slider
+                  classes={{
+                    thumb: classes.thumb,
+                    rail: classes.rail,
+                    track: classes.track,
+                    valueLabel: classes.valueLabel,
+                    mark: classes.mark
+                  }}
+                  style={{ width: 300 }}
+                  min={6}
+                  max={12}
+                  step={3}
+                  marks
+                  value={noOfMonths}
+                  valueLabelDisplay="auto"
+                  getAriaValueText={getNoOfMonthsTextValue}
+                  onChange={onChangeNoOfMonths} />
+
+              </Stack>
+
+              <Stack direction="column" spacing={2}>
+                <h3>Team members included:</h3>
+                <List>
+                  {teamList.map(member => (
+
+                    <ListItem>
+
+                      <CheckCircle style={{ fontSize: 'large', color: 'green' }} />   <h5> {member}</h5>
+
+                    </ListItem>))
+                  }
+                </List> </Stack>
+
+              <Stack direction="column" spacing={2} justifyContent="end">
+
+                <h3 style={{ textAlign: "end" }}>Monthly: {currencyFormat(totalCost / noOfMonths)}</h3>
+                <Divider />
+                <h3 style={{ textAlign: "end" }}>Total: {currencyFormat(totalCost)}</h3>
+                <Divider />
+                {saving > 0 &&
+
+                  <h5 style={{ textAlign: "end", color: 'gray' }}>Saving: {currencyFormat(saving)} after %{discount} discount</h5>
                 }
-              </List> </Stack>
-
-            <Stack direction="column" spacing={2} justifyContent="end">
-
-              <h3 style={{ textAlign: "end" }}>Monthly: {currencyFormat(totalCost / noOfMonths)}</h3>
-              <Divider />
-              <h3 style={{ textAlign: "end" }}>Total: {currencyFormat(totalCost)}</h3>
-              <Divider />
-              {saving > 0 &&
-
-                <h5 style={{ textAlign: "end", color: 'gray' }}>Saving: {currencyFormat(saving)} after %{discount} discount</h5>
-              }
+              </Stack>
             </Stack>
-          </Stack>
-        </Card>
+          </Card>
 
-        <Card raised style={{
-          backgroundColor: theme.primary[80],
-          padding: '30px',
-          minWidth: '500px',
-          margin: '10px',
-          flex: 2,
-        }}>
+          <Card raised style={{
+            backgroundColor: theme.primary[80],
+            padding: '30px',
+            minWidth: '500px',
+            margin: '10px',
+            flex: 2,
+          }}>
 
 
-          <Stack direction="column" spacing={1}>
-            <h2>Services included:</h2>
+            <Stack direction="column" spacing={1}>
+              <h2>Services included:</h2>
 
-            <List>
-              {serviceValueData.regular.map(service => (
-                <Fade bottom>
-                  <ListItem>
-                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
-                  </ListItem>
-                </Fade>
-              ))
-              }
-            </List>
-          </Stack>
-        </Card>
+              <List>
+                {serviceValueData.regular.map(service => (
+                  <Fade bottom>
+                    <ListItem>
+                      <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                    </ListItem>
+                  </Fade>
+                ))
+                }
+              </List>
+            </Stack>
+          </Card>
 
-        <Card raised style={{
-          backgroundColor: theme.primary[80],
-          padding: '30px',
-          minWidth: '500px',
-          margin: '10px',
-          flex: 2,
-        }}>
+          <Card raised style={{
+            backgroundColor: theme.primary[80],
+            padding: '30px',
+            minWidth: '500px',
+            margin: '10px',
+            flex: 2,
+          }}>
 
-          <Stack direction="column" spacing={1}>
-            <h2>Bonus:</h2>
+            <Stack direction="column" spacing={1}>
+              <h2>Bonus:</h2>
 
-            <List>
-              {serviceValueData.bonus.map(service => (
-                <Fade bottom>
-                  <ListItem>
-                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
-                  </ListItem>
-                </Fade>))
-              }
-            </List>
-          </Stack>
-        </Card>
-      </div>
+              <List>
+                {serviceValueData.bonus.map(service => (
+                  <Fade bottom>
+                    <ListItem>
+                      <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                    </ListItem>
+                  </Fade>))
+                }
+              </List>
+            </Stack>
+          </Card>
+        </div>
 
-    </div >
-  )
+      </div >
+    )
+  }
 }
 
 export default Pricing
