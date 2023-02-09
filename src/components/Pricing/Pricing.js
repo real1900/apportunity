@@ -8,6 +8,7 @@ import { CheckCircle } from '@material-ui/icons';
 import { serviceValueData } from '../../data/serviceValueData';
 import { makeStyles } from "@material-ui/core/styles";
 import { Fade } from 'react-reveal';
+import { appInDebugMode } from '../../utils';
 
 const teamList = [
   "Project Manager",
@@ -123,7 +124,7 @@ function Pricing() {
     setTotalCost(totalPrice - discountedMoney);
   }
 
-  if (window.location.origin.includes("localhost") === false) {
+  if (!appInDebugMode) {
     return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE 8-) </h1></div>
   } else {
 
