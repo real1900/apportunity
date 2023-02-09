@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6226feba.css",
-    "main.js": "/static/js/main.bc8ce828.js",
+    "main.js": "/static/js/main.ca6ec641.js",
     "static/js/787.3ad3eb91.chunk.js": "/static/js/787.3ad3eb91.chunk.js",
     "static/media/apportunity-intro.mp4": "/static/media/apportunity-intro.4ed52da48665443ad9cd.mp4",
     "static/media/14.png": "/static/media/14.f18630125e1429e4ffea.png",
@@ -182,11 +182,11 @@
     "static/media/vuetifyjs.svg": "/static/media/vuetifyjs.8a22a3ec81ad62e97094feab6e7ee0fb.svg",
     "static/media/bulma.svg": "/static/media/bulma.5910d4416e077262d0264109649ab214.svg",
     "main.6226feba.css.map": "/static/css/main.6226feba.css.map",
-    "main.bc8ce828.js.map": "/static/js/main.bc8ce828.js.map",
+    "main.ca6ec641.js.map": "/static/js/main.ca6ec641.js.map",
     "787.3ad3eb91.chunk.js.map": "/static/js/787.3ad3eb91.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6226feba.css",
-    "static/js/main.bc8ce828.js"
+    "static/js/main.ca6ec641.js"
   ]
 }
