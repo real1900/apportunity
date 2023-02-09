@@ -136,7 +136,8 @@ function Pricing() {
         <Card raised style={{
           backgroundColor: theme.primary[80],
           padding: '30px',
-          margin: '10px'
+          margin: '10px',
+          flex: 1,
         }}>
 
 
@@ -256,7 +257,9 @@ function Pricing() {
 
         <Card raised style={{
           backgroundColor: theme.primary[80],
-          padding: '30px', margin: '10px'
+          padding: '30px',
+          margin: '10px',
+          flex: 2,
         }}>
 
 
@@ -272,6 +275,14 @@ function Pricing() {
               }
             </List>
           </Stack>
+        </Card>
+
+        <Card raised style={{
+          backgroundColor: theme.primary[80],
+          padding: '30px',
+          margin: '10px',
+          flex: 2,
+        }}>
 
           <Stack direction="column" spacing={1}>
             <h2>Bonus:</h2>
