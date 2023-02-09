@@ -126,7 +126,7 @@ function Pricing() {
 
   if (!appInDebugMode) {
     return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE 8-) </h1></div>
-  }
+  } else {}
 
   return (
     <div className="pricing" id="pricing" style={{ backgroundColor: theme.primary }}>
