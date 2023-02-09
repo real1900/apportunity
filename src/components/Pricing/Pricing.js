@@ -8,6 +8,7 @@ import { CheckCircle } from '@material-ui/icons';
 import { serviceValueData } from '../../data/serviceValueData';
 import { makeStyles } from "@material-ui/core/styles";
 import { appInDebugMode } from '../../utils';
+import { Fade } from 'react-reveal';
 
 const teamList = [
   "Project Manager",
@@ -137,6 +138,7 @@ function Pricing() {
           backgroundColor: theme.primary[80],
           padding: '30px',
           margin: '10px',
+          minWidth: '350px',
           flex: 1,
         }}>
 
@@ -258,6 +260,7 @@ function Pricing() {
         <Card raised style={{
           backgroundColor: theme.primary[80],
           padding: '30px',
+          minWidth: '500px',
           margin: '10px',
           flex: 2,
         }}>
@@ -268,10 +271,12 @@ function Pricing() {
 
             <List>
               {serviceValueData.regular.map(service => (
-
-                <ListItem>
-                  <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
-                </ListItem>))
+                <Fade bottom>
+                  <ListItem>
+                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                  </ListItem>
+                </Fade>
+              ))
               }
             </List>
           </Stack>
@@ -280,6 +285,7 @@ function Pricing() {
         <Card raised style={{
           backgroundColor: theme.primary[80],
           padding: '30px',
+          minWidth: '500px',
           margin: '10px',
           flex: 2,
         }}>
@@ -289,15 +295,17 @@ function Pricing() {
 
             <List>
               {serviceValueData.bonus.map(service => (
-
-                <ListItem>
-                  <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
-                </ListItem>))
+                <Fade bottom>
+                  <ListItem>
+                    <CheckCircle style={{ fontSize: 'large', color: 'green' }} />    {service}
+                  </ListItem>
+                </Fade>))
               }
             </List>
           </Stack>
         </Card>
       </div>
+
     </div >
   )
 }
