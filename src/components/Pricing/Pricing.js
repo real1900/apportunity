@@ -125,7 +125,7 @@ function Pricing() {
   }
 
   if (!appInDebugMode) {
-    return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE</h1></div>
+    return <div><h1>SORRY YOU DON'T HAVE AUTHORIZATION TO VIEW THIS PAGE 8-) </h1></div>
   }
 
   return (
@@ -133,9 +133,6 @@ function Pricing() {
 
       <h1 style={{ color: theme.secondary }}>Pricing </h1>
 
-      {appInDebugMode &&
-        <h1 style={{ color: theme.secondary }}>DEBUG </h1>
-      }
 
       <div class="box">
         <Card raised style={{
