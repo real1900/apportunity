@@ -23,7 +23,7 @@ export default function Header() {
                 {/* Brand Identity */}
                 <div className="flex items-center gap-3">
                     <Image
-                        src="/favicon.png"
+                        src="/logo.png"
                         alt="Apportunity Labs"
                         width={32}
                         height={32}

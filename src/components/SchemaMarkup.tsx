@@ -7,7 +7,7 @@ export default function SchemaMarkup() {
                 "@id": "https://apportunitylabs.ai/#organization",
                 "name": "Apportunity Labs (AI Research)",
                 "url": "https://apportunitylabs.ai",
-                "logo": "https://apportunitylabs.ai/jhu-logo.png", // Using an available asset as placeholder 
+                "logo": "https://apportunitylabs.ai/logo.png", // The canonical original geometric logo
                 "description": "Apportunity Labs is a specialized AI Research & Systems Engineering firm dedicated to the 'Last Mile' of production AI, focusing on Edge AI, Autonomous Agents, and High-Scale Systems.",
                 "founder": {
                     "@id": "https://apportunitylabs.ai/#person"

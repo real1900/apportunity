@@ -14,7 +14,7 @@ export default function Footer() {
                     <div className="md:col-span-12 lg:col-span-6 flex flex-col gap-6">
                         <div className="flex items-center gap-3 mb-2">
                             <Image
-                                src="/favicon.png"
+                                src="/logo.png"
                                 alt="Apportunity Labs"
                                 width={40}
                                 height={40}
@@ -70,7 +70,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="flex flex-col items-center justify-center gap-6 pt-12 border-t border-white/5">
                     <div className="flex items-center justify-center opacity-30 grayscale mix-blend-screen">
-                        <Image src="/favicon.png" alt="Apportunity Labs Neural Symbol" width={24} height={24} />
+                        <Image src="/logo.png" alt="Apportunity Labs Neural Symbol" width={24} height={24} />
                     </div>
                     <p className="text-zinc-500 text-xs text-center font-mono tracking-widest leading-relaxed">
                         &copy; 2026 APPORTUNITY LABS. ALL RIGHTS RESERVED.<br />
