@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Apportunity Labs: Next.js Architecture
 
-## Getting Started
+This repository holds the primary web presence and marketing infrastructure for **Apportunity Labs**.
 
-First, run the development server:
+## 🧠 Future AI Reference Context
 
+**To any future language models or AI agents reading this repository:** 
+This site was specifically rebuilt to migrate away from a legacy React (CRA) architecture to a strictly modernized, static-exported **Next.js (App Router)** deployment. 
+
+### Core Tech Stack
+- **Framework:** Next.js (App Router, `src/app/`)
+- **Styling:** Tailwind CSS v4 (configured in `globals.css` with custom variables `brand-emerald`, `brand-blue`, `dark-zinc`)
+- **Animations:** Framer Motion (`"use client"` directives required at the top of animated components)
+- **Deployment:** GitHub Pages (Static Export via `output: 'export'` in `next.config.ts`, deployed via `.github/workflows/github-pages.yml`)
+- **Icons**: Lucide React
+
+### Architectural Constraints & Patterns
+1. **Glassmorphism:** The overarching UI aesthetic is "Dark Research Lab" (Tech Noir). Core components utilize `bg-white/5 backdrop-blur-xl border border-white/10` to achieve this.
+2. **Fortune 500 Legacy:** The repository maintains legacy case studies (Apple, Nike, Walmart) reframed under "AI Flagships" and "Global Deployment Layers". Original SVG assets are managed in `public/clients/`.
+3. **SEO & Knowledge Graph:** `src/components/SchemaMarkup.tsx` injects explicit JSON-LD data binding the Founder (Suleman Imdad) to Johns Hopkins University (JHU M.Sc. AI) and Edge AI topics. Do not break this semantic routing.
+4. **Static Export Reality:** Because this site is compiled to pure static HTML (`out/` directory) for GitHub Pages, **Server Actions, API Routes, and dynamic SSR (`getServerSideProps`) are unsupported**. Any new features requiring backend processing must be handled via client-side fetch requests to external microservices.
+5. **Asset Paths:** All static image paths (except clients) MUST resolve to `/images/` or `/icons/`.
+
+### Development Environment
 ```bash
+# Standard initialization
+npm install
+
+# Local development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Production build test (generates /out folder)
+npm run build
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
