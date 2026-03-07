@@ -1,0 +1,9 @@
+[18:23:37.303] Server  LOG     ○ Compiling /_not-found/page ...
+[18:23:46.504] Server  ERROR   Error: ENOENT: no such file or directory, scandir '/Users/sulemanimdad/Documents/Developer/Apportunity/apportunity/apportunitylabs-web/src/app'
+[18:23:46.513] Server  ERROR   ⨯ "unhandledRejection:" Error: ENOENT: no such file or directory, scandir '/Users/sulemanimdad/Documents/Developer/Apportunity/apportunity/apportunitylabs-web/src/app'
+[18:23:46.515] Server  ERROR   ⨯ "unhandledRejection: " Error: ENOENT: no such file or directory, scandir '/Users/sulemanimdad/Documents/Developer/Apportunity/apportunity/apportunitylabs-web/src/app'
+[18:23:47.598] Server  ERROR   ⨯ PageNotFoundError: Cannot find module for page: route not found /_not-found/page
+[18:23:47.884] Server  ERROR   ⨯ PageNotFoundError: Cannot find module for page: route not found /_not-found/page
+[18:23:48.843] Server  ERROR   ⨯ PageNotFoundError: Cannot find module for page: route not found /_not-found/page
+[18:23:49.717] Server  ERROR   ⨯ PageNotFoundError: Cannot find module for page: route not found /_not-found/page
+[18:23:50.618] Server  LOG     ○ Compiling /_error ...

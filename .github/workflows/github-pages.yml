@@ -1,5 +1,5 @@
 ---
-name: Build and Deploy React App to GitHub Pages
+name: Build and Deploy Next.js App to GitHub Pages
 on:
   push:
     branches: [ main ]
@@ -12,15 +12,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Build
-      run: yarn install
-
-    # - name: Test
-    #   run: yarn run test
+    - name: Install and Build
+      run: |
+        npm ci
+        npm run build
 
     - name: Deploy
       run: |
         git config --global user.name 'Suleman Imdad'
         git config --global user.email 'suleman.imdad@me.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
-        npm run deploy
+        npx gh-pages -d out -u "github-actions-bot <support+actions@github.com>"
