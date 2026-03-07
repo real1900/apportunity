@@ -150,16 +150,19 @@ export default function FounderPage() {
                             </div>
 
                             <div className="md:w-1/2 w-full">
-                                <div className="grid grid-cols-2 md:grid-cols-2 gap-4 opacity-70 group-hover:opacity-100 transition-opacity">
+                                <div className="grid grid-cols-2 gap-4 w-full opacity-70 group-hover:opacity-100 transition-all duration-500">
                                     {/* Grayscale Client Grid */}
-                                    <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 rounded-2xl grayscale hover:grayscale-0 transition-all cursor-crosshair">
-                                        <img src="/clients/apple.svg" alt="Apportunity Labs SteelVision YOLOv10 Architecture - Apple" className="max-h-8" />
-                                        <div className="h-6 w-px bg-white/10 mx-6"></div>
-                                        <img src="/clients/nike.svg" alt="Apportunity Labs SteelVision YOLOv10 Architecture - Nike" className="max-h-8" />
-                                        <div className="h-6 w-px bg-white/10 mx-6"></div>
-                                        <img src="/clients/amazon.svg" alt="Apportunity Labs SteelVision YOLOv10 Architecture - Amazon" className="max-h-8" />
-                                        <div className="h-6 w-px bg-white/10 mx-6"></div>
-                                        <img src="/clients/walmart.svg" alt="Apportunity Labs SteelVision YOLOv10 Architecture - Walmart" className="max-h-8" />
+                                    <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 rounded-2xl grayscale hover:grayscale-0 transition-all backdrop-blur-sm">
+                                        <img src="/clients/apple.svg" alt="Apple" className="max-h-8 w-auto" />
+                                    </div>
+                                    <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 rounded-2xl grayscale hover:grayscale-0 transition-all backdrop-blur-sm">
+                                        <img src="/clients/nike.svg" alt="Nike" className="max-h-6 w-auto" />
+                                    </div>
+                                    <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 rounded-2xl grayscale hover:grayscale-0 transition-all backdrop-blur-sm">
+                                        <img src="/clients/amazon.svg" alt="Amazon" className="max-h-7 w-auto translate-y-1" />
+                                    </div>
+                                    <div className="bg-white/5 border border-white/10 flex items-center justify-center p-6 rounded-2xl grayscale hover:grayscale-0 transition-all backdrop-blur-sm">
+                                        <img src="/clients/walmart.svg" alt="Walmart" className="max-h-7 w-auto" />
                                     </div>
                                 </div>
                             </div>
