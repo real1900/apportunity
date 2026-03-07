@@ -22,4 +22,4 @@ jobs:
         git config --global user.name 'Suleman Imdad'
         git config --global user.email 'suleman.imdad@me.com'
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}    
-        npx gh-pages -d out -u "github-actions-bot <support+actions@github.com>"
+        npx gh-pages -d out -t -u "github-actions-bot <support+actions@github.com>"
