@@ -35,8 +35,7 @@ export default function FounderPage() {
                                 alt="Apportunity Labs - Suleman Imdad - Principal AI Architect and Founder"
                                 fill
                                 priority
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover object-center filter contrast-125 saturate-50 hover:saturate-100 transition-all duration-700"
+                                className="object-cover object-center filter contrast-110 saturate-100 shadow-2xl"
                             />
                             {/* Inner glassmorphic bottom overlay for credentials */}
                             <div className="absolute bottom-0 w-full p-6 bg-black/60 backdrop-blur-md border-t border-white/10">
