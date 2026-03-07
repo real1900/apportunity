@@ -1,10 +1,30 @@
 'use client';
 
-import { ArrowRight, Github, Twitter, Linkedin } from "lucide-react";
+import { useState } from "react";
+import { ArrowRight, Github, Twitter, Linkedin, Loader2, CheckCircle } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Footer() {
+    const [email, setEmail] = useState("");
+    const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+
+    const handleSubscribe = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!email) return;
+
+        setStatus("submitting");
+
+        // Simulate network request
+        setTimeout(() => {
+            setStatus("success");
+            setEmail("");
+            // Reset after a few seconds
+            setTimeout(() => setStatus("idle"), 4000);
+        }, 1500);
+    };
+
     return (
         <footer className="px-6 pt-20 pb-12 bg-[#050505] border-t border-white/5 font-sans selection:bg-emerald-500/30 selection:text-emerald-400">
             <div className="max-w-7xl mx-auto">
@@ -25,15 +45,39 @@ export default function Footer() {
                         <p className="text-zinc-400 text-sm max-w-sm leading-relaxed">
                             Receive classified updates on neural architecture breakthroughs, edge-inference case studies, and physical intelligence deployments.
                         </p>
-                        <form className="flex gap-2 w-full max-w-md mt-2" onSubmit={(e) => e.preventDefault()}>
+                        <form className="flex gap-2 w-full max-w-md mt-2 relative" onSubmit={handleSubscribe}>
                             <input
-                                className="flex-1 bg-[#09090b] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-all placeholder:text-zinc-600"
+                                className="flex-1 bg-[#09090b] border border-white/10 rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-all placeholder:text-zinc-600 disabled:opacity-50 disabled:cursor-not-allowed"
                                 placeholder="Email Address"
                                 type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                disabled={status !== "idle"}
+                                required
                             />
-                            <button className="bg-emerald-500 hover:bg-emerald-400 text-[#09090b] font-bold px-6 py-3 rounded-xl text-sm transition-colors flex items-center justify-center min-w-[100px] shadow-[0_0_15px_rgba(16,185,129,0.2)]">
-                                Join
-                            </button>
+                            <motion.button
+                                className={`bg-emerald-500 hover:bg-emerald-400 text-[#09090b] font-bold px-6 py-3 rounded-xl text-sm transition-colors flex items-center justify-center min-w-[100px] shadow-[0_0_15px_rgba(16,185,129,0.2)] disabled:pointer-events-none ${status === 'success' ? 'bg-emerald-400' : ''}`}
+                                disabled={status !== "idle"}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                <AnimatePresence mode="wait">
+                                    {status === "idle" && (
+                                        <motion.span key="idle" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center">
+                                            Join
+                                        </motion.span>
+                                    )}
+                                    {status === "submitting" && (
+                                        <motion.span key="submitting" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }}>
+                                            <Loader2 className="w-4 h-4 animate-spin text-[#09090b]" />
+                                        </motion.span>
+                                    )}
+                                    {status === "success" && (
+                                        <motion.span key="success" initial={{ opacity: 0, scale: 0.5 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.5 }}>
+                                            <CheckCircle className="w-5 h-5 text-[#09090b]" />
+                                        </motion.span>
+                                    )}
+                                </AnimatePresence>
+                            </motion.button>
                         </form>
                     </div>
 

@@ -1,11 +1,25 @@
 'use client';
 
-import { motion, Variants } from "framer-motion";
-import { Terminal, Shield, Lock, MapPin, Activity, Mail, ArrowRight, Server, Cpu, Database, Network } from "lucide-react";
+import { useState } from "react";
+import { motion, Variants, AnimatePresence } from "framer-motion";
+import { Terminal, Shield, Lock, MapPin, Activity, Mail, ArrowRight, Server, Cpu, Database, Network, Loader2, CheckCircle, Send } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function ContactPage() {
+    const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success">("idle");
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+
+    const handleFormSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        setFormStatus("submitting");
+        setTimeout(() => {
+            setFormStatus("success");
+            setFormData({ name: '', email: '', message: '' });
+            setTimeout(() => setFormStatus("idle"), 5000);
+        }, 2000); // 2 second mock delay
+    };
+
     // Framer Motion Variants for the "Secure Hatch" mechanical sliding effect
     const hatchVariants: Variants = {
         hidden: { opacity: 0, y: 80, scaleY: 0.9 },
@@ -99,6 +113,79 @@ export default function ContactPage() {
                             <div className="mt-6 inline-flex items-center gap-2 px-3 py-1 rounded bg-zinc-900 border border-zinc-800 text-[10px] text-zinc-400 font-mono">
                                 <Activity className="w-3 h-3 text-emerald-500" /> ACTIVE NETWORK STATUS
                             </div>
+                        </motion.div>
+
+                        {/* Secure Transmission Form */}
+                        <motion.div variants={hatchVariants} className="p-8 rounded-xl bg-[#0a0a0c] border border-emerald-500/20 shadow-[0_0_30px_rgba(16,185,129,0.05)] relative overflow-hidden">
+                            <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full"></div>
+                            <div className="flex items-center gap-3 mb-6">
+                                <Shield className="w-5 h-5 text-emerald-400" />
+                                <h3 className="text-sm font-bold text-white font-mono uppercase tracking-widest text-emerald-50/80">Secure Transmission</h3>
+                            </div>
+
+                            <form onSubmit={handleFormSubmit} className="flex flex-col gap-4 relative z-10">
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Ident / Name</label>
+                                    <input
+                                        type="text"
+                                        required
+                                        disabled={formStatus !== "idle"}
+                                        value={formData.name}
+                                        onChange={e => setFormData({ ...formData, name: e.target.value })}
+                                        className="w-full bg-[#050505] border border-white/10 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-all disabled:opacity-50"
+                                    />
+                                </div>
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Comm Link / Email</label>
+                                    <input
+                                        type="email"
+                                        required
+                                        disabled={formStatus !== "idle"}
+                                        value={formData.email}
+                                        onChange={e => setFormData({ ...formData, email: e.target.value })}
+                                        className="w-full bg-[#050505] border border-white/10 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-all disabled:opacity-50"
+                                    />
+                                </div>
+                                <div className="space-y-1">
+                                    <label className="text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Payload / Message</label>
+                                    <textarea
+                                        required
+                                        rows={4}
+                                        disabled={formStatus !== "idle"}
+                                        value={formData.message}
+                                        onChange={e => setFormData({ ...formData, message: e.target.value })}
+                                        className="w-full bg-[#050505] border border-white/10 rounded-lg px-4 py-2 text-sm text-white focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30 transition-all resize-none disabled:opacity-50"
+                                    ></textarea>
+                                </div>
+
+                                <motion.button
+                                    type="submit"
+                                    disabled={formStatus !== "idle"}
+                                    whileTap={{ scale: 0.98 }}
+                                    className={`relative mt-2 w-full py-3 rounded-lg text-sm font-bold flex items-center justify-center transition-all overflow-hidden border ${formStatus === "success" ? "bg-emerald-500/10 border-emerald-500/50 text-emerald-400" : "bg-emerald-500 hover:bg-emerald-400 text-black border-transparent shadow-[0_0_15px_rgba(16,185,129,0.2)]"}`}
+                                >
+                                    <AnimatePresence mode="wait">
+                                        {formStatus === "idle" && (
+                                            <motion.div key="idle" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="flex items-center gap-2">
+                                                <span>Transmit</span>
+                                                <Send className="w-4 h-4" />
+                                            </motion.div>
+                                        )}
+                                        {formStatus === "submitting" && (
+                                            <motion.div key="submitting" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2 text-[#050505]">
+                                                <Loader2 className="w-4 h-4 animate-spin text-[#09090b]" />
+                                                <span className="text-[#09090b]">Encrypting...</span>
+                                            </motion.div>
+                                        )}
+                                        {formStatus === "success" && (
+                                            <motion.div key="success" initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex items-center gap-2">
+                                                <CheckCircle className="w-5 h-5" />
+                                                <span>Transmission Secured</span>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </motion.button>
+                            </form>
                         </motion.div>
 
                     </div>
