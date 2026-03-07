@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-emerald: #10b981;
+  --color-brand-blue: #3b82f6;
+  --color-dark-zinc: #09090b;
+
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-mesh-gradient: meshShift 15s ease infinite;
+}
+
+:root {
+  --background: #09090b; /* dark-zinc */
+  --foreground: #fafafa;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Inter, sans-serif;
+  letter-spacing: -0.025em; /* tracking-tight */
+  overflow-x: hidden;
+}
+
+/* Glass Layout definition globally just in case, though we will use Tailwind utility classes primarily as requested */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.05); /* bg-white/5 */
+  backdrop-filter: blur(24px); /* backdrop-blur-xl */
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1); /* border-white/10 */
+  border-radius: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Mesh Gradient for Hero Background */
+.bg-mesh-gradient {
+  background: radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.15) 0px, transparent 50%),
+              radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
+              radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.1) 0px, transparent 50%),
+              radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.1) 0px, transparent 50%);
+  background-size: 200% 200%;
+  animation: meshShift 15s ease infinite;
+}
+
+/* Mesh Gradient Animation */
+@keyframes meshShift {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}

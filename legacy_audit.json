@@ -1,0 +1,42 @@
+{
+    "social_proof": [
+        "Apple",
+        "Nike",
+        "Walmart",
+        "Amazon",
+        "Southwest"
+    ],
+    "engineering_metrics": {
+        "years_of_experience": 16,
+        "categories": [
+            "Scale",
+            "Security",
+            "BLE Hardware Integration"
+        ]
+    },
+    "project_assets": {
+        "ai_flagships": [
+            {
+                "name": "SteelVision",
+                "technologies": [
+                    "YOLOv10",
+                    "On-Device RAG"
+                ],
+                "description": "Offline Edge AI for Industrial P&IDs"
+            },
+            {
+                "name": "Submission AI",
+                "technologies": [
+                    "Multilingual NMT",
+                    "Vertex AI"
+                ],
+                "description": "Advanced Generation and Translation AI for Submission"
+            },
+            {
+                "name": "SPEAR",
+                "technologies": [],
+                "description": "Advanced AI Flagship"
+            }
+        ]
+    }
+}
