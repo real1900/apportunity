@@ -25,7 +25,7 @@ export default function Research() {
                     className="mb-24"
                 >
                     <div className="flex items-center gap-4 mb-6">
-                        <img src="/jhu-logo.svg" alt="Johns Hopkins University M.Sc. in Artificial Intelligence Research Anchor" className="h-10 w-auto object-contain opacity-90" />
+                        <img src="/images/jhu-logo.svg" alt="Johns Hopkins University M.Sc. in Artificial Intelligence Research Anchor" className="h-10 w-auto object-contain opacity-90" />
                         <span className="h-6 w-px bg-white/20"></span>
                         <span className="text-sm font-bold uppercase tracking-[0.2em] text-blue-400">ACADEMIC ANCHOR</span>
                     </div>

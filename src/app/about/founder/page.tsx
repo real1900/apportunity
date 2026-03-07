@@ -31,7 +31,7 @@ export default function FounderPage() {
                         <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-blue-500/30 blur-3xl rounded-full"></div>
                         <div className="w-full aspect-[4/5] relative rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/10 z-10">
                             <Image
-                                src="/suleman-portrait.jpg"
+                                src="/images/suleman-portrait.jpg"
                                 alt="Apportunity Labs - Suleman Imdad - Principal AI Architect and Founder"
                                 fill
                                 priority

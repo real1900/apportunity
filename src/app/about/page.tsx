@@ -301,7 +301,7 @@ export default function About() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                         <div className="lg:col-span-4 rounded-3xl border border-white/10 bg-white/5 p-8 flex flex-col items-center justify-center backdrop-blur-xl h-fit sticky top-32 shadow-[0_0_30px_rgba(0,0,0,0.5)]">
-                            <Image src="/jhu-logo.svg" alt="Apportunity Labs Johns Hopkins University AI Research Anchor" width={200} height={100} className="w-48 opacity-80 mb-6" />
+                            <Image src="/images/jhu-logo.svg" alt="Apportunity Labs Johns Hopkins University AI Research Anchor" width={200} height={100} className="w-48 opacity-80 mb-6" />
                             <h3 className="text-xl font-bold text-white text-center mb-2">Master of Science</h3>
                             <h4 className="text-sm tracking-widest text-zinc-400 font-mono text-center uppercase">Artificial Intelligence</h4>
                         </div>

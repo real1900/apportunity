@@ -20,7 +20,7 @@ export default function SchemaMarkup() {
                 "name": "Suleman Imdad",
                 "jobTitle": "Principal AI Architect",
                 "url": "https://apportunitylabs.ai/about/founder",
-                "image": "https://apportunitylabs.ai/suleman-portrait.jpg",
+                "image": "https://apportunitylabs.ai/images/suleman-portrait.jpg",
                 "sameAs": [
                     "https://www.linkedin.com/in/suleman-imdad/",
                     "https://github.com/real1900/"

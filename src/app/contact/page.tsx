@@ -197,7 +197,7 @@ export default function ContactPage() {
                         <div className="flex items-center gap-4 mb-6 md:mb-0">
                             <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-emerald-500/20 grayscale hover:grayscale-0 transition-all duration-500 relative flex-shrink-0">
                                 <Image
-                                    src="/suleman-portrait.jpg"
+                                    src="/images/suleman-portrait.jpg"
                                     alt="Apportunity Labs - Suleman Imdad - Principal AI Architect"
                                     fill
                                     className="object-cover"
