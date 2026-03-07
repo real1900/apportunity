@@ -105,16 +105,36 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-zinc-500 mb-8 text-center">
               Powering mission-critical systems for global leaders
             </p>
-            <div className="w-full overflow-hidden relative">
-              <div className="flex gap-16 md:gap-24 items-center justify-center flex-wrap opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                {/* Conceptual text logos since we don't have SVGs verified yet, user requested text representation or logos. We'll use styled text for reliability here. */}
-                <span className="text-2xl font-bold tracking-tight">Apple</span>
-                <span className="text-2xl font-black italic tracking-tighter">NIKE</span>
-                <span className="text-2xl font-bold tracking-tight">amazon</span>
-                <span className="text-2xl font-bold text-blue-400">Walmart</span>
-                <span className="text-2xl font-bold">Southwest Airlines</span>
-                <span className="text-2xl font-semibold">Union Bank</span>
-              </div>
+            <div className="w-full overflow-hidden relative flex py-4">
+              {/* Fade masks */}
+              <div className="absolute inset-y-0 left-0 w-24 md:w-48 bg-gradient-to-r from-[#09090b] to-transparent z-10 pointer-events-none"></div>
+              <div className="absolute inset-y-0 right-0 w-24 md:w-48 bg-gradient-to-l from-[#09090b] to-transparent z-10 pointer-events-none"></div>
+
+              <motion.div
+                animate={{ x: ["0%", "-50%"] }}
+                transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+                className="flex gap-16 md:gap-24 items-center flex-nowrap min-w-max pr-16 md:pr-24 opacity-60 hover:opacity-100 grayscale hover:grayscale-0 transition-all duration-700"
+              >
+                {[
+                  "Apple", "Amazon", "Walmart", "Nike", "Southwest Airlines",
+                  "Verizon", "GE", "Intuit", "Oracle", "Chase",
+                  "DirecTV", "Hyundai", "Volkswagen", "Panavision",
+                  "Technicolor", "CBS", "KornFerry", "Vance and Hines",
+                  // Duplicated array to ensure seamless looping back to 0% after scrolling 50%
+                  "Apple", "Amazon", "Walmart", "Nike", "Southwest Airlines",
+                  "Verizon", "GE", "Intuit", "Oracle", "Chase",
+                  "DirecTV", "Hyundai", "Volkswagen", "Panavision",
+                  "Technicolor", "CBS", "KornFerry", "Vance and Hines"
+                ].map((client, idx) => (
+                  <div key={`${client}-${idx}`} className="flex-shrink-0 flex items-center justify-center w-32 md:w-48 h-8 md:h-12 lg:h-14">
+                    <img
+                      src={`/clients/${client.toLowerCase()}.svg`}
+                      alt={`${client} Logo`}
+                      className="h-full w-full object-contain brightness-200 contrast-125"
+                    />
+                  </div>
+                ))}
+              </motion.div>
             </div>
           </div>
         </section>
