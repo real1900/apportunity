@@ -1,8 +1,10 @@
 'use client';
 
-import { motion } from "framer-motion";
-import { Network, Server, Database, ArrowLeft, Terminal as TerminalIcon, Building2 } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { Server, Cpu, Lock, Network, Database, Shield, ArrowRight, Activity, Terminal as TerminalIcon, Building2, ArrowLeft } from "lucide-react";
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 // AI-Generated Enterprise Case Studies reflecting the new "Systems Architecture" context
 const clients = [
@@ -122,151 +124,149 @@ const clients = [
     }
 ];
 
-export default function Solutions() {
-    const [typedText, setTypedText] = useState("");
-    const fullJson = `{
-  "status": "success",
-  "latency": "142ms",
-  "source": "Local_Vector_Store",
-  "model": "Distilled-LVM-1.8B",
-  "retrieval": {
-    "top_k": 3,
-    "semantic_score": 0.982,
-    "context_chunk": "Section 4.2: Hardware calibration for BLE 5.4 synchronization..."
-  },
-  "spatial_verification": {
-    "yolo_v10_detection": "active",
-    "confidence": 0.994,
-    "bounding_box": [102, 45, 304, 512]
-  }
-}`;
+export default function SolutionsPage() {
+    // Animation variants for smooth list staggered entrance
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+        }
+    };
 
-    useEffect(() => {
-        let i = 0;
-        const typingInterval = setInterval(() => {
-            setTypedText(fullJson.slice(0, i));
-            i++;
-            if (i > fullJson.length) clearInterval(typingInterval);
-        }, 15); // Fast typewriter effect
-        return () => clearInterval(typingInterval);
-    }, [fullJson]);
+    const cardVariants: Variants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: { type: "spring", stiffness: 60, damping: 20 }
+        }
+    };
 
     return (
         <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-[#09090b] text-slate-100 antialiased font-sans">
-
-            {/* Navigation */}
-
             <section className="px-6 py-24 lg:py-32 relative z-10 max-w-6xl mx-auto w-full">
-                <a href="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-emerald-400 mb-12 transition-colors">
+                <Link href="/" className="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-emerald-400 mb-12 transition-colors">
                     <ArrowLeft className="w-4 h-4" /> Back to Home
-                </a>
+                </Link>
 
+                {/* Enterprise Offerings Header */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-16"
                 >
-                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block">Primary Project Case Study</span>
+                    <span className="text-xs font-bold uppercase tracking-[0.2em] text-emerald-400 mb-4 block">Enterprise Offerings</span>
                     <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white mb-6">
-                        Project SteelVision: Spatial Intelligence at the Edge.
+                        Physical Intelligence for Tier-1 Infrastructure.
                     </h1>
                     <p className="text-xl text-zinc-400 leading-relaxed max-w-4xl border-l-2 border-emerald-500/50 pl-6 mb-16">
-                        <strong className="text-zinc-200">The Problem Space:</strong> Modern asset verification requires high-reliability spatial awareness, but cloud dependency introduces latency and privacy risks. Industrial and retail asset verification fails when the cloud is unavailable. Project SteelVision is our answer: a 100% offline-first Spatial Intelligence pipeline.
+                        We provide enterprise-grade solutions for the most complex physical intelligence challenges, guaranteeing sub-millisecond latency and absolute data sovereignty through on-device edge deployments.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="flex flex-col gap-12"
-                    >
-                        <div>
-                            <h2 className="text-3xl font-bold tracking-tight text-white mb-8 border-b border-white/10 pb-4">The Architecture</h2>
-
-                            <div className="flex flex-col gap-8">
-                                <div className="flex gap-4">
-                                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                        <Server className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Neural Pipeline</h3>
-                                        <p className="text-zinc-400 leading-relaxed">A hybrid vision architecture utilizing <strong>YOLOv10</strong> for real-time object detection fused with <strong>Vision Transformers (ViT)</strong> for high-fidelity OCR.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-4">
-                                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
-                                        <Database className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Local Intelligence</h3>
-                                        <p className="text-zinc-400 leading-relaxed">An on-device RAG (Retrieval-Augmented Generation) system indexing 2M+ technical manual tokens for instant offline diagnostics.</p>
-                                    </div>
-                                </div>
-
-                                <div className="flex gap-4">
-                                    <div className="mt-1 flex-shrink-0 w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
-                                        <Network className="w-5 h-5" />
-                                    </div>
-                                    <div>
-                                        <h3 className="text-lg font-bold text-white mb-2">Hardware Sync</h3>
-                                        <p className="text-zinc-400 leading-relaxed">Direct sensor fusion via <strong>Bluetooth Low Energy (BLE 5.4)</strong> to synchronize physical asset states with digital twins in real-time.</p>
-                                    </div>
-                                </div>
-                            </div>
+                {/* Solutions Grid */}
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10"
+                >
+                    {/* Audit & Feasibility Validation */}
+                    <motion.div variants={cardVariants} className="group flex flex-col p-8 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 h-full relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
+                        <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg w-fit mb-6 relative z-10">
+                            <Activity className="w-6 h-6 text-emerald-400" />
                         </div>
-
-                        <div className="p-8 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl">
-                            <h3 className="text-xl font-bold text-white mb-6">Technical Spec Sheet</h3>
-                            <ul className="flex flex-col gap-4">
-                                <li className="flex justify-between items-center border-b border-white/5 pb-4">
-                                    <span className="text-zinc-500 font-mono text-sm">Inference Latency</span>
-                                    <span className="text-emerald-400 font-bold">&lt;180ms on-device</span>
-                                </li>
-                                <li className="flex justify-between items-center border-b border-white/5 pb-4">
-                                    <span className="text-zinc-500 font-mono text-sm">Model Architecture</span>
-                                    <span className="text-white font-medium">1.8B parameter distilled VLM</span>
-                                </li>
-                                <li className="flex justify-between items-center pb-2">
-                                    <span className="text-zinc-500 font-mono text-sm">Connectivity Protocol</span>
-                                    <span className="text-white font-medium text-right">100% Offline-capable<br /><span className="text-xs text-zinc-500">w/ periodic Vector Store syncing</span></span>
-                                </li>
+                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight relative z-10">Infrastructure Audit & Feasibility Validation</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 relative z-10">
+                            Before any tensor is computed, our engineering team executes a deep diagnostic of your existing operational topography. We evaluate your on-premise compute availability, legacy cloud dependency overhead, and viable edge capacities (Nvidia Jetsons, Apple Silicon, or custom TPUs) hosting our inference engines. This phase mathematically structures the constraints required to achieve sub-millisecond, real-time latency.
+                        </p>
+                        <div className="mt-auto pt-4 border-t border-white/5 relative z-10">
+                            <ul className="space-y-2 text-xs font-mono text-zinc-500">
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Edge Hardware Profiling</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Network Topology Mapping</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Latency Bottleneck Analysis</li>
                             </ul>
                         </div>
                     </motion.div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        className="flex flex-col gap-6"
-                    >
-                        {/* Mock RAG Terminal */}
-                        <div className="rounded-2xl border border-white/10 bg-black/80 overflow-hidden shadow-2xl flex flex-col h-[550px]">
-                            <div className="bg-white/5 border-b border-white/10 px-4 py-3 flex items-center gap-3">
-                                <div className="flex gap-1.5">
-                                    <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                                    <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                                    <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                                </div>
-                                <div className="text-xs font-mono text-zinc-500 ml-4 flex items-center gap-2">
-                                    <TerminalIcon className="w-3 h-3" />
-                                    apportunity-edge-node ~ json-output
-                                </div>
-                            </div>
-
-                            <div className="p-6 font-mono text-sm overflow-y-auto flex-1 text-zinc-300">
-                                <div className="text-zinc-500 mb-2"># SteelVision Edge-RAG Response Metadata</div>
-                                <div className="text-emerald-400 whitespace-pre-wrap leading-relaxed">
-                                    {typedText}
-                                    <span className="animate-pulse">_</span>
-                                </div>
-                            </div>
+                    {/* Security Clearances & Air-Gapped Verification */}
+                    <motion.div variants={cardVariants} className="group flex flex-col p-8 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 h-full relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
+                        <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg w-fit mb-6 relative z-10">
+                            <Shield className="w-6 h-6 text-emerald-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight relative z-10">Data Sovereignty & Air-Gapped Security</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 relative z-10">
+                            True physical intelligence demands absolute data sovereignty. We design the cryptographic perimeter, configuring encrypted transfer protocols and establishing isolated, air-gapped data lakes engineered exclusively for secure model distillation. Our architectures pass rigorous penetration testing, ensuring highly guarded proprietary telemetry never breaches the physical boundary of the embedded device.
+                        </p>
+                        <div className="mt-auto pt-4 border-t border-white/5 relative z-10">
+                            <ul className="space-y-2 text-xs font-mono text-zinc-500">
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Cryptographic Inference Perimeters</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Localized Vector Databases</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Military-Grade Air-Gapping</li>
+                            </ul>
                         </div>
                     </motion.div>
-                </div>
+
+                    {/* Deterministic Stakeholder Alignment & Logic Schema */}
+                    <motion.div variants={cardVariants} className="group flex flex-col p-8 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 h-full relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
+                        <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg w-fit mb-6 relative z-10">
+                            <Network className="w-6 h-6 text-emerald-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight relative z-10">Deterministic Logic Schemas</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 relative z-10">
+                            We align with your technical stakeholders to define absolute mathematical constraints and guard-railed logic schemas required for your specific physical application. We map exact operational boundaries, failure modes, and acceptable inference tolerances. This ensures the neural network behaves predictably without suffering from unconstrained hallucinatory drift.
+                        </p>
+                        <div className="mt-auto pt-4 border-t border-white/5 relative z-10">
+                            <ul className="space-y-2 text-xs font-mono text-zinc-500">
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Constrained Decoding Logic</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Output Verification Parsing</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> State-Machine Integration</li>
+                            </ul>
+                        </div>
+                    </motion.div>
+
+                    {/* Multi-Phase Deployment & Hardened Shadow Rollout */}
+                    <motion.div variants={cardVariants} className="group flex flex-col p-8 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 h-full relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-emerald-500/5 blur-[40px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500"></div>
+                        <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-lg w-fit mb-6 relative z-10">
+                            <Server className="w-6 h-6 text-emerald-400" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white mb-3 tracking-tight relative z-10">Shadow Rollout & Hardened Deployment</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-1 relative z-10">
+                            Our deployment protocol mitigates all operational risk. We initiate "Shadow Deployments," running quantized models securely in parallel to existing workflows, logging inferential reasoning without actuating physical consequence. We utilize these logs for aggressive A/B validation, tracking model drift or metric degradation prior to a full Hardened Rollout.
+                        </p>
+                        <div className="mt-auto pt-4 border-t border-white/5 relative z-10">
+                            <ul className="space-y-2 text-xs font-mono text-zinc-500">
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> A/B Telemetry Tracking</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Zero-Downtime Quantization</li>
+                                <li className="flex items-center gap-2"><span className="w-1 h-1 bg-emerald-500 rounded-full"></span> Model Drift Auditing</li>
+                            </ul>
+                        </div>
+                    </motion.div>
+                </motion.div>
+
+                {/* Contact CTA */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    viewport={{ once: true }}
+                    className="mt-24 p-12 rounded-3xl bg-[#0a0a0c] border border-emerald-500/20 text-center relative overflow-hidden group shadow-[0_0_50px_rgba(16,185,129,0.05)]"
+                >
+                    <div className="absolute inset-0 bg-mesh-gradient opacity-10"></div>
+                    <h2 className="text-3xl font-black text-white tracking-tight mb-4 relative z-10">Initiate Enterprise Intake</h2>
+                    <p className="text-zinc-400 max-w-2xl mx-auto mb-8 relative z-10">
+                        Clearances required for highly-classified infrastructure audits. Contact our principal architecture team to begin feasibility validation.
+                    </p>
+                    <Link href="/contact" className="inline-flex items-center gap-3 px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-[#09090b] font-bold rounded-xl transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] transform hover:scale-105 relative z-10">
+                        <Lock className="w-5 h-5" /> Secure Request <ArrowRight className="w-5 h-5 ml-1" />
+                    </Link>
+                </motion.div>
             </section>
 
             {/* Enterprise Deployments (19 Clients) */}

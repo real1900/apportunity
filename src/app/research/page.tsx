@@ -1,9 +1,27 @@
 'use client';
 
-import { motion } from "framer-motion";
-import { Network, ArrowLeft, GraduationCap, ServerCog, Bot, Activity, Layers, Zap, Search, ShieldCheck } from "lucide-react";
+import { motion, Variants } from "framer-motion";
+import { Network, ArrowLeft, GraduationCap, ServerCog, Bot, Activity, Layers, Zap, Search, ShieldCheck, BookOpen, Cpu, Eye, Binary, ExternalLink, ArrowRight } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
-export default function Research() {
+export default function ResearchPage() {
+    const listVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+        }
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { type: "spring", stiffness: 60, damping: 20 }
+        }
+    };
     return (
         <div className="relative flex min-h-screen flex-col overflow-x-hidden bg-[#09090b] text-slate-100 antialiased font-sans">
 
@@ -124,16 +142,103 @@ export default function Research() {
                             Hierarchical Multi-Agent Workflows
                         </h2>
                         <p className="text-zinc-400 leading-relaxed mb-8">
-                            Moving beyond simple "Chat" interfaces, we research the orchestration of Autonomous Agents capable of long-horizon planning and self-correction.
+                            The Apportunity Labs Research Division operates at the boundary of theoretical machine learning and physical constraints. We publish architectures, optimization methodologies, and empirical studies focused strictly on extending transformer and CNN capabilities to extreme-edge hardware constraints.
                         </p>
+                    </motion.div>
 
-                        {/* Mathematical Callout Box */}
-                        <div className="relative p-8 rounded-3xl border border-blue-500/30 bg-blue-500/5 backdrop-blur-xl">
-                            <h3 className="text-lg font-bold text-white mb-4 relative z-10 text-blue-400">Technical Context</h3>
-                            <p className="text-zinc-300 leading-relaxed text-sm relative z-10">
-                                We engineer deterministic, multi-step cognitive pathways utilizing adversarial and collaborative agentic frameworks. By leveraging LangGraph and Semantic Routing networks, we parse highly complex industrial tasks into sequential <strong>DAGs (Directed Acyclic Graphs)</strong>, ensuring zero-hallucination execution across global Fortune 500 supply chains and legacy mainframes.
-                            </p>
-                        </div>
+                    {/* Research Papers / Projects List */}
+                    <motion.div
+                        variants={listVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="space-y-6 relative z-10"
+                    >
+                        {/* DETR Study */}
+                        <motion.div variants={itemVariants} className="group flex flex-col md:flex-row gap-8 p-8 md:p-10 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500 pointer-events-none"></div>
+
+                            <div className="flex-shrink-0 md:w-64 pt-2">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded text-xs font-mono text-emerald-400 mb-4 uppercase tracking-widest">
+                                    <Eye className="w-3 h-3" /> CV / Object Detection
+                                </div>
+                                <h3 className="text-xl font-bold text-white leading-tight mb-2">Quantized DETR Models for Real-Time P&ID Symbol Recognition</h3>
+                                <p className="text-zinc-500 text-xs font-mono">Johns Hopkins University Study</p>
+                            </div>
+
+                            <div className="flex-1">
+                                <p className="text-zinc-400 text-[15px] leading-relaxed mb-6">
+                                    An empirical analysis of applying Detection Transformers (DETR) and Deformable DETR architectures to dense, heavily-occluded engineering diagrams (Piping & Instrumentation Diagrams). We evaluate the impact of the Frobenius norm on cross-attention weights, demonstrating mechanisms to force model convergence on highly asymmetric object classes (e.g., valves vs. pipelines). The study concludes with deployment strategies for CoreML, converting the transformer into a strictly deterministic edge model capable of 60 FPS processing on native Apple Silicon.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">DETR</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">Deformable Attention</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">PyTorch</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">CoreML</span>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Edge RAG Study */}
+                        <motion.div variants={itemVariants} className="group flex flex-col md:flex-row gap-8 p-8 md:p-10 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500 pointer-events-none"></div>
+
+                            <div className="flex-shrink-0 md:w-64 pt-2">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded text-xs font-mono text-emerald-400 mb-4 uppercase tracking-widest">
+                                    <Binary className="w-3 h-3" /> NLP / Info Retrieval
+                                </div>
+                                <h3 className="text-xl font-bold text-white leading-tight mb-2">On-Device RAG: Sovereign LLMs via MLX and Specialized Vector Storage</h3>
+                                <p className="text-zinc-500 text-xs font-mono">Apportunity Labs Internal Proof-of-Concept</p>
+                            </div>
+
+                            <div className="flex-1">
+                                <p className="text-zinc-400 text-[15px] leading-relaxed mb-6">
+                                    Current Retrieval-Augmented Generation (RAG) paradigms rely heavily on remote vector databases (Pinecone, heavily-scaled cloud clusters). This study demonstrates the compilation of a 100% localized, air-gapped RAG pipeline utilizing Apple's MLX matrix framework and highly compressed local FAISS indexing. Our architecture proves that proprietary corporate data can be reasoned against using small, 7B parameter models (Llama-3 quantized) running entirely within the thermal and memory constraints of a Macbook Pro, yielding zero network latency and perfect data sovereignty.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">RAG</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">Apple MLX</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">Quantization</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">Data Sovereignty</span>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        {/* Fast SAM / Architecture */}
+                        <motion.div variants={itemVariants} className="group flex flex-col md:flex-row gap-8 p-8 md:p-10 rounded-2xl bg-[#0a0a0c] border border-white/5 hover:border-emerald-500/30 transition-all duration-500 relative overflow-hidden shadow-[0_0_20px_rgba(0,0,0,0.5)]">
+                            <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 blur-[80px] rounded-full group-hover:bg-emerald-500/10 transition-colors duration-500 pointer-events-none"></div>
+
+                            <div className="flex-shrink-0 md:w-64 pt-2">
+                                <div className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-900 border border-zinc-800 rounded text-xs font-mono text-emerald-400 mb-4 uppercase tracking-widest">
+                                    <Activity className="w-3 h-3" /> Mobile / Edge Compute
+                                </div>
+                                <h3 className="text-xl font-bold text-white leading-tight mb-2">Real-Time Person Segmentation via MTKView and iOS Vision Frame Hooks</h3>
+                                <p className="text-zinc-500 text-xs font-mono">Teleprompter OS Framework</p>
+                            </div>
+
+                            <div className="flex-1">
+                                <p className="text-zinc-400 text-[15px] leading-relaxed mb-6">
+                                    An architectural breakdown for achieving zero-latency video processing on mobile hardware by avoiding the `AVPlayer` pipeline overhead. This research details a pipeline utilizing Apple's `MTKView` (Metal Kit View) coupled with native iOS Vision framework hooks (`Vision Person Segmentation`) to calculate localized depth-of-field blur ("Cinematic Mode") exclusively on the Neural Engine (NPU). By isolating animations and layout frames, we achieved a stable 60 FPS segmentation map without thermally throttling the iOS device.
+                                </p>
+                                <div className="flex flex-wrap items-center gap-3">
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">AVFoundation</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">Metal (MTKView)</span>
+                                    <span className="px-3 py-1 rounded-full bg-[#101014] border border-white/5 text-xs text-zinc-300">iOS Vision Matrix</span>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+
+                    {/* Return CTA */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="mt-20 text-center"
+                    >
+                        <Link href="/" className="inline-flex items-center gap-2 text-zinc-500 hover:text-emerald-400 font-mono text-sm uppercase tracking-widest transition-colors group">
+                            Return to Core Infrastructure <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </Link>
                     </motion.div>
 
                     {/* Section 4 */}
